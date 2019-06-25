@@ -1,23 +1,83 @@
-# Compiled class file
+##################
+# Compiled files #
+##################
 *.class
 
-# Log file
-*.log
+##################
+# intellij files #
+##################
+*.iws
+*.iml
+*.ipr
+!.idea/runConfigurations
+.idea/inspectionProfiles
+.idea/libraries
+.idea/codeStyles
+.idea/*.*
 
-# BlueJ files
-*.ctxt
+#################
+# eclipse files #
+#################
+/.project
+/.classpath
+/.settings
+/.tern-project
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+###########
+### STS ###
+###########
+.apt_generated
+.factorypath
+.springBeans
+.sts4-cache
 
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
+
+################
+### NetBeans ###
+################
+/nbproject/private/
+/nbbuild/
+/nbdist/
+/.nb-gradle/
+/build/
+
+#########################
+# maven generated files #
+#########################
+/target
+/.mvn/
+
+#############
+# Zip files #
+#############
+*.tar
 *.zip
-*.tar.gz
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
 *.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+##############
+# Logs files #
+##############
+*.log
+
+#################
+# test-ng files #
+#################
+/test-output
+
+############################
+# Binaries generated files #
+############################
+/bin
+
+################
+# gradle files #
+################
+/build
+/.gradle
+/gradle
+/pom.xml.bak
