@@ -30,14 +30,14 @@ Than you can add the dependency to your dependencies:
 
 	<properties>
 			...
-		<!-- MERGE-API version -->
+		<!-- CRYPT-API version -->
 		<crypt-api.version>7</crypt-api.version>
 			...
 	</properties>
 			...
 		<dependencies>
 			...
-			<!-- MERGE-API DEPENDENCY -->
+			<!-- CRYPT-API DEPENDENCY -->
 			<dependency>
 				<groupId>de.alpharogroup</groupId>
 				<artifactId>crypt-api</artifactId>
