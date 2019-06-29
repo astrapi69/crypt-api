@@ -10,4 +10,4 @@ Version 7
 ADDED:
 
 - this changelog file
-- moved jobject-merge-api to this project
+- moved crypt-api to this project
