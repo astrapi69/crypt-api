@@ -1,6 +1,17 @@
 ## Change log
 ----------------------
 
+Version 7.2
+-------------
+
+ADDED:
+
+- new value NONE to Operation enum
+
+CHANGED
+
+- removed value TITLE_CASE from Operation enum
+
 Version 7.1
 -------------
 
