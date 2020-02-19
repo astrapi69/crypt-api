@@ -1,6 +1,18 @@
 ## Change log
 ----------------------
 
+Version 7.3
+-------------
+
+ADDED:
+ 
+- new build system gradle
+
+CHANGED:
+
+- removed maven build system and all related files
+- removed all lombok dependent imports
+
 Version 7.2
 -------------
 

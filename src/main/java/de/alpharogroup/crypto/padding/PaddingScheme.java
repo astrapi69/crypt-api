@@ -24,8 +24,6 @@
  */
 package de.alpharogroup.crypto.padding;
 
-import lombok.Getter;
-
 /**
  * The enum {@link PaddingScheme}.
  */
@@ -58,7 +56,6 @@ public enum PaddingScheme
 
 
 	/** The padding scheme. */
-	@Getter
 	private final String scheme;
 
 	/**
@@ -70,5 +67,10 @@ public enum PaddingScheme
 	private PaddingScheme(final String scheme)
 	{
 		this.scheme = scheme;
+	}
+
+	public String getScheme()
+	{
+		return this.scheme;
 	}
 }

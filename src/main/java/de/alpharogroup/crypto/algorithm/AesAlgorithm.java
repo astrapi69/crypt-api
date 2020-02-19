@@ -24,8 +24,6 @@
  */
 package de.alpharogroup.crypto.algorithm;
 
-import lombok.Getter;
-
 /**
  * The enum {@link AesAlgorithm} for the Advanced Encryption Standard (AES), also known as Rijndael.
  */
@@ -39,7 +37,6 @@ public enum AesAlgorithm implements Algorithm
 	public static final int AES_KEY_LENGTH = 256;
 
 	/** The algorithm. */
-	@Getter
 	private final String algorithm;
 
 	/**
@@ -51,5 +48,11 @@ public enum AesAlgorithm implements Algorithm
 	private AesAlgorithm(final String algorithm)
 	{
 		this.algorithm = algorithm;
+	}
+
+	@Override
+	public String getAlgorithm()
+	{
+		return algorithm;
 	}
 }
