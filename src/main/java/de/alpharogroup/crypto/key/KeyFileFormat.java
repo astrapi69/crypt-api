@@ -24,8 +24,6 @@
  */
 package de.alpharogroup.crypto.key;
 
-import lombok.Getter;
-
 /**
  * The enum {@link KeyFileFormat}.
  */
@@ -51,7 +49,6 @@ public enum KeyFileFormat
 	PEM("cer", "crt", "pem");
 
 	/** The file extensions. */
-	@Getter
 	private final String[] fileExtensions;
 
 	/**
@@ -63,5 +60,10 @@ public enum KeyFileFormat
 	private KeyFileFormat(String... fileExtensions)
 	{
 		this.fileExtensions = fileExtensions;
+	}
+
+	public String[] getFileExtensions()
+	{
+		return this.fileExtensions;
 	}
 }

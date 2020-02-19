@@ -24,8 +24,6 @@
  */
 package de.alpharogroup.crypto.key;
 
-import lombok.Getter;
-
 /**
  * The enum {@link KeyType} can discriminate the type, if it is a private or public key or a
  * certificate.
@@ -48,7 +46,6 @@ public enum KeyType
 	/** The password protected public key type. */
 	PUBLIC_KEY_PASSWORD_PROTECTED("Password protected public key");
 
-	@Getter
 	private final String displayValue;
 
 	/**
@@ -60,6 +57,11 @@ public enum KeyType
 	private KeyType(final String displayValue)
 	{
 		this.displayValue = displayValue;
+	}
+
+	public String getDisplayValue()
+	{
+		return this.displayValue;
 	}
 
 	/**

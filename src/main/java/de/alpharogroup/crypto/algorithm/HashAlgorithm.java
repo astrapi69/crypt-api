@@ -24,8 +24,6 @@
  */
 package de.alpharogroup.crypto.algorithm;
 
-import lombok.Getter;
-
 /**
  * The enum {@link HashAlgorithm} represents the one-way conversion hash algorithms.
  *
@@ -60,7 +58,6 @@ public enum HashAlgorithm implements Algorithm
 	SHA512("SHA512");
 
 	/** The algorithm. */
-	@Getter
 	private final String algorithm;
 
 	/**
@@ -72,6 +69,12 @@ public enum HashAlgorithm implements Algorithm
 	private HashAlgorithm(final String algorithm)
 	{
 		this.algorithm = algorithm;
+	}
+
+	@Override
+	public String getAlgorithm()
+	{
+		return algorithm;
 	}
 
 }

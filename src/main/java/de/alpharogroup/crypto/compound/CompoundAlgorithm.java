@@ -35,7 +35,6 @@ import de.alpharogroup.crypto.algorithm.UnionWord;
 import de.alpharogroup.crypto.mechanisms.PBEMechanism;
 import de.alpharogroup.crypto.modes.Mode;
 import de.alpharogroup.crypto.pw.PasswordHashType;
-import lombok.Getter;
 
 /**
  * The enum {@link CompoundAlgorithm} provides some compound algorithms
@@ -99,7 +98,6 @@ public enum CompoundAlgorithm implements Algorithm
 			(byte)0x35, (byte)0xE3, (byte)0x03 };
 
 	/** The algorithm. */
-	@Getter
 	private final String algorithm;
 
 	/**
@@ -111,5 +109,11 @@ public enum CompoundAlgorithm implements Algorithm
 	private CompoundAlgorithm(final String algorithm)
 	{
 		this.algorithm = algorithm;
+	}
+
+	@Override
+	public String getAlgorithm()
+	{
+		return this.algorithm;
 	}
 }

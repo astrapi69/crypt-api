@@ -26,7 +26,6 @@ package de.alpharogroup.crypto.algorithm;
 
 import de.alpharogroup.crypto.modes.Mode;
 import de.alpharogroup.crypto.padding.PaddingScheme;
-import lombok.Getter;
 
 /**
  * The enum {@link KeyPairWithModeAndPaddingAlgorithm}.
@@ -80,7 +79,6 @@ public enum KeyPairWithModeAndPaddingAlgorithm implements Algorithm
 
 
 	/** The algorithm. */
-	@Getter
 	private final String algorithm;
 
 	/**
@@ -92,6 +90,12 @@ public enum KeyPairWithModeAndPaddingAlgorithm implements Algorithm
 	private KeyPairWithModeAndPaddingAlgorithm(final String algorithm)
 	{
 		this.algorithm = algorithm;
+	}
+
+	@Override
+	public String getAlgorithm()
+	{
+		return algorithm;
 	}
 
 }

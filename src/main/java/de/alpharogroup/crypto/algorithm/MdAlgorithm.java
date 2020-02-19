@@ -24,8 +24,6 @@
  */
 package de.alpharogroup.crypto.algorithm;
 
-import lombok.Getter;
-
 /**
  * The enum {@link MdAlgorithm} defines the MessageDigest algorithm.
  *
@@ -45,7 +43,6 @@ public enum MdAlgorithm implements Algorithm
 	MD5("MD5");
 
 	/** The algorithm. */
-	@Getter
 	private final String algorithm;
 
 	/**
@@ -57,5 +54,11 @@ public enum MdAlgorithm implements Algorithm
 	private MdAlgorithm(final String algorithm)
 	{
 		this.algorithm = algorithm;
+	}
+
+	@Override
+	public String getAlgorithm()
+	{
+		return algorithm;
 	}
 }

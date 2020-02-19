@@ -24,8 +24,6 @@
  */
 package de.alpharogroup.crypto.algorithm;
 
-import lombok.Getter;
-
 /**
  * The enum {@link SunJCEAlgorithm} defines the algorithm specified by the SunJCE security provider.
  *
@@ -48,7 +46,6 @@ public enum SunJCEAlgorithm implements Algorithm
 	PBEWithMD5AndDES("PBEWithMD5AndDES");
 
 	/** The algorithm. */
-	@Getter
 	private final String algorithm;
 
 	/**
@@ -62,4 +59,9 @@ public enum SunJCEAlgorithm implements Algorithm
 		this.algorithm = algorithm;
 	}
 
+	@Override
+	public String getAlgorithm()
+	{
+		return this.algorithm;
+	}
 }

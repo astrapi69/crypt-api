@@ -26,8 +26,6 @@ package de.alpharogroup.crypto.algorithm;
 
 import java.security.SecureRandom;
 
-import lombok.Getter;
-
 /**
  * The enum {@link RngAlgorithm} provides algorithms for generation of random number generator (RNG)
  * that are used with the {@link SecureRandom} object. <br>
@@ -57,7 +55,6 @@ public enum RngAlgorithm implements Algorithm
 	/**
 	 * {@inheritDoc}
 	 */
-	@Getter
 	private final String algorithm;
 
 	/**
@@ -69,5 +66,11 @@ public enum RngAlgorithm implements Algorithm
 	RngAlgorithm(final String algorithm)
 	{
 		this.algorithm = algorithm;
+	}
+
+	@Override
+	public String getAlgorithm()
+	{
+		return algorithm;
 	}
 }

@@ -24,8 +24,6 @@
  */
 package de.alpharogroup.crypto.key;
 
-import lombok.Getter;
-
 /**
  * The enum {@link KeySize} hold the bit size for private keys.
  */
@@ -45,7 +43,6 @@ public enum KeySize
 	KEYSIZE_8192(8192);
 
 	/** The display. */
-	@Getter
 	private final Integer keySize;
 
 	/**
@@ -57,6 +54,11 @@ public enum KeySize
 	private KeySize(final Integer keySize)
 	{
 		this.keySize = keySize;
+	}
+
+	public Integer getKeySize()
+	{
+		return this.keySize;
 	}
 
 	/**
