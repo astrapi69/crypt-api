@@ -45,6 +45,24 @@ Than you can add the dependency to your dependencies:
 			</dependency>
 			...
 		</dependencies>
+	
+			
+## gradle dependency
+
+You can first define the version in the ext section and add than the following gradle dependency to your project `build.gradle` if you want to import the core functionality of crypt-api:
+
+```
+ext {
+			...
+    cryptApiVersion = "7.3"
+			...
+}
+dependencies {
+			...
+compile "de.alpharogroup:crypt-api:$cryptApiVersion"
+			...
+}
+```
 
 ## Semantic Versioning
 
