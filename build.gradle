@@ -3,15 +3,15 @@ plugins {
     id "java"
     id "maven-publish"
     id "signing"
-    id "com.github.ben-manes.versions" version "0.27.0"
+    id "com.github.ben-manes.versions" version "0.28.0"
     id "com.github.hierynomus.license" version "0.15.0"
 }
 
 apply plugin: "jacoco"
 
-group = "de.alpharogroup"
+group = "$groupPackage"
 version = "$projectVersion"
-description = "crypt-api"
+description = "$rootProject.name"
 sourceCompatibility = "1.8"
 
 repositories {
@@ -81,21 +81,21 @@ def releaseVersion = !version.endsWith("SNAPSHOT")
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            artifactId = "${rootProject.name}"
+            artifactId = "$rootProject.name"
             from components.java
             artifact sourcesJar
             artifact javadocJar
             pom {
-                name = "${rootProject.name}"
-                description = "Provides interfaces for encrypting and decrypting bytes, text, and files"
-                url = "https://github.com/astrapi69/"+"${rootProject.name}"
+                name = "$rootProject.name"
+                description = "$projectDescription"
+                url = "https://github.com/"+"$projectHolderUsername"+"/"+"$rootProject.name"
                 organization {
                     name = "Alpha Ro Group UG (haftungsbeschrängt)"
                     url = "http://www.alpharogroup.de/"
                 }
                 issueManagement {
                     system = "GitHub"
-                    url = "https://github.com/astrapi69/"+"${rootProject.name}"+"/issues"
+                    url = "https://github.com/"+"$projectHolderUsername"+"/"+"$rootProject.name"+"/issues"
                 }
                 licenses {
                     license {
@@ -111,9 +111,9 @@ publishing {
                     }
                 }
                 scm {
-                    connection = "scm:git:git:@github.com:astrapi69/"+"${rootProject.name}"+".git"
-                    developerConnection = "scm:git:git@github.com:astrapi69/"+"${rootProject.name}"+".git"
-                    url = "git:@github.com:astrapi69/"+"${rootProject.name}"+".git"
+                    connection = "scm:git:git:@github.com:"+"$projectHolderUsername"+"/"+"$rootProject.name"+".git"
+                    developerConnection = "scm:git:git:@github.com:"+"$projectHolderUsername"+"/"+"$rootProject.name"+".git"
+                    url = "scm:git:git:@github.com:"+"$projectHolderUsername"+"/"+"$rootProject.name"+".git"
                 }
             }
         }
