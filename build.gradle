@@ -22,7 +22,7 @@ apply plugin: "jacoco"
 group = "$groupPackage"
 version = "$projectVersion"
 description = "$rootProject.name"
-sourceCompatibility = "1.8"
+sourceCompatibility = "$projectSourceCompatibility"
 
 repositories {
     mavenLocal()
