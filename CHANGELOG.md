@@ -4,6 +4,11 @@
 Version 7.4-SNAPSHOT
 -------------
 
+CHANGED:
+
+- update gradle to new version 6.4.1
+- extracted project properties to gradle.properties
+
 Version 7.3
 -------------
 
