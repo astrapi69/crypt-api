@@ -36,6 +36,9 @@ public enum HashAlgorithm implements Algorithm
 	/** The enum constant for SHA-1 algorithm. */
 	SHA_1("SHA-1"),
 
+	/** The enum constant for SHA-224 algorithm. */
+	SHA_224("SHA-224"),
+
 	/** The enum constant for SHA-256 algorithm. */
 	SHA_256("SHA-256"),
 
@@ -47,6 +50,9 @@ public enum HashAlgorithm implements Algorithm
 
 	/** The enum constant for SHA1 algorithm. */
 	SHA1("SHA1"),
+
+	/** The enum constant for SHA224 algorithm. */
+	SHA224("SHA224"),
 
 	/** The enum constant for SHA256 algorithm. */
 	SHA256("SHA256"),
@@ -66,7 +72,7 @@ public enum HashAlgorithm implements Algorithm
 	 * @param algorithm
 	 *            the algorithm.
 	 */
-	private HashAlgorithm(final String algorithm)
+	HashAlgorithm(final String algorithm)
 	{
 		this.algorithm = algorithm;
 	}

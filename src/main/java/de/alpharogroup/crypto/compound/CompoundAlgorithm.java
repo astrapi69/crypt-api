@@ -75,10 +75,28 @@ public enum CompoundAlgorithm implements Algorithm
 		+ HashAlgorithm.SHA1.name()),
 
 	/**
+	 * The enum constant for the 'SHA1withRSA' algorithm
+	 */
+	SHA1_WITH_RSA(HashAlgorithm.SHA1.getAlgorithm() + UnionWord.With.name().toLowerCase()
+			+ KeyPairGeneratorAlgorithm.RSA.getAlgorithm()),
+
+	/**
 	 * The enum constant for the 'SHA256withRSA' algorithm
 	 */
 	SHA256_WITH_RSA(HashAlgorithm.SHA256.getAlgorithm() + UnionWord.With.name().toLowerCase()
-		+ KeyPairGeneratorAlgorithm.RSA.getAlgorithm());
+			+ KeyPairGeneratorAlgorithm.RSA.getAlgorithm()),
+
+	/**
+	 * The enum constant for the 'SHA384withRSA' algorithm
+	 */
+	SHA384_WITH_RSA(HashAlgorithm.SHA384.getAlgorithm() + UnionWord.With.name().toLowerCase()
+			+ KeyPairGeneratorAlgorithm.RSA.getAlgorithm()),
+
+	/**
+	 * The enum constant for the 'SHA512withRSA' algorithm
+	 */
+	SHA512_WITH_RSA(HashAlgorithm.SHA512.getAlgorithm() + UnionWord.With.name().toLowerCase()
+			+ KeyPairGeneratorAlgorithm.RSA.getAlgorithm());
 
 
 	/**
@@ -106,7 +124,7 @@ public enum CompoundAlgorithm implements Algorithm
 	 * @param algorithm
 	 *            the algorithm
 	 */
-	private CompoundAlgorithm(final String algorithm)
+	CompoundAlgorithm(final String algorithm)
 	{
 		this.algorithm = algorithm;
 	}

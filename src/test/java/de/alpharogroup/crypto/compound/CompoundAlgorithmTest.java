@@ -49,6 +49,12 @@ public class CompoundAlgorithmTest
 		assertEquals(CompoundAlgorithm.PBE_WITH_SHA1_AND_128BIT_AES_CBC_BC.getAlgorithm(),
 			"PBEWITHSHA1AND128BITAES-CBC-BC");
 
+		assertEquals(CompoundAlgorithm.SHA512_WITH_RSA.getAlgorithm(), "SHA512withRSA");
+
+		assertEquals(CompoundAlgorithm.SHA384_WITH_RSA.getAlgorithm(), "SHA384withRSA");
+
 		assertEquals(CompoundAlgorithm.SHA256_WITH_RSA.getAlgorithm(), "SHA256withRSA");
+
+		assertEquals(CompoundAlgorithm.SHA1_WITH_RSA.getAlgorithm(), "SHA1withRSA");
 	}
 }

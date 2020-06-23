@@ -3,10 +3,14 @@
 
 Version 7.4-SNAPSHOT
 -------------
+ADDED:
+ 
+- new compound algorithm 'SHA1withRSA', 'SHA256withRSA', 'SHA384withRSA' and 'SHA512withRSA', to enum CompoundAlgorithm
+- new hash algorithm 'SHA224' to enum HashAlgorithm
 
 CHANGED:
 
-- update gradle to new version 6.4.1
+- update gradle to new version 6.5
 - extracted project properties to gradle.properties
 
 Version 7.3
