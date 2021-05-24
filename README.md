@@ -31,7 +31,7 @@ Than you can add the dependency to your dependencies:
 	<properties>
 			...
 		<!-- CRYPT-API version -->
-		<crypt-api.version>7.3</crypt-api.version>
+		<crypt-api.version>7.4</crypt-api.version>
 			...
 	</properties>
 			...
@@ -39,7 +39,7 @@ Than you can add the dependency to your dependencies:
 			...
 			<!-- CRYPT-API DEPENDENCY -->
 			<dependency>
-				<groupId>de.alpharogroup</groupId>
+				<groupId>io.github.astrapi69</groupId>
 				<artifactId>crypt-api</artifactId>
 				<version>${crypt-api.version}</version>
 			</dependency>
@@ -49,17 +49,31 @@ Than you can add the dependency to your dependencies:
 			
 ## gradle dependency
 
-You can first define the version in the ext section and add than the following gradle dependency to your project `build.gradle` if you want to import the core functionality of crypt-api:
+You can first define the version in the ext section and add than the following gradle dependency 
+to your project `build.gradle` if you want to import the core functionality of crypt-api:
+
+```
+define version in file gradle.properties
+
+cryptApiVersion=7.4
+```
+
+or in build.gradle ext area
 
 ```
 ext {
 			...
-    cryptApiVersion = "7.3"
+    cryptApiVersion = "7.4"
 			...
 }
+```
+
+and than add the dependency to the dependencies area
+ 
+```
 dependencies {
 			...
-compile "de.alpharogroup:crypt-api:$cryptApiVersion"
+implementation("io.github.astrapi69:crypt-api:$cryptApiVersion")
 			...
 }
 ```
@@ -93,16 +107,57 @@ Do not hesitate to contact the crypt-api developers with your questions, concern
 
 No animals were harmed in the making of this library.
 
-
 # Donations
 
-If you like this library, please consider a donation through bitcoin or over bitcoin-cash with:
+This project is kept as an open source product and relies on contributions to remain being
+developed. If you like this library, please consider a donation
 
-36JxRRDfRazLNqUV6NsywCw1q7TK38ukpC
+over paypal: <br><br>
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=MJ7V43GU2H386" target="_blank">
+<img src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" alt="PayPal this" title="PayPal – The safer, easier way to pay online!" style="border: none" />
+</a>
+<br><br>
+or over bitcoin(BTC) with this address:
 
-or over ether with:
+bc1ql2y99q7e8psndhcc3gferk03esw3qqf677rhjy
 
-0x588Aa02De98B1Ef70afeDC3ec5290130a3E5e273
+<img src="https://github.com/astrapi69/jgeohash/blob/master/src/main/resources/img/bc1ql2y99q7e8psndhcc3gferk03esw3qqf677rhjy.png"
+alt="Donation Bitcoin Wallet" width="250"/>
+
+or over FIO with this address:
+
+FIO7tFMUVAA9cHiPPqKMfMXiSxHrbpiFyRYqTketNuM67aULuwjop
+
+<img src="https://github.com/astrapi69/jgeohash/blob/master/src/main/resources/img/FIO7tFMUVAA9cHiPPqKMfMXiSxHrbpiFyRYqTketNuM67aULuwjop.png"
+alt="Donation FIO Wallet" width="250"/>
+
+or over Ethereum(ETH) with:
+
+0xc057D159D3C8f3311E73568b334FF6fE82EB2b7D
+
+<img src="https://github.com/astrapi69/jgeohash/blob/master/src/main/resources/img/0xc057D159D3C8f3311E73568b334FF6fE82EB2b7D.png"
+alt="Donation Ethereum Wallet" width="250"/>
+
+or over Ethereum Classic(ETC) with:
+
+0xF708cA86D86C246B69c3F4BAe431eBbe0c2bfddD
+
+<img src="https://github.com/astrapi69/jgeohash/blob/master/src/main/resources/img/0xF708cA86D86C246B69c3F4BAe431eBbe0c2bfddD.png"
+alt="Donation Ethereum Classic Wallet" width="250"/>
+
+or over Dogecoin(DOGE) with:
+
+D5yi4Um8cpakd6yPRm2hGWuQ5nrVzhSSW1
+
+<img src="https://github.com/astrapi69/jgeohash/blob/master/src/main/resources/img/D5yi4Um8cpakd6yPRm2hGWuQ5nrVzhSSW1.png"
+alt="Donation Dogecoin Wallet" width="250"/>
+
+or over Monero(XMR) with:
+
+49bqeRQ7Bf49oJFVC72pqpe5hFbb62pfXDYPdLsadGGF81KZW2ZfrPZ8PbAVu5X2v1TYAspeczMya3cYQysNS4usRRPQHVw
+
+<img src="https://github.com/astrapi69/jgeohash/blob/master/src/main/resources/img/49bqeRQ7Bf49oJFVC72pqpe5hFbb62pfXDYPdLsadGGF81KZW2ZfrPZ8PbAVu5X2v1TYAspeczMya3cYQysNS4usRRPQHVw.png"
+alt="Donation Monero Wallet" width="250"/>
 
 or over flattr:
 
