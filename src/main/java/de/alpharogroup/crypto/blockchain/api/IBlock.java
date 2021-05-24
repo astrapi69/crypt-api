@@ -28,6 +28,7 @@ import java.util.List;
 
 public interface IBlock
 {
+	String getData();
 
 	byte[] getHash();
 
@@ -42,6 +43,8 @@ public interface IBlock
 	List<ITransaction> getTransactions();
 
 	long getTries();
+
+	void setData(String data);
 
 	void setHash(byte[] hash);
 
