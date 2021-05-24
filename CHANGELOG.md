@@ -3,14 +3,17 @@
 
 Version 7.4-SNAPSHOT
 -------------
+
 ADDED:
  
 - new compound algorithm 'SHA1withRSA', 'SHA256withRSA', 'SHA384withRSA' and 'SHA512withRSA', to enum CompoundAlgorithm
 - new hash algorithm 'SHA224' to enum HashAlgorithm
+- new field data in interface IBlock created
 
 CHANGED:
 
-- update gradle to new version 6.5
+- changed to new package io.github.astrapi69
+- update gradle to new version 7.0.2
 - extracted project properties to gradle.properties
 
 Version 7.3
