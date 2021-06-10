@@ -4,6 +4,10 @@
 Version 7.5-SNAPSHOT
 -------------
 
+ADDED:
+
+- new algorithm 'AES/CBC/PKCS5Padding' in the enum KeyPairWithModeAndPaddingAlgorithm
+
 Version 7.4
 -------------
 
