@@ -29,13 +29,13 @@ public interface IAddress
 
 	byte[] getHash();
 
-	String getName();
-
-	byte[] getPublicKey();
-
 	void setHash(byte[] hash);
 
+	String getName();
+
 	void setName(String name);
+
+	byte[] getPublicKey();
 
 	void setPublicKey(byte[] publicKey);
 

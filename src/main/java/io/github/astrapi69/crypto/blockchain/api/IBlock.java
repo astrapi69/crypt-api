@@ -30,31 +30,31 @@ public interface IBlock
 {
 	String getData();
 
+	void setData(String data);
+
 	byte[] getHash();
+
+	void setHash(byte[] hash);
 
 	int getLeadingZerosCount();
 
 	byte[] getMerkleRoot();
 
-	byte[] getPreviousBlockHash();
-
-	long getTimestamp();
-
-	List<ITransaction> getTransactions();
-
-	long getTries();
-
-	void setData(String data);
-
-	void setHash(byte[] hash);
-
 	void setMerkleRoot(byte[] merkleRoot);
+
+	byte[] getPreviousBlockHash();
 
 	void setPreviousBlockHash(byte[] previousBlockHash);
 
+	long getTimestamp();
+
 	void setTimestamp(long timestamp);
 
+	List<ITransaction> getTransactions();
+
 	void setTransactions(List<ITransaction> transactions);
+
+	long getTries();
 
 	void setTries(long tries);
 

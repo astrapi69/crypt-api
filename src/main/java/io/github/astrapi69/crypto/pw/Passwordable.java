@@ -31,13 +31,17 @@ public interface Passwordable
 {
 	/**
 	 * Sets the given password
-	 * @param password the password to set
+	 * 
+	 * @param password
+	 *            the password to set
 	 */
 	void setPassword(String password);
 
 	/**
 	 * Sets the given password
-	 * @param password the password to set
+	 * 
+	 * @param password
+	 *            the password to set
 	 */
 	void setPassword(char[] password);
 

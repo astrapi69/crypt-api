@@ -50,11 +50,8 @@ public enum RngAlgorithm implements Algorithm
 	SHA1PRNG("SHA1PRNG"),
 	/** The Windows PRNG. */
 	Windows_PRNG("Windows-PRNG");
-	/** The algorithm. */
 
-	/**
-	 * {@inheritDoc}
-	 */
+	/** The algorithm. */
 	private final String algorithm;
 
 	/**

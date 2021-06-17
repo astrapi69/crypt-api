@@ -29,23 +29,23 @@ public interface ITransaction
 
 	byte[] getHash();
 
+	void setHash(byte[] hash);
+
 	byte[] getSenderHash();
+
+	void setSenderHash(byte[] senderHash);
 
 	byte[] getSignableData();
 
 	byte[] getSignature();
 
-	String getText();
-
-	long getTimestamp();
-
-	void setHash(byte[] hash);
-
-	void setSenderHash(byte[] senderHash);
-
 	void setSignature(byte[] signature);
 
+	String getText();
+
 	void setText(String text);
+
+	long getTimestamp();
 
 	void setTimestamp(long timestamp);
 

@@ -39,8 +39,8 @@ public enum KeyPairWithModeAndPaddingAlgorithm implements Algorithm
 	 * The enum constant with the 'AES' algorithm with mode 'CBC' and padding 'PKCS5Padding' that
 	 * results in 'AES/CBC/PKCS5Padding'.
 	 */
-	AES_CBC_PKCS5Padding(AesAlgorithm.AES.name() + "/" + Mode.CBC.name() + "/"
-		+ PaddingScheme.PKCS5Padding.name()),
+	AES_CBC_PKCS5Padding(
+		AesAlgorithm.AES.name() + "/" + Mode.CBC.name() + "/" + PaddingScheme.PKCS5Padding.name()),
 
 	/**
 	 * The enum constant with the 'DESede' algorithm with mode 'CBC' and padding 'PKCS5Padding' that
@@ -94,7 +94,7 @@ public enum KeyPairWithModeAndPaddingAlgorithm implements Algorithm
 	 * @param algorithm
 	 *            the algorithm.
 	 */
-	private KeyPairWithModeAndPaddingAlgorithm(final String algorithm)
+	KeyPairWithModeAndPaddingAlgorithm(final String algorithm)
 	{
 		this.algorithm = algorithm;
 	}

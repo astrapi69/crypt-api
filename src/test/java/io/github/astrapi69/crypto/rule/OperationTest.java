@@ -28,10 +28,11 @@ import static org.testng.AssertJUnit.assertEquals;
 
 import java.lang.reflect.InvocationTargetException;
 
-import io.github.astrapi69.crypto.obfuscation.rule.Operation;
 import org.meanbean.test.BeanTestException;
 import org.meanbean.test.BeanTester;
 import org.testng.annotations.Test;
+
+import io.github.astrapi69.crypto.obfuscation.rule.Operation;
 
 /**
  * The unit test class for the class {@link Operation}
@@ -43,7 +44,7 @@ public class OperationTest
 	 * Test method for {@link Operation#operate(char, Operation)}
 	 */
 	@Test
-	public void testOperateCharOperation() throws Exception
+	public void testOperateCharOperation()
 	{
 		Character expected;
 		Character actual;
@@ -77,7 +78,7 @@ public class OperationTest
 	 * Test method for {@link Operation#operate(char, Operation, boolean)}
 	 */
 	@Test
-	public void testOperateCharOperationBoolean() throws Exception
+	public void testOperateCharOperationBoolean()
 	{
 		Character expected;
 		Character actual;
