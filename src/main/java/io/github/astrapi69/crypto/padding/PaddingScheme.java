@@ -24,6 +24,8 @@
  */
 package io.github.astrapi69.crypto.padding;
 
+import io.github.astrapi69.crypto.mechanisms.PBEMechanism;
+
 /**
  * The enum {@link PaddingScheme}.
  */
@@ -48,12 +50,15 @@ public enum PaddingScheme
 	/** The OAEP with SHA 256 and MGF 1 padding. */
 	OAEPWithSHA256AndMGF1Padding("OAEPWithSHA256AndMGF1Padding"),
 
-	/** The PKCS 1 padding. */
-	PKCS1Padding("PKCS1Padding"),
+	/**
+	 * The enum constant for the 'PKCS1Padding' algorithm
+	 **/
+	PKCS1Padding(PBEMechanism.PKCS.name() + "1Padding"),
 
-	/** The PKCS 5 padding. */
-	PKCS5Padding("PKCS5Padding");
-
+	/**
+	 * The enum constant for the 'PKCS5Padding' algorithm
+	 **/
+	PKCS5Padding(PBEMechanism.PKCS.name() + "5Padding");
 
 	/** The padding scheme. */
 	private final String scheme;
