@@ -1,7 +1,7 @@
 ## Change log
 ----------------------
 
-Version 7.5-SNAPSHOT
+Version 7.5
 -------------
 
 ADDED:
@@ -12,6 +12,7 @@ ADDED:
 CHANGED:
 
 - downgrade gradle to version 6.9
+- update of com.github.ben-manes.versions.gradle.plugin to new version 0.39.0
 
 Version 7.4
 -------------

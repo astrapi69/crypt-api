@@ -31,7 +31,7 @@ Than you can add the dependency to your dependencies:
 	<properties>
 			...
 		<!-- CRYPT-API version -->
-		<crypt-api.version>7.4</crypt-api.version>
+		<crypt-api.version>7.5</crypt-api.version>
 			...
 	</properties>
 			...
@@ -55,7 +55,7 @@ to your project `build.gradle` if you want to import the core functionality of c
 ```
 define version in file gradle.properties
 
-cryptApiVersion=7.4
+cryptApiVersion=7.5
 ```
 
 or in build.gradle ext area
@@ -63,7 +63,7 @@ or in build.gradle ext area
 ```
 ext {
 			...
-    cryptApiVersion = "7.4"
+    cryptApiVersion = "7.5"
 			...
 }
 ```
