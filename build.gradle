@@ -29,12 +29,6 @@ repositories {
     mavenCentral()
 }
 
-dependencies {
-    testImplementation("org.testng:testng:$testngVersion")
-    testImplementation("org.meanbean:meanbean:$meanbeanVersion")
-    testImplementation("de.alpharogroup:silly-collections:$sillyCollectionsVersion")
-}
-
 license {
     ext.year="$projectInceptionYear"
     ext.owner="$projectLeaderName"
@@ -168,3 +162,9 @@ jacocoTestReport {
 }
 
 check.dependsOn jacocoTestReport
+
+dependencies {
+    testImplementation("org.testng:testng:$testngVersion")
+    testImplementation("org.meanbean:meanbean:$meanbeanVersion")
+    testImplementation("de.alpharogroup:silly-collections:$sillyCollectionsVersion")
+}
