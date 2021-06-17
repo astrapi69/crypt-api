@@ -6,7 +6,12 @@ Version 7.5-SNAPSHOT
 
 ADDED:
 
+- new interface Passwordable that can be implemented from classes that want to encrypt or decrypt with a password
 - new algorithm 'AES/CBC/PKCS5Padding' in the enum KeyPairWithModeAndPaddingAlgorithm
+
+CHANGED:
+
+- downgrade gradle to version 6.9
 
 Version 7.4
 -------------
