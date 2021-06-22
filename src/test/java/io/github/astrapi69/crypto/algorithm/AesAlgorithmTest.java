@@ -22,19 +22,25 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package io.github.astrapi69.crypto.mechanisms;
+package io.github.astrapi69.crypto.algorithm;
+
+import static org.testng.AssertJUnit.assertEquals;
+
+import org.testng.annotations.Test;
 
 /**
- * The enum {@link PBEMechanism} defines some of the password-based encryption (PBE).
+ * The unit test class for the enum class {@link AesAlgorithm}
  */
-public enum PBEMechanism
+public class AesAlgorithmTest
 {
 
-	/** The pbe mechanism. */
-	PBE,
-	/** The pkcs mechanism. */
-	PKCS;
-
-	public static final String PBE_MECHANISM_NAME = "PBE";
-	public static final String PKCS_MECHANISM_NAME = "PKCS";
+	/**
+	 * Test for concatenated constants.
+	 */
+	@Test
+	public void testGetAlgorithms()
+	{
+		assertEquals(AesAlgorithm.AES.getAlgorithm(), "AES");
+		assertEquals(AesAlgorithm.AES_KEY_LENGTH, 256);
+	}
 }

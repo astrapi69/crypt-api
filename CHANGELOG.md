@@ -4,6 +4,10 @@
 Version 7.6-SNAPSHOT
 -------------
 
+ADDED:
+
+- new unit tests created for verify the values of the enums
+
 Version 7.5
 -------------
 

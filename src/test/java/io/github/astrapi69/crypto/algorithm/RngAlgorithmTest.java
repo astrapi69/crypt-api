@@ -22,19 +22,28 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package io.github.astrapi69.crypto.mechanisms;
+package io.github.astrapi69.crypto.algorithm;
+
+import static org.testng.AssertJUnit.assertEquals;
+
+import org.testng.annotations.Test;
 
 /**
- * The enum {@link PBEMechanism} defines some of the password-based encryption (PBE).
+ * The unit test class for the enum class {@link RngAlgorithm}
  */
-public enum PBEMechanism
+public class RngAlgorithmTest
 {
-
-	/** The pbe mechanism. */
-	PBE,
-	/** The pkcs mechanism. */
-	PKCS;
-
-	public static final String PBE_MECHANISM_NAME = "PBE";
-	public static final String PKCS_MECHANISM_NAME = "PKCS";
+	/**
+	 * Test for concatenated constants.
+	 */
+	@Test
+	public void testGetAlgorithms()
+	{
+		assertEquals(RngAlgorithm.NativePRNG.getAlgorithm(), "NativePRNG");
+		assertEquals(RngAlgorithm.NativePRNGBlocking.getAlgorithm(), "NativePRNGBlocking");
+		assertEquals(RngAlgorithm.NativePRNGNonBlocking.getAlgorithm(), "NativePRNGNonBlocking");
+		assertEquals(RngAlgorithm.PKCS11.getAlgorithm(), "PKCS11");
+		assertEquals(RngAlgorithm.SHA1PRNG.getAlgorithm(), "SHA1PRNG");
+		assertEquals(RngAlgorithm.Windows_PRNG.getAlgorithm(), "Windows-PRNG");
+	}
 }

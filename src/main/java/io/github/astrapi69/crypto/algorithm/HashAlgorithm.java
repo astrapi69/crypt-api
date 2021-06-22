@@ -34,35 +34,36 @@ public enum HashAlgorithm implements Algorithm
 {
 
 	/** The enum constant for SHA-1 algorithm. */
-	SHA_1("SHA-1"),
+	SHA_1(HashAlgorithm.SHA + "-" + 1),
 
 	/** The enum constant for SHA-224 algorithm. */
-	SHA_224("SHA-224"),
+	SHA_224(HashAlgorithm.SHA + "-" + 224),
 
 	/** The enum constant for SHA-256 algorithm. */
-	SHA_256("SHA-256"),
+	SHA_256(HashAlgorithm.SHA + "-" + 256),
 
 	/** The enum constant for SHA-384 algorithm. */
-	SHA_384("SHA-384"),
+	SHA_384(HashAlgorithm.SHA + "-" + 384),
 
 	/** The enum constant for SHA-512 algorithm. */
-	SHA_512("SHA-512"),
+	SHA_512(HashAlgorithm.SHA + "-" + 512),
 
 	/** The enum constant for SHA1 algorithm. */
-	SHA1("SHA1"),
+	SHA1(HashAlgorithm.SHA + 1),
 
 	/** The enum constant for SHA224 algorithm. */
-	SHA224("SHA224"),
+	SHA224(HashAlgorithm.SHA + 224),
 
 	/** The enum constant for SHA256 algorithm. */
-	SHA256("SHA256"),
+	SHA256(HashAlgorithm.SHA + 256),
 
 	/** The enum constant for SHA384 algorithm. */
-	SHA384("SHA384"),
+	SHA384(HashAlgorithm.SHA + 384),
 
 	/** The enum constant for SHA512 algorithm. */
-	SHA512("SHA512");
+	SHA512(HashAlgorithm.SHA + 512);
 
+	public static final String SHA = "SHA";
 	/** The algorithm. */
 	private final String algorithm;
 

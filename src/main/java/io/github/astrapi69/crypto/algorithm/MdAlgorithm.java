@@ -34,14 +34,16 @@ public enum MdAlgorithm implements Algorithm
 {
 
 	/** The enum constant for MD2 algorithm. */
-	MD2("MD2"),
+	MD2(MdAlgorithm.MD + 2),
 
 	/** The enum constant for MD4 algorithm. */
-	MD4("MD4"),
+	MD4(MdAlgorithm.MD + 4),
 
 	/** The enum constant for MD5 algorithm. */
-	MD5("MD5");
+	MD5(MdAlgorithm.MD_5);
 
+	public static final String MD = "MD";
+	public static final String MD_5 = MD + 5;
 	/** The algorithm. */
 	private final String algorithm;
 
@@ -51,7 +53,7 @@ public enum MdAlgorithm implements Algorithm
 	 * @param algorithm
 	 *            the algorithm.
 	 */
-	private MdAlgorithm(final String algorithm)
+	MdAlgorithm(final String algorithm)
 	{
 		this.algorithm = algorithm;
 	}

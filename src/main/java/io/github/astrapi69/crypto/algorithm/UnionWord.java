@@ -35,4 +35,7 @@ public enum UnionWord
 
 	/** The With enum value for chain algorithms */
 	With;
+
+	public static final String AND_UNION_WORD = "And";
+	public static final String WITH_UNION_WORD = "With";
 }

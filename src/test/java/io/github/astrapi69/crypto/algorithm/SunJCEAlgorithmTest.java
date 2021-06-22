@@ -22,19 +22,26 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package io.github.astrapi69.crypto.mechanisms;
+package io.github.astrapi69.crypto.algorithm;
+
+import static org.testng.AssertJUnit.assertEquals;
+
+import org.testng.annotations.Test;
 
 /**
- * The enum {@link PBEMechanism} defines some of the password-based encryption (PBE).
+ * The unit test class for the enum class {@link SunJCEAlgorithm}
  */
-public enum PBEMechanism
+public class SunJCEAlgorithmTest
 {
-
-	/** The pbe mechanism. */
-	PBE,
-	/** The pkcs mechanism. */
-	PKCS;
-
-	public static final String PBE_MECHANISM_NAME = "PBE";
-	public static final String PKCS_MECHANISM_NAME = "PKCS";
+	/**
+	 * Test for concatenated constants.
+	 */
+	@Test
+	public void testGetAlgorithms()
+	{
+		assertEquals(SunJCEAlgorithm.Blowfish.getAlgorithm(), "Blowfish");
+		assertEquals(SunJCEAlgorithm.DES.getAlgorithm(), "DES");
+		assertEquals(SunJCEAlgorithm.DESede.getAlgorithm(), "DESede");
+		assertEquals(SunJCEAlgorithm.PBEWithMD5AndDES.getAlgorithm(), "PBEWithMD5AndDES");
+	}
 }

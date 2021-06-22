@@ -24,6 +24,8 @@
  */
 package io.github.astrapi69.crypto.algorithm;
 
+import io.github.astrapi69.crypto.mechanisms.PBEMechanism;
+
 /**
  * The enum {@link SunJCEAlgorithm} defines the algorithm specified by the SunJCE security provider.
  *
@@ -37,13 +39,19 @@ public enum SunJCEAlgorithm implements Algorithm
 	Blowfish("Blowfish"),
 
 	/** The DES algorithm. */
-	DES("DES"),
+	DES(SunJCEAlgorithm.DES_ALGORITHM_NAME),
 
 	/** The DESede algorithm. */
-	DESede("DESede"),
+	DESede(SunJCEAlgorithm.DES_EDE_ALGORITHM_NAME),
 
 	/** The PBEWithMD5AndDES algorithm. */
-	PBEWithMD5AndDES("PBEWithMD5AndDES");
+	PBEWithMD5AndDES(SunJCEAlgorithm.PBEWithMD5AndDES_ALGORITHM_NAME);
+
+	public static final String DES_ALGORITHM_NAME = "DES";
+	public static final String DES_EDE_ALGORITHM_NAME = DES_ALGORITHM_NAME + "ede";
+	public static final String PBEWithMD5AndDES_ALGORITHM_NAME = PBEMechanism.PBE_MECHANISM_NAME
+		+ UnionWord.WITH_UNION_WORD + MdAlgorithm.MD_5 + UnionWord.AND_UNION_WORD
+		+ DES_ALGORITHM_NAME;
 
 	/** The algorithm. */
 	private final String algorithm;
@@ -54,7 +62,7 @@ public enum SunJCEAlgorithm implements Algorithm
 	 * @param algorithm
 	 *            the algorithm.
 	 */
-	private SunJCEAlgorithm(final String algorithm)
+	SunJCEAlgorithm(final String algorithm)
 	{
 		this.algorithm = algorithm;
 	}
