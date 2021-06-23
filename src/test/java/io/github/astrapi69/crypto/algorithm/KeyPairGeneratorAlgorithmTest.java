@@ -43,6 +43,7 @@ public class KeyPairGeneratorAlgorithmTest
 		assertEquals(KeyPairGeneratorAlgorithm.DIFFIE_HELLMAN.getAlgorithm(), "DiffieHellman");
 		assertEquals(KeyPairGeneratorAlgorithm.DSA.getAlgorithm(), "DSA");
 		assertEquals(KeyPairGeneratorAlgorithm.EC.getAlgorithm(), "EC");
-		assertEquals(KeyPairGeneratorAlgorithm.RSA.getAlgorithm(), "AES");
+		assertEquals(KeyPairGeneratorAlgorithm.RSA.getAlgorithm(), "RSA");
+		assertEquals(KeyPairGeneratorAlgorithm.RSAASSA_PSS.getAlgorithm(), "RSASSA-PSS");
 	}
 }

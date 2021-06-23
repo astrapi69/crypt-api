@@ -33,18 +33,28 @@ package io.github.astrapi69.crypto.algorithm;
 public enum KeyPairGeneratorAlgorithm implements Algorithm
 {
 	/** The enum constant for DIFFIE_HELLMAN algorithm. */
-	DIFFIE_HELLMAN("DiffieHellman"),
-
+	DIFFIE_HELLMAN(KeyPairGeneratorAlgorithm.DIFFIE_HELLMAN_ALGORITHM_NAME),
 	/** The enum constant for DSA algorithm. */
-	DSA("DSA"),
+	DSA(KeyPairGeneratorAlgorithm.DSA_ALGORITHM_NAME),
 	/** The enum constant for EC algorithm. */
-	EC("EC"),
+	EC(KeyPairGeneratorAlgorithm.EC_ALGORITHM_NAME),
 	/** The enum constant for RSA algorithm. */
-	RSA("RSA");
-
+	RSA(KeyPairGeneratorAlgorithm.RSA_ALGORITHM_NAME),
+	/** The enum constant for RSA algorithm. */
+	RSAASSA_PSS(KeyPairGeneratorAlgorithm.RSAASSA_PSS_ALGORITHM_NAME);
 
 	/** The algorithm. */
 	private final String algorithm;
+	/** The string constant DIFFIE_HELLMAN_ALGORITHM_NAME */
+	public static final String DIFFIE_HELLMAN_ALGORITHM_NAME = "DiffieHellman";
+	/** The string constant DSA_ALGORITHM_NAME */
+	public static final String DSA_ALGORITHM_NAME = "DSA";
+	/** The string constant EC_ALGORITHM_NAME */
+	public static final String EC_ALGORITHM_NAME = "EC";
+	/** The string constant RSA_ALGORITHM_NAME */
+	public static final String RSA_ALGORITHM_NAME = "RSA";
+	/** The string constant RSAASSA_PSS_ALGORITHM_NAME */
+	public static final String RSAASSA_PSS_ALGORITHM_NAME = RSA_ALGORITHM_NAME + "ASSA-PSS";
 
 	/**
 	 * Instantiates a new {@link KeyPairGeneratorAlgorithm} object.

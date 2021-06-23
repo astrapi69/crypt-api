@@ -31,21 +31,23 @@ public enum AesAlgorithm implements Algorithm
 {
 
 	/** The enum constant for AES algorithm. */
-	AES("AES");
+	AES(AesAlgorithm.AES_ALGORITHM_NAME);
 
-	/** The Constant AES_KEY_LENGTH. */
+	/** The constant AES_KEY_LENGTH */
 	public static final int AES_KEY_LENGTH = 256;
+	/** The string constant AES_ALGORITHM_NAME */
+	public static final String AES_ALGORITHM_NAME = "AES";
 
 	/** The algorithm. */
 	private final String algorithm;
 
 	/**
-	 * Instantiates a new {@link Algorithm} object.
+	 * Instantiates a new {@link AesAlgorithm} object.
 	 *
 	 * @param algorithm
 	 *            the algorithm.
 	 */
-	private AesAlgorithm(final String algorithm)
+	AesAlgorithm(final String algorithm)
 	{
 		this.algorithm = algorithm;
 	}

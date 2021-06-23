@@ -42,7 +42,9 @@ public enum MdAlgorithm implements Algorithm
 	/** The enum constant for MD5 algorithm. */
 	MD5(MdAlgorithm.MD_5);
 
+	/** The string constant MD that is use as prefix */
 	public static final String MD = "MD";
+	/** The string constant MD_5 */
 	public static final String MD_5 = MD + 5;
 	/** The algorithm. */
 	private final String algorithm;

@@ -25,7 +25,7 @@
 package io.github.astrapi69.crypto.algorithm;
 
 /**
- * The enum {@link HashAlgorithm} represents the one-way conversion hash algorithms.
+ * The enum {@link HashAlgorithm} represents the one-way conversion hash algorithms
  *
  * @version 1.0
  * @author Asterios Raptis
@@ -63,6 +63,7 @@ public enum HashAlgorithm implements Algorithm
 	/** The enum constant for SHA512 algorithm. */
 	SHA512(HashAlgorithm.SHA + 512);
 
+	/** The string constant SHA that is use as prefix */
 	public static final String SHA = "SHA";
 	/** The algorithm. */
 	private final String algorithm;

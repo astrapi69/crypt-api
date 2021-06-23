@@ -36,7 +36,7 @@ public enum SunJCEAlgorithm implements Algorithm
 {
 
 	/** The Blowfish algorithm. */
-	Blowfish("Blowfish"),
+	Blowfish(SunJCEAlgorithm.BLOWFISH_ALGORITHM_NAME),
 
 	/** The DES algorithm. */
 	DES(SunJCEAlgorithm.DES_ALGORITHM_NAME),
@@ -47,6 +47,7 @@ public enum SunJCEAlgorithm implements Algorithm
 	/** The PBEWithMD5AndDES algorithm. */
 	PBEWithMD5AndDES(SunJCEAlgorithm.PBEWithMD5AndDES_ALGORITHM_NAME);
 
+	public static final String BLOWFISH_ALGORITHM_NAME = "Blowfish";
 	public static final String DES_ALGORITHM_NAME = "DES";
 	public static final String DES_EDE_ALGORITHM_NAME = DES_ALGORITHM_NAME + "ede";
 	public static final String PBEWithMD5AndDES_ALGORITHM_NAME = PBEMechanism.PBE_MECHANISM_NAME

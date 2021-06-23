@@ -29,18 +29,46 @@ import java.security.KeyStore;
 /**
  * The enum {@link KeystoreType} for algorithm that are used to create {@link KeyStore} objects.
  */
-public enum KeystoreType
+public enum KeystoreType implements Algorithm
 {
 
-	/** The enum constant for DSA algorithm. */
-	DSA,
+	/** The enum constant for DSA algorithm.
+	 * @deprecated will be removed in next minor version
+	 */
+	DSA("dsa"),
 
 	/** The enum constant for JCEKS algorithm. */
-	JCEKS,
+	JCEKS("jceks"),
 
 	/** The enum constant for JKS algorithm. */
-	JKS,
+	JKS("jks"),
+
+	/** The enum constant for DKS algorithm. */
+	DKS("dks"),
+
+	/** The enum constant for PKCS11 algorithm. */
+	PKCS11("pkcs11"),
 
 	/** The enum constant for PKCS12 algorithm. */
-	PKCS12;
+	PKCS12("pkcs12");
+
+	/** The algorithm. */
+	private final String algorithm;
+
+	/**
+	 * Instantiates a new {@link AesAlgorithm} object.
+	 *
+	 * @param algorithm
+	 *            the algorithm.
+	 */
+	KeystoreType(final String algorithm)
+	{
+		this.algorithm = algorithm;
+	}
+
+	@Override
+	public String getAlgorithm()
+	{
+		return algorithm;
+	}
 }
