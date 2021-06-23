@@ -44,6 +44,6 @@ public class KeyPairGeneratorAlgorithmTest
 		assertEquals(KeyPairGeneratorAlgorithm.DSA.getAlgorithm(), "DSA");
 		assertEquals(KeyPairGeneratorAlgorithm.EC.getAlgorithm(), "EC");
 		assertEquals(KeyPairGeneratorAlgorithm.RSA.getAlgorithm(), "RSA");
-		assertEquals(KeyPairGeneratorAlgorithm.RSAASSA_PSS.getAlgorithm(), "RSASSA-PSS");
+		assertEquals(KeyPairGeneratorAlgorithm.RSASSA_PSS.getAlgorithm(), "RSASSA-PSS");
 	}
 }

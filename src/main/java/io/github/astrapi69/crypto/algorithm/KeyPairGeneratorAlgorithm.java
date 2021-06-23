@@ -41,7 +41,7 @@ public enum KeyPairGeneratorAlgorithm implements Algorithm
 	/** The enum constant for RSA algorithm. */
 	RSA(KeyPairGeneratorAlgorithm.RSA_ALGORITHM_NAME),
 	/** The enum constant for RSA algorithm. */
-	RSAASSA_PSS(KeyPairGeneratorAlgorithm.RSAASSA_PSS_ALGORITHM_NAME);
+	RSASSA_PSS(KeyPairGeneratorAlgorithm.RSASSA_PSS_ALGORITHM_NAME);
 
 	/** The algorithm. */
 	private final String algorithm;
@@ -54,7 +54,7 @@ public enum KeyPairGeneratorAlgorithm implements Algorithm
 	/** The string constant RSA_ALGORITHM_NAME */
 	public static final String RSA_ALGORITHM_NAME = "RSA";
 	/** The string constant RSAASSA_PSS_ALGORITHM_NAME */
-	public static final String RSAASSA_PSS_ALGORITHM_NAME = RSA_ALGORITHM_NAME + "ASSA-PSS";
+	public static final String RSASSA_PSS_ALGORITHM_NAME = RSA_ALGORITHM_NAME + "SSA-PSS";
 
 	/**
 	 * Instantiates a new {@link KeyPairGeneratorAlgorithm} object.
