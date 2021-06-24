@@ -41,6 +41,9 @@ public class AesAlgorithmTest
 	public void testGetAlgorithms()
 	{
 		assertEquals(AesAlgorithm.AES.getAlgorithm(), "AES");
+		assertEquals(AesAlgorithm.AES_KEY_MINIMUM_LENGTH, 128);
+		assertEquals(AesAlgorithm.AES_KEY_MEDIUM_LENGTH, 192);
+		assertEquals(AesAlgorithm.AES_KEY_MAXIMUM_LENGTH, 256);
 		assertEquals(AesAlgorithm.AES_KEY_LENGTH, 256);
 	}
 }

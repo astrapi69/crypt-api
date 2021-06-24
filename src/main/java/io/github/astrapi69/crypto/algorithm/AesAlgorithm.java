@@ -33,8 +33,14 @@ public enum AesAlgorithm implements Algorithm
 	/** The enum constant for AES algorithm. */
 	AES(AesAlgorithm.AES_ALGORITHM_NAME);
 
+	/** The constant AES_KEY_MINIMUM_LENGTH represents the minimum length of the AES algorithm */
+	public static final int AES_KEY_MINIMUM_LENGTH = 128;
+	/** The constant AES_KEY_MEDIUM_LENGTH represents the medium length of the AES algorithm */
+	public static final int AES_KEY_MEDIUM_LENGTH = 192;
+	/** The constant AES_KEY_MAXIMUM_LENGTH represents the maximum length of the AES algorithm */
+	public static final int AES_KEY_MAXIMUM_LENGTH = 256;
 	/** The constant AES_KEY_LENGTH */
-	public static final int AES_KEY_LENGTH = 256;
+	public static final int AES_KEY_LENGTH = AES_KEY_MAXIMUM_LENGTH;
 	/** The string constant AES_ALGORITHM_NAME */
 	public static final String AES_ALGORITHM_NAME = "AES";
 
