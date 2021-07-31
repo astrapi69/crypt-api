@@ -33,7 +33,7 @@ import org.meanbean.test.BeanTestException;
 import org.meanbean.test.BeanTester;
 import org.testng.annotations.Test;
 
-import de.alpharogroup.collections.array.ArrayFactory;
+import io.github.astrapi69.collections.array.ArrayFactory;
 
 /**
  * The unit test class for the class {@link KeyFileFormat}
@@ -63,6 +63,11 @@ public class KeyFileFormatTest
 		actual = KeyFileFormat.P7B.getFileExtensions();
 
 		expected = ArrayFactory.newArray("p7b", "p7c");
+		assertTrue(Arrays.equals(actual, expected));
+
+		actual = KeyFileFormat.UNKNOWN.getFileExtensions();
+
+		expected = ArrayFactory.newArray();
 		assertTrue(Arrays.equals(actual, expected));
 
 	}

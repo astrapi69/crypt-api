@@ -46,7 +46,12 @@ public enum KeyFileFormat
 	 * The constant for the file format PEM. The PEM file format is encoded in Base64 ASCII format.
 	 * PEM formatted files usually have the file extension '*.cer', '*.crt' and '*.pem'.
 	 */
-	PEM("cer", "crt", "pem");
+	PEM("cer", "crt", "pem"),
+
+	/**
+	 * The constant if the format is not known or can not be resolved
+	 */
+	UNKNOWN();
 
 	/** The file extensions. */
 	private final String[] fileExtensions;

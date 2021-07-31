@@ -166,5 +166,5 @@ check.dependsOn jacocoTestReport
 dependencies {
     testImplementation("org.testng:testng:$testngVersion")
     testImplementation("org.meanbean:meanbean:$meanbeanVersion")
-    testImplementation("de.alpharogroup:silly-collections:$sillyCollectionsVersion")
+    testImplementation("io.github.astrapi69:silly-collections:$sillyCollectionsVersion")
 }

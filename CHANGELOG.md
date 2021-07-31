@@ -8,6 +8,14 @@ ADDED:
 
 - new KeyFactory algorithm 'RSASSA-PSS' added to the enum KeyPairGeneratorAlgorithm
 - new unit tests created for verify the values of the enums
+- new field UNKNOWN in enum class KeyFileFormat for unknown file formats
+
+CHANGED:
+
+- update gradle to new version 7.1
+- changed all test dependencies from groupid de.alpharogroup to new groupid io.github.astrapi69
+- update gradle-plugin dependency of gradle.plugin.com.hierynomus.gradle.plugins:license-gradle-plugin to new version 0.16.1
+- update of test dependency silly-collections to new version to 8.7
 
 Version 7.5
 -------------

@@ -32,7 +32,9 @@ import java.security.KeyStore;
 public enum KeystoreType implements Algorithm
 {
 
-	/** The enum constant for DSA algorithm.
+	/**
+	 * The enum constant for DSA algorithm.
+	 * 
 	 * @deprecated will be removed in next minor version
 	 */
 	DSA("dsa"),
