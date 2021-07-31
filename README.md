@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![Build Status](https://travis-ci.org/astrapi69/crypt-api.svg?branch=develop)](https://travis-ci.org/astrapi69/crypt-api) 
+[![Build Status](https://travis-ci.com/astrapi69/crypt-api.svg?branch=develop)](https://travis-ci.com/github/astrapi69/crypt-api) 
 [![Open Issues](https://img.shields.io/github/issues/astrapi69/crypt-api.svg?style=flat)](https://github.com/astrapi69/crypt-api/issues) 
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.alpharogroup/crypt-api/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.alpharogroup/crypt-api)
 [![Javadocs](http://www.javadoc.io/badge/de.alpharogroup/crypt-api.svg)](http://www.javadoc.io/doc/de.alpharogroup/crypt-api)
@@ -13,7 +13,13 @@
 
 Provides interfaces for encrypting and decrypting bytes, text, and files
 
-If you like this project put a ⭐ and donate
+> Please support this project by simply putting a Github <!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/astrapi69/crypt-api" data-icon="octicon-star" aria-label="Star astrapi69/~~crypt-api~~ on GitHub">Star ⭐</a>
+>
+> Share this library with friends on Twitter and everywhere else you can
+>
+> If you love this project [![donation](https://img.shields.io/badge/donate-❤-ff2244.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GVBTWLRAZ7HB8)
+
 
 ## License
 
@@ -31,7 +37,7 @@ Than you can add the dependency to your dependencies:
 	<properties>
 			...
 		<!-- CRYPT-API version -->
-		<crypt-api.version>7.5</crypt-api.version>
+		<crypt-api.version>7.6</crypt-api.version>
 			...
 	</properties>
 			...
@@ -52,10 +58,11 @@ Than you can add the dependency to your dependencies:
 You can first define the version in the ext section and add than the following gradle dependency 
 to your project `build.gradle` if you want to import the core functionality of crypt-api:
 
-```
 define version in file gradle.properties
 
-cryptApiVersion=7.5
+```
+
+cryptApiVersion=7.6
 ```
 
 or in build.gradle ext area
@@ -63,17 +70,17 @@ or in build.gradle ext area
 ```
 ext {
 			...
-    cryptApiVersion = "7.5"
+    cryptApiVersion = "7.6"
 			...
 }
 ```
 
-and than add the dependency to the dependencies area
+then add the dependency to the dependencies area
  
 ```
 dependencies {
 			...
-implementation("io.github.astrapi69:crypt-api:$cryptApiVersion")
+    implementation("io.github.astrapi69:crypt-api:$cryptApiVersion")
 			...
 }
 ```
@@ -169,8 +176,8 @@ or over flattr:
 
 |**Travis CI**|
 |     :---:      |
-|[![Travis CI](https://travis-ci.com/images/logos/TravisCI-Full-Color.png)](https://coveralls.io/github/astrapi69/crypt-api?branch=master)|
-|Special thanks to [Travis CI](https://travis-ci.org) for providing a free continuous integration service for open source projects|
+|[![Travis CI](https://travis-ci.com/images/logos/TravisCI-Full-Color.png)](https://travis-ci.com)~~~~|
+|Special thanks to [Travis CI](https://travis-ci.com) for providing a free continuous integration service for open source projects|
 |     <img width=1000/>     |
 
 |**Nexus Sonatype repositories**|
