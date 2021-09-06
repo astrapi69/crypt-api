@@ -37,7 +37,7 @@ Than you can add the dependency to your dependencies:
 	<properties>
 			...
 		<!-- CRYPT-API version -->
-		<crypt-api.version>7.6</crypt-api.version>
+		<crypt-api.version>7.6.1</crypt-api.version>
 			...
 	</properties>
 			...
@@ -62,7 +62,7 @@ define version in file gradle.properties
 
 ```
 
-cryptApiVersion=7.6
+cryptApiVersion=7.6.1
 ```
 
 or in build.gradle ext area
@@ -70,7 +70,7 @@ or in build.gradle ext area
 ```
 ext {
 			...
-    cryptApiVersion = "7.6"
+    cryptApiVersion = "7.6.1"
 			...
 }
 ```

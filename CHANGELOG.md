@@ -1,6 +1,13 @@
 ## Change log
 ----------------------
 
+Version 7.6.1 
+-------------
+
+CHANGED:
+
+- update gradle to new version 7.2
+
 Version 7.6
 -------------
 
