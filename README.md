@@ -1,6 +1,6 @@
 # Overview
 
-<div align="center">
+<div style="text-align: center">
 
 [![Build Status](https://travis-ci.com/astrapi69/crypt-api.svg?branch=develop)](https://travis-ci.com/github/astrapi69/crypt-api) 
 [![Open Issues](https://img.shields.io/github/issues/astrapi69/crypt-api.svg?style=flat)](https://github.com/astrapi69/crypt-api/issues) 
@@ -37,7 +37,7 @@ Than you can add the dependency to your dependencies:
 	<properties>
 			...
 		<!-- CRYPT-API version -->
-		<crypt-api.version>7.6</crypt-api.version>
+		<crypt-api.version>7.6.1</crypt-api.version>
 			...
 	</properties>
 			...
@@ -62,7 +62,7 @@ define version in file gradle.properties
 
 ```
 
-cryptApiVersion=7.6
+cryptApiVersion=7.6.1
 ```
 
 or in build.gradle ext area
@@ -70,7 +70,7 @@ or in build.gradle ext area
 ```
 ext {
 			...
-    cryptApiVersion = "7.6"
+    cryptApiVersion = "7.6.1"
 			...
 }
 ```
@@ -169,7 +169,7 @@ alt="Donation Monero Wallet" width="250"/>
 or over flattr:
 
 <a href="https://flattr.com/submit/auto?fid=r7vp62&url=https%3A%2F%2Fgithub.com%2Fastrapi69%2Fcrypt-api" target="_blank">
-<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
+<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" style="border: none" />
 </a>
 
 ## Credits
