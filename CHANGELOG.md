@@ -5,6 +5,15 @@
 Version 7.7-SNAPSHOT
 -------------
 
+ADDED:
+
+- improve gradle build performance by adding new gradle parameters for caching, parallel, configure on demand and file watch
+
+CHANGED:
+
+- update gradle to new version 7.3
+- update of test dependency silly-collections to new version to 18
+
 Version 7.6.1 
 -------------
 
