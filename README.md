@@ -2,7 +2,7 @@
 
 <div style="text-align: center">
 
-[![Build Status](https://travis-ci.com/astrapi69/crypt-api.svg?branch=develop)](https://travis-ci.com/github/astrapi69/crypt-api)
+[![Java CI with Gradle](https://github.com/astrapi69/crypt-api/actions/workflows/gradle.yml/badge.svg)](https://github.com/astrapi69/crypt-api/actions/workflows/gradle.yml)
 [![Open Issues](https://img.shields.io/github/issues/astrapi69/crypt-api.svg?style=flat)](https://github.com/astrapi69/crypt-api/issues)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.astrapi69/crypt-api/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.astrapi69/crypt-api)
 [![Javadocs](http://www.javadoc.io/badge/io.github.astrapi69/crypt-api.svg)](http://www.javadoc.io/doc/io.github.astrapi69/crypt-api)
