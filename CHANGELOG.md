@@ -8,6 +8,7 @@ ADDED:
 
 - improve gradle build performance by adding new gradle parameters for caching, parallel, configure on demand and file watch
 - new test dependency junit-jupiter-api in new minor version 5.8.2
+- new enum PemType
 
 CHANGED:
 

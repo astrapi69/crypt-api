@@ -24,6 +24,10 @@
  */
 package io.github.astrapi69.crypto.algorithm;
 
+import io.github.astrapi69.crypto.key.PemType;
+
+import java.util.Arrays;
+
 /**
  * The enum {@link KeyPairGeneratorAlgorithm}. For more info see: <a href=
  * "https://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#KeyPairGenerator">
@@ -35,6 +39,8 @@ public enum KeyPairGeneratorAlgorithm implements Algorithm
 {
 	/** The enum constant for DIFFIE_HELLMAN algorithm. */
 	DIFFIE_HELLMAN(KeyPairGeneratorAlgorithm.DIFFIE_HELLMAN_ALGORITHM_NAME),
+	/** The shortcut value for the enum constant for DIFFIE_HELLMAN algorithm. */
+	DH(KeyPairGeneratorAlgorithm.DH_ALGORITHM_NAME),
 	/** The enum constant for DSA algorithm. */
 	DSA(KeyPairGeneratorAlgorithm.DSA_ALGORITHM_NAME),
 	/** The enum constant for EC algorithm. */
@@ -42,10 +48,17 @@ public enum KeyPairGeneratorAlgorithm implements Algorithm
 	/** The enum constant for RSA algorithm. */
 	RSA(KeyPairGeneratorAlgorithm.RSA_ALGORITHM_NAME),
 	/** The enum constant for RSA algorithm. */
-	RSASSA_PSS(KeyPairGeneratorAlgorithm.RSASSA_PSS_ALGORITHM_NAME);
+	RSASSA_PSS(KeyPairGeneratorAlgorithm.RSASSA_PSS_ALGORITHM_NAME),
+	/** The enum constant if the algorithm type is unknown. */
+	UNKNOWN_TYPE(KeyPairGeneratorAlgorithm.UNKNOWN_ALGORITHM_TYPE);
 
-	/** The string constant DIFFIE_HELLMAN_ALGORITHM_NAME */
+	/** The string constant DIFFIE_HELLMAN_ALGORITHM_NAME for the 'DiffieHellman' algorithm */
 	public static final String DIFFIE_HELLMAN_ALGORITHM_NAME = "DiffieHellman";
+	/**
+	 * The string constant DH_ALGORITHM_NAME for the 'DH' and is a shortcut for 'DiffieHellman'
+	 * algorithm
+	 */
+	public static final String DH_ALGORITHM_NAME = "DH";
 	/** The string constant DSA_ALGORITHM_NAME */
 	public static final String DSA_ALGORITHM_NAME = "DSA";
 	/** The string constant EC_ALGORITHM_NAME */
@@ -54,6 +67,8 @@ public enum KeyPairGeneratorAlgorithm implements Algorithm
 	public static final String RSA_ALGORITHM_NAME = "RSA";
 	/** The string constant RSAASSA_PSS_ALGORITHM_NAME */
 	public static final String RSASSA_PSS_ALGORITHM_NAME = RSA_ALGORITHM_NAME + "SSA-PSS";
+	/** The Constant UNKNOWN_ALGORITHM_TYPE is if the algorithm type is unknown. */
+	public static final String UNKNOWN_ALGORITHM_TYPE = "UNKNOWN ALGORITHM TYPE";
 	/** The algorithm. */
 	private final String algorithm;
 
@@ -74,4 +89,17 @@ public enum KeyPairGeneratorAlgorithm implements Algorithm
 		return algorithm;
 	}
 
+	/**
+	 * Transforms the given algorithm to the corresponding {@link KeyPairGeneratorAlgorithm} object
+	 * 
+	 * @param algorithm
+	 *            the algorithm
+	 * @return the {@link KeyPairGeneratorAlgorithm} object or null if not found
+	 */
+	public static KeyPairGeneratorAlgorithm toKeyPairGeneratorAlgorithm(final String algorithm)
+	{
+		return Arrays.stream(KeyPairGeneratorAlgorithm.values())
+			.filter(algorithmType -> algorithmType.getAlgorithm().equals(algorithm)).findFirst()
+			.orElse(KeyPairGeneratorAlgorithm.UNKNOWN_TYPE);
+	}
 }
