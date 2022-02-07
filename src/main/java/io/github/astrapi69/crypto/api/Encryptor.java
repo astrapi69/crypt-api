@@ -46,6 +46,6 @@ public interface Encryptor<T, R>
 	 * @throws Exception
 	 *             is thrown if encryption fails.
 	 */
-	public R encrypt(final T toEncrypt) throws Exception;
+	R encrypt(final T toEncrypt) throws Exception;
 
 }

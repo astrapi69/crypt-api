@@ -54,7 +54,7 @@ public enum KeyType
 	 * @param displayValue
 	 *            the display value
 	 */
-	private KeyType(final String displayValue)
+	KeyType(final String displayValue)
 	{
 		this.displayValue = displayValue;
 	}

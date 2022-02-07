@@ -39,7 +39,7 @@ public enum KeyFormat
 
 	private final String format;
 
-	private KeyFormat(final String format)
+	KeyFormat(final String format)
 	{
 		Objects.requireNonNull(format);
 		this.format = format;

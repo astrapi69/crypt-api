@@ -88,7 +88,7 @@ public enum Operation
 				case NEGATE :
 					if (reverse)
 					{
-						return Character.valueOf(character);
+						return character;
 					}
 					if (Character.isUpperCase(character))
 					{
@@ -102,6 +102,6 @@ public enum Operation
 				default :
 			}
 		}
-		return Character.valueOf(character);
+		return character;
 	}
 }

@@ -51,7 +51,7 @@ public enum KeySize
 	 * @param keySize
 	 *            the key size
 	 */
-	private KeySize(final Integer keySize)
+	KeySize(final Integer keySize)
 	{
 		this.keySize = keySize;
 	}

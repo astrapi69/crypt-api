@@ -31,5 +31,5 @@ public enum PasswordHashType
 {
 
 	/** The PBKDF2 hash type. */
-	PBKDF2;
+	PBKDF2
 }

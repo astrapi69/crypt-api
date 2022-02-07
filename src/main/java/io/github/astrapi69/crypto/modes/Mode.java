@@ -46,5 +46,5 @@ public enum Mode
 	OFB,
 
 	/** The PCBC operation mode. */
-	PCBC;
+	PCBC
 }

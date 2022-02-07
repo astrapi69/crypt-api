@@ -62,7 +62,7 @@ public enum KeyFileFormat
 	 * @param fileExtensions
 	 *            the file extensions
 	 */
-	private KeyFileFormat(String... fileExtensions)
+	KeyFileFormat(String... fileExtensions)
 	{
 		this.fileExtensions = fileExtensions;
 	}

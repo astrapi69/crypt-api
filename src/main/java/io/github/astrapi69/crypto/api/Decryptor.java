@@ -47,6 +47,6 @@ public interface Decryptor<T, R>
 	 * @throws Exception
 	 *             is thrown if decryption fails.
 	 */
-	public R decrypt(final T encrypted) throws Exception;
+	R decrypt(final T encrypted) throws Exception;
 
 }

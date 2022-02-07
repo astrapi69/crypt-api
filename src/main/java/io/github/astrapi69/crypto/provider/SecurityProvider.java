@@ -33,5 +33,5 @@ public enum SecurityProvider
 	/** The BouncyCastle SecurityProvider. */
 	BC,
 	/** The sun SecurityProvider. */
-	SUN;
+	SUN
 }

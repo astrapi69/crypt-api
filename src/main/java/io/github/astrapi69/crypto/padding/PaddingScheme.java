@@ -69,7 +69,7 @@ public enum PaddingScheme
 	 * @param scheme
 	 *            the padding scheme
 	 */
-	private PaddingScheme(final String scheme)
+	PaddingScheme(final String scheme)
 	{
 		this.scheme = scheme;
 	}

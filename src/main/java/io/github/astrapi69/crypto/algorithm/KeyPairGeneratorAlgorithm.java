@@ -63,7 +63,7 @@ public enum KeyPairGeneratorAlgorithm implements Algorithm
 	 * @param algorithm
 	 *            the algorithm.
 	 */
-	private KeyPairGeneratorAlgorithm(final String algorithm)
+	KeyPairGeneratorAlgorithm(final String algorithm)
 	{
 		this.algorithm = algorithm;
 	}
