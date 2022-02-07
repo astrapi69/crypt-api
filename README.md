@@ -2,12 +2,14 @@
 
 <div style="text-align: center">
 
-[![Build Status](https://travis-ci.com/astrapi69/crypt-api.svg?branch=develop)](https://travis-ci.com/github/astrapi69/crypt-api) 
-[![Open Issues](https://img.shields.io/github/issues/astrapi69/crypt-api.svg?style=flat)](https://github.com/astrapi69/crypt-api/issues) 
+[![Build Status](https://travis-ci.com/astrapi69/crypt-api.svg?branch=develop)](https://travis-ci.com/github/astrapi69/crypt-api)
+[![Open Issues](https://img.shields.io/github/issues/astrapi69/crypt-api.svg?style=flat)](https://github.com/astrapi69/crypt-api/issues)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.alpharogroup/crypt-api/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.alpharogroup/crypt-api)
 [![Javadocs](http://www.javadoc.io/badge/de.alpharogroup/crypt-api.svg)](http://www.javadoc.io/doc/de.alpharogroup/crypt-api)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](http://opensource.org/licenses/MIT)
 [![Donate](https://img.shields.io/badge/donate-❤-ff2244.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GVBTWLRAZ7HB8)
+[![Hits Of Code](https://hitsofcode.com/github/astrapi69/crypt-api?branch=develop)](https://hitsofcode.com/github/astrapi69/crypt-api/view?branch=develop)
+[![Lines Of Code](https://tokei.rs/b1/github/astrapi69/crypt-api)](https://github.com/astrapi69/crypt-api)
 
 </div>
 
@@ -20,42 +22,13 @@ Provides interfaces for encrypting and decrypting bytes, text, and files
 >
 > If you love this project [![donation](https://img.shields.io/badge/donate-❤-ff2244.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GVBTWLRAZ7HB8)
 
-
 ## License
 
 The source code comes under the liberal MIT License.
 
-## Maven dependency
-
-Maven dependency is now on sonatype.
-Check out [sonatype repository](https://oss.sonatype.org/index.html#nexus-search;gav~de.alpharogroup~crypt-api~~~) for latest snapshots and releases.
-
-Add the following maven dependency to your project `pom.xml` if you want to import the core functionality of crypt-api:
-
-Than you can add the dependency to your dependencies:
-
-	<properties>
-			...
-		<!-- CRYPT-API version -->
-		<crypt-api.version>7.6.1</crypt-api.version>
-			...
-	</properties>
-			...
-		<dependencies>
-			...
-			<!-- CRYPT-API DEPENDENCY -->
-			<dependency>
-				<groupId>io.github.astrapi69</groupId>
-				<artifactId>crypt-api</artifactId>
-				<version>${crypt-api.version}</version>
-			</dependency>
-			...
-		</dependencies>
-	
-			
 ## gradle dependency
 
-You can first define the version in the ext section and add than the following gradle dependency 
+You can first define the version in the ext section and add than the following gradle dependency
 to your project `build.gradle` if you want to import the core functionality of crypt-api:
 
 define version in file gradle.properties
@@ -68,22 +41,41 @@ cryptApiVersion=7.6.1
 or in build.gradle ext area
 
 ```
-ext {
-			...
     cryptApiVersion = "7.6.1"
-			...
-}
 ```
 
 then add the dependency to the dependencies area
- 
+
 ```
-dependencies {
-			...
     implementation("io.github.astrapi69:crypt-api:$cryptApiVersion")
-			...
-}
 ```
+
+## Maven dependency
+
+Maven dependency is now on sonatype.
+Check out [sonatype repository](https://oss.sonatype.org/index.html#nexus-search;gav~de.alpharogroup~crypt-api~~~) for latest snapshots and releases.
+
+Add the following maven dependency to your project `pom.xml` if you want to import the core functionality of crypt-api:
+
+Than you can add the dependency to your dependencies:
+
+    <properties>
+            ...
+        <!-- CRYPT-API version -->
+        <crypt-api.version>7.6.1</crypt-api.version>
+            ...
+    </properties>
+            ...
+        <dependencies>
+            ...
+            <!-- CRYPT-API DEPENDENCY -->
+            <dependency>
+                <groupId>io.github.astrapi69</groupId>
+                <artifactId>crypt-api</artifactId>
+                <version>${crypt-api.version}</version>
+            </dependency>
+            ...
+        </dependencies>
 
 ## Semantic Versioning
 

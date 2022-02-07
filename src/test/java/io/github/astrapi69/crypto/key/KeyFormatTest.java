@@ -27,13 +27,9 @@
  */
 package io.github.astrapi69.crypto.key;
 
-import static org.testng.AssertJUnit.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import java.lang.reflect.InvocationTargetException;
-
-import org.meanbean.test.BeanTestException;
-import org.meanbean.test.BeanTester;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * The unit test class for the class {@link KeyFormatTest}
@@ -64,17 +60,6 @@ public class KeyFormatTest
 		actual = KeyFormat.PKCS_8.getFormat();
 		expected = "PKCS#8";
 		assertEquals(actual, expected);
-	}
-
-	/**
-	 * Test method for {@link KeyFormat}
-	 */
-	@Test(expectedExceptions = { BeanTestException.class, InvocationTargetException.class,
-			UnsupportedOperationException.class })
-	public void testWithBeanTester()
-	{
-		final BeanTester beanTester = new BeanTester();
-		beanTester.testBean(KeyFormat.class);
 	}
 
 }

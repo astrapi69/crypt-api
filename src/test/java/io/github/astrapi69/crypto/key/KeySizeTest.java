@@ -24,13 +24,9 @@
  */
 package io.github.astrapi69.crypto.key;
 
-import static org.testng.AssertJUnit.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import java.lang.reflect.InvocationTargetException;
-
-import org.meanbean.test.BeanTestException;
-import org.meanbean.test.BeanTester;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * The unit test class for the class {@link KeySize}
@@ -66,17 +62,6 @@ public class KeySizeTest
 		expected = 8192;
 		assertEquals(actual, expected);
 		assertEquals(KeySize.KEYSIZE_8192.toString(), expected.toString());
-	}
-
-	/**
-	 * Test method for {@link KeySize}
-	 */
-	@Test(expectedExceptions = { BeanTestException.class, InvocationTargetException.class,
-			UnsupportedOperationException.class })
-	public void testWithBeanTester()
-	{
-		final BeanTester beanTester = new BeanTester();
-		beanTester.testBean(KeySize.class);
 	}
 
 }

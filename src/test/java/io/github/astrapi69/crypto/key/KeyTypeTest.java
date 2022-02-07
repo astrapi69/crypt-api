@@ -24,13 +24,9 @@
  */
 package io.github.astrapi69.crypto.key;
 
-import static org.testng.AssertJUnit.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import java.lang.reflect.InvocationTargetException;
-
-import org.meanbean.test.BeanTestException;
-import org.meanbean.test.BeanTester;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.Test;
 
 import io.github.astrapi69.crypto.algorithm.AesAlgorithm;
 import io.github.astrapi69.crypto.algorithm.HashAlgorithm;
@@ -72,17 +68,5 @@ public class KeyTypeTest
 		expected = "Public key";
 		assertEquals(actual, expected);
 		assertEquals(KeyType.PUBLIC_KEY.toString(), expected);
-	}
-
-
-	/**
-	 * Test method for {@link KeyType}
-	 */
-	@Test(expectedExceptions = { BeanTestException.class, InvocationTargetException.class,
-			UnsupportedOperationException.class })
-	public void testWithBeanTester()
-	{
-		final BeanTester beanTester = new BeanTester();
-		beanTester.testBean(KeyType.class);
 	}
 }

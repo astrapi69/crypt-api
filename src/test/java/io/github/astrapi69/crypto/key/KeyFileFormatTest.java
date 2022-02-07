@@ -24,14 +24,11 @@
  */
 package io.github.astrapi69.crypto.key;
 
-import static org.testng.AssertJUnit.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 
-import org.meanbean.test.BeanTestException;
-import org.meanbean.test.BeanTester;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.Test;
 
 import io.github.astrapi69.collections.array.ArrayFactory;
 
@@ -70,17 +67,6 @@ public class KeyFileFormatTest
 		expected = ArrayFactory.newArray();
 		assertTrue(Arrays.equals(actual, expected));
 
-	}
-
-	/**
-	 * Test method for {@link KeyFileFormat}
-	 */
-	@Test(expectedExceptions = { BeanTestException.class, InvocationTargetException.class,
-			UnsupportedOperationException.class })
-	public void testWithBeanTester()
-	{
-		final BeanTester beanTester = new BeanTester();
-		beanTester.testBean(KeyFileFormat.class);
 	}
 
 }

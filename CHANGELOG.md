@@ -8,13 +8,17 @@ Version 7.7-SNAPSHOT
 ADDED:
 
 - improve gradle build performance by adding new gradle parameters for caching, parallel, configure on demand and file watch
+- new test dependency junit-jupiter-api in new minor version 5.8.2
 
 CHANGED:
 
-- update gradle to new version 7.3
-- update of test dependency silly-collections to new version to 18
+- update gradle to new version 7.3.3
+- update of gradle plugin dependency com.github.ben-manes.versions.gradle.plugin to new minor version 0.42.0
+- update of test dependency silly-collections to new major version 18
+- removed test dependency testng
+- removed test dependency meanbean
 
-Version 7.6.1 
+Version 7.6.1
 -------------
 
 CHANGED:
@@ -54,7 +58,7 @@ Version 7.4
 -------------
 
 ADDED:
- 
+
 - new compound algorithm 'SHA1withRSA', 'SHA256withRSA', 'SHA384withRSA' and 'SHA512withRSA', to enum CompoundAlgorithm
 - new hash algorithm 'SHA224' to enum HashAlgorithm
 - new field data in interface IBlock created
@@ -69,7 +73,7 @@ Version 7.3
 -------------
 
 ADDED:
- 
+
 - new build system gradle
 
 CHANGED:

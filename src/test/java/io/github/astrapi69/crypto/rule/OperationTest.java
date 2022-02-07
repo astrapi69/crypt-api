@@ -24,13 +24,9 @@
  */
 package io.github.astrapi69.crypto.rule;
 
-import static org.testng.AssertJUnit.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import java.lang.reflect.InvocationTargetException;
-
-import org.meanbean.test.BeanTestException;
-import org.meanbean.test.BeanTester;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.Test;
 
 import io.github.astrapi69.crypto.obfuscation.rule.Operation;
 
@@ -118,17 +114,6 @@ public class OperationTest
 		actual = Operation.operate('A', Operation.NEGATE, true);
 		expected = 'A';
 		assertEquals(expected, actual);
-	}
-
-	/**
-	 * Test method for {@link Operation}
-	 */
-	@Test(expectedExceptions = { BeanTestException.class, InvocationTargetException.class,
-			UnsupportedOperationException.class })
-	public void testWithBeanTester()
-	{
-		final BeanTester beanTester = new BeanTester();
-		beanTester.testBean(Operation.class);
 	}
 
 }

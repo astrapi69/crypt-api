@@ -24,9 +24,9 @@
  */
 package io.github.astrapi69.crypto.algorithm;
 
-import static org.testng.AssertJUnit.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.Test;
 
 public class MdAlgorithmTest
 {
