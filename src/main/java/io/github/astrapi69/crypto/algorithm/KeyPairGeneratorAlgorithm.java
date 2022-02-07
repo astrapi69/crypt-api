@@ -24,8 +24,6 @@
  */
 package io.github.astrapi69.crypto.algorithm;
 
-import io.github.astrapi69.crypto.key.PemType;
-
 import java.util.Arrays;
 
 /**
@@ -83,15 +81,9 @@ public enum KeyPairGeneratorAlgorithm implements Algorithm
 		this.algorithm = algorithm;
 	}
 
-	@Override
-	public String getAlgorithm()
-	{
-		return algorithm;
-	}
-
 	/**
 	 * Transforms the given algorithm to the corresponding {@link KeyPairGeneratorAlgorithm} object
-	 * 
+	 *
 	 * @param algorithm
 	 *            the algorithm
 	 * @return the {@link KeyPairGeneratorAlgorithm} object or null if not found
@@ -101,5 +93,11 @@ public enum KeyPairGeneratorAlgorithm implements Algorithm
 		return Arrays.stream(KeyPairGeneratorAlgorithm.values())
 			.filter(algorithmType -> algorithmType.getAlgorithm().equals(algorithm)).findFirst()
 			.orElse(KeyPairGeneratorAlgorithm.UNKNOWN_TYPE);
+	}
+
+	@Override
+	public String getAlgorithm()
+	{
+		return algorithm;
 	}
 }
