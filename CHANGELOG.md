@@ -1,10 +1,22 @@
 ## Change log
 ----------------------
 
-Version 7.8-SNAPSHOT
+Version 8-SNAPSHOT
 -------------
 
+ADDED:
 
+- new module-info.java file
+
+CHANGED:
+
+- update of jdk to version 11
+- update gradle to new version 7.5
+- update of gradle-plugin dependency 'org.ajoberstar.grgit:grgit-gradle' in version 5.0.0
+- update of gradle-plugin dependency 'com.diffplug.spotless:spotless-plugin-gradle' in version 6.8.0
+- update of test dependency junit-jupiter-api to new version 5.9.0-RC1
+- update of test dependency silly-collections to new version to 18.2
+- removed deprecated DSA field in enum KeystoreType
 
 Version 7.7
 -------------

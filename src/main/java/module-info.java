@@ -22,48 +22,5 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package io.github.astrapi69.crypto.algorithm;
-
-import java.security.KeyStore;
-
-/**
- * The enum {@link KeystoreType} for algorithm that are used to create {@link KeyStore} objects.
- */
-public enum KeystoreType implements Algorithm
-{
-
-	/** The enum constant for JCEKS algorithm. */
-	JCEKS("jceks"),
-
-	/** The enum constant for JKS algorithm. */
-	JKS("jks"),
-
-	/** The enum constant for DKS algorithm. */
-	DKS("dks"),
-
-	/** The enum constant for PKCS11 algorithm. */
-	PKCS11("pkcs11"),
-
-	/** The enum constant for PKCS12 algorithm. */
-	PKCS12("pkcs12");
-
-	/** The algorithm. */
-	private final String algorithm;
-
-	/**
-	 * Instantiates a new {@link AesAlgorithm} object.
-	 *
-	 * @param algorithm
-	 *            the algorithm.
-	 */
-	KeystoreType(final String algorithm)
-	{
-		this.algorithm = algorithm;
-	}
-
-	@Override
-	public String getAlgorithm()
-	{
-		return algorithm;
-	}
+module crypt.api.main {
 }
