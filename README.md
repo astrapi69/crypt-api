@@ -35,13 +35,13 @@ define version in file gradle.properties
 
 ```
 
-cryptApiVersion=8
+cryptApiVersion=8.1
 ```
 
 or in build.gradle ext area
 
 ```
-    cryptApiVersion = "8"
+    cryptApiVersion = "8.1"
 ```
 
 then add the dependency to the dependencies area
@@ -62,7 +62,7 @@ Than you can add the dependency to your dependencies:
     <properties>
             ...
         <!-- CRYPT-API version -->
-        <crypt-api.version>8</crypt-api.version>
+        <crypt-api.version>8.1</crypt-api.version>
             ...
     </properties>
             ...
