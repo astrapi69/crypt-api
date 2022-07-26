@@ -22,19 +22,14 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package io.github.astrapi69.crypto.mechanisms;
+package io.github.astrapi69.crypto.password;
 
 /**
- * The enum {@link PBEMechanism} defines some of the password-based encryption (PBE).
+ * The enum {@link PasswordHashType}.
  */
-public enum PBEMechanism
+public enum PasswordHashType
 {
 
-	/** The pbe mechanism. */
-	PBE,
-	/** The pkcs mechanism. */
-	PKCS;
-
-	public static final String PBE_MECHANISM_NAME = "PBE";
-	public static final String PKCS_MECHANISM_NAME = "PKCS";
+	/** The PBKDF2 hash type. */
+	PBKDF2
 }

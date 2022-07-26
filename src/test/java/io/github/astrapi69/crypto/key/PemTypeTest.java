@@ -22,29 +22,34 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package io.github.astrapi69.crypto.modes;
+package io.github.astrapi69.crypto.key;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
 
 /**
- * The enum {@link Mode} defines the block chaining mode.
+ * The unit test class for the class {@link PemType}
  */
-public enum Mode
+public class PemTypeTest
 {
 
-	/** The BC operation mode. */
-	BC,
+	/**
+	 * Test method for {@link PemType#toPemType(String)}
+	 */
+	@Test
+	public void testToPemType()
+	{
+		PemType actual;
+		PemType expected;
 
-	/** The CBC operation mode. */
-	CBC,
+		actual = PemType.toPemType(PemType.PRIVATE_KEY_NAME);
+		expected = PemType.PRIVATE_KEY;
+		assertEquals(actual, expected);
 
-	/** The CFB operation mode. */
-	CFB,
+		actual = PemType.toPemType("foo");
+		expected = PemType.UNKNOWN_TYPE;
+		assertEquals(actual, expected);
+	}
 
-	/** The ECB operation mode. */
-	ECB,
-
-	/** The OFB operation mode. */
-	OFB,
-
-	/** The PCBC operation mode. */
-	PCBC
 }

@@ -24,7 +24,7 @@
  */
 package io.github.astrapi69.crypto.algorithm;
 
-import io.github.astrapi69.crypto.modes.Mode;
+import io.github.astrapi69.crypto.mode.Mode;
 import io.github.astrapi69.crypto.padding.PaddingScheme;
 
 /**

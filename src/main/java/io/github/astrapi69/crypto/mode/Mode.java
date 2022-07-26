@@ -22,14 +22,29 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package io.github.astrapi69.crypto.pw;
+package io.github.astrapi69.crypto.mode;
 
 /**
- * The enum {@link PasswordHashType}.
+ * The enum {@link Mode} defines the block chaining mode.
  */
-public enum PasswordHashType
+public enum Mode
 {
 
-	/** The PBKDF2 hash type. */
-	PBKDF2
+	/** The BC operation mode. */
+	BC,
+
+	/** The CBC operation mode. */
+	CBC,
+
+	/** The CFB operation mode. */
+	CFB,
+
+	/** The ECB operation mode. */
+	ECB,
+
+	/** The OFB operation mode. */
+	OFB,
+
+	/** The PCBC operation mode. */
+	PCBC
 }

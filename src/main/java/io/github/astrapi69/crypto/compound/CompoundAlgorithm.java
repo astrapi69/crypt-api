@@ -32,9 +32,9 @@ import io.github.astrapi69.crypto.algorithm.MacAlgorithm;
 import io.github.astrapi69.crypto.algorithm.MdAlgorithm;
 import io.github.astrapi69.crypto.algorithm.SunJCEAlgorithm;
 import io.github.astrapi69.crypto.algorithm.UnionWord;
-import io.github.astrapi69.crypto.mechanisms.PBEMechanism;
-import io.github.astrapi69.crypto.modes.Mode;
-import io.github.astrapi69.crypto.pw.PasswordHashType;
+import io.github.astrapi69.crypto.mechanism.PBEMechanism;
+import io.github.astrapi69.crypto.mode.Mode;
+import io.github.astrapi69.crypto.password.PasswordHashType;
 
 /**
  * The enum {@link CompoundAlgorithm} provides some compound algorithms

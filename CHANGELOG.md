@@ -4,6 +4,15 @@
 Version 8.1-SNAPSHOT
 -------------
 
+ADDED:
+
+- new enum class KeyStringEntry that holds prefixes for PEM value entries
+
+CHANGED:
+
+- export all packages in module-info.java file
+- rename of all packages that was in plural form to singular form
+
 Version 8
 -------------
 

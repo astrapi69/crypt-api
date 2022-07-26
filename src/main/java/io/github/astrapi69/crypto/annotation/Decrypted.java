@@ -22,7 +22,8 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package io.github.astrapi69.crypto.annotations;
+package io.github.astrapi69.crypto.annotation;
+
 
 import static java.lang.annotation.ElementType.FIELD;
 import static java.lang.annotation.ElementType.PARAMETER;
@@ -32,10 +33,10 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 
 /**
- * The marker annotation {@link Encrypted} marks a field that it is encrypted as the name let
+ * The marker annotation {@link Decrypted} marks a field that it was decrypted as the name let
  * assume.
  */
 @Retention(RUNTIME)
 @Target(value = { FIELD, PARAMETER })
-public @interface Encrypted {
+public @interface Decrypted {
 }

@@ -24,7 +24,7 @@
  */
 package io.github.astrapi69.crypto.algorithm;
 
-import io.github.astrapi69.crypto.mechanisms.PBEMechanism;
+import io.github.astrapi69.crypto.mechanism.PBEMechanism;
 
 /**
  * The enum {@link SunJCEAlgorithm} defines the algorithm specified by the SunJCE security provider.

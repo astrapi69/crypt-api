@@ -22,20 +22,19 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package io.github.astrapi69.crypto.annotations;
-
-import static java.lang.annotation.ElementType.FIELD;
-import static java.lang.annotation.ElementType.TYPE;
-import static java.lang.annotation.RetentionPolicy.RUNTIME;
-
-import java.lang.annotation.Retention;
-import java.lang.annotation.Target;
+package io.github.astrapi69.crypto.mechanism;
 
 /**
- * The interface {@link Obfuscated} marks a field that it is obfuscated as the name let assume.
+ * The enum {@link PBEMechanism} defines some of the password-based encryption (PBE).
  */
-@Retention(RUNTIME)
-@Target({ TYPE, FIELD })
-public @interface Obfuscated {
+public enum PBEMechanism
+{
 
+	/** The pbe mechanism. */
+	PBE,
+	/** The pkcs mechanism. */
+	PKCS;
+
+	public static final String PBE_MECHANISM_NAME = "PBE";
+	public static final String PKCS_MECHANISM_NAME = "PKCS";
 }

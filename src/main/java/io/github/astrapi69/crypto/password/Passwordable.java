@@ -22,21 +22,31 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package io.github.astrapi69.crypto.annotations;
-
-
-import static java.lang.annotation.ElementType.FIELD;
-import static java.lang.annotation.ElementType.PARAMETER;
-import static java.lang.annotation.RetentionPolicy.RUNTIME;
-
-import java.lang.annotation.Retention;
-import java.lang.annotation.Target;
+package io.github.astrapi69.crypto.password;
 
 /**
- * The marker annotation {@link Decrypted} marks a field that it was decrypted as the name let
- * assume.
+ * Interface that can be implemented from classes that want to encrypt or decrypt with a password
  */
-@Retention(RUNTIME)
-@Target(value = { FIELD, PARAMETER })
-public @interface Decrypted {
+public interface Passwordable
+{
+	/**
+	 * Sets the given password
+	 * 
+	 * @param password
+	 *            the password to set
+	 */
+	void setPassword(String password);
+
+	/**
+	 * Sets the given password
+	 * 
+	 * @param password
+	 *            the password to set
+	 */
+	void setPassword(char[] password);
+
+	/**
+	 * Resets the password
+	 */
+	void resetPassword();
 }

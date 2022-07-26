@@ -24,7 +24,7 @@
  */
 package io.github.astrapi69.crypto.padding;
 
-import io.github.astrapi69.crypto.mechanisms.PBEMechanism;
+import io.github.astrapi69.crypto.mechanism.PBEMechanism;
 
 /**
  * The enum {@link PaddingScheme}.

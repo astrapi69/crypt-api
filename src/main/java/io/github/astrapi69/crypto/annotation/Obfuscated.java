@@ -22,18 +22,20 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-module crypt.api.main {
-	exports io.github.astrapi69.crypto.algorithm;
-	exports io.github.astrapi69.crypto.annotation;
-	exports io.github.astrapi69.crypto.api;
-	exports io.github.astrapi69.crypto.blockchain.api;
-	exports io.github.astrapi69.crypto.compound;
-	exports io.github.astrapi69.crypto.key;
-	exports io.github.astrapi69.crypto.mechanism;
-	exports io.github.astrapi69.crypto.mode;
-	exports io.github.astrapi69.crypto.obfuscation.api;
-	exports io.github.astrapi69.crypto.obfuscation.rule;
-	exports io.github.astrapi69.crypto.padding;
-	exports io.github.astrapi69.crypto.provider;
-	exports io.github.astrapi69.crypto.password;
+package io.github.astrapi69.crypto.annotation;
+
+import static java.lang.annotation.ElementType.FIELD;
+import static java.lang.annotation.ElementType.TYPE;
+import static java.lang.annotation.RetentionPolicy.RUNTIME;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.Target;
+
+/**
+ * The interface {@link Obfuscated} marks a field that it is obfuscated as the name let assume.
+ */
+@Retention(RUNTIME)
+@Target({ TYPE, FIELD })
+public @interface Obfuscated {
+
 }

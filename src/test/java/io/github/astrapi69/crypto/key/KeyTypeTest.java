@@ -31,8 +31,8 @@ import org.junit.jupiter.api.Test;
 import io.github.astrapi69.crypto.algorithm.AesAlgorithm;
 import io.github.astrapi69.crypto.algorithm.HashAlgorithm;
 import io.github.astrapi69.crypto.algorithm.UnionWord;
-import io.github.astrapi69.crypto.mechanisms.PBEMechanism;
-import io.github.astrapi69.crypto.modes.Mode;
+import io.github.astrapi69.crypto.mechanism.PBEMechanism;
+import io.github.astrapi69.crypto.mode.Mode;
 
 /**
  * The unit test class for the class {@link KeyType}
