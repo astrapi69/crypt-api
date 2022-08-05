@@ -24,45 +24,29 @@
  */
 package io.github.astrapi69.crypto.algorithm;
 
-import java.security.KeyStore;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
 
 /**
- * The enum {@link KeystoreType} for algorithm that are used to create {@link KeyStore} objects.
+ * The unit test class for the enum class {@link ChecksumAlgorithm}
  */
-public enum KeystoreType implements Algorithm
+public class ChecksumAlgorithmTest
 {
-	/** The enum constant for DKS algorithm. */
-	DKS("dks"),
-
-	/** The enum constant for JKS algorithm. */
-	JKS("jks"),
-
-	/** The enum constant for JCEKS algorithm. */
-	JCEKS("jceks"),
-
-	/** The enum constant for PKCS11 algorithm. */
-	PKCS11("pkcs11"),
-
-	/** The enum constant for PKCS12 algorithm. */
-	PKCS12("pkcs12");
-
-	/** The algorithm. */
-	private final String algorithm;
 
 	/**
-	 * Instantiates a new {@link AesAlgorithm} object.
-	 *
-	 * @param algorithm
-	 *            the algorithm.
+	 * Test for concatenated constants
 	 */
-	KeystoreType(final String algorithm)
+	@Test
+	public void testGetAlgorithms()
 	{
-		this.algorithm = algorithm;
-	}
-
-	@Override
-	public String getAlgorithm()
-	{
-		return algorithm;
+		assertEquals(ChecksumAlgorithm.MD2.getAlgorithm(), "MD2");
+		assertEquals(ChecksumAlgorithm.MD4.getAlgorithm(), "MD4");
+		assertEquals(ChecksumAlgorithm.MD5.getAlgorithm(), "MD5");
+		assertEquals(ChecksumAlgorithm.SHA_1.getAlgorithm(), "SHA-1");
+		assertEquals(ChecksumAlgorithm.SHA_256.getAlgorithm(), "SHA-256");
+		assertEquals(ChecksumAlgorithm.SHA_384.getAlgorithm(), "SHA-384");
+		assertEquals(ChecksumAlgorithm.SHA_512.getAlgorithm(), "SHA-512");
+		assertEquals(ChecksumAlgorithm.UNDEFINED.getAlgorithm(), "UNDEFINED");
 	}
 }

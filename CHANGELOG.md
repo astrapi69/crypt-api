@@ -4,6 +4,9 @@
 Version 8.2-SNAPSHOT
 -------------
 
+ADDED:
+
+- new enum class ChecksumAlgorithm for possible checksum algorithms
 
 Version 8.1
 -------------

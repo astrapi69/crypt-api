@@ -24,45 +24,26 @@
  */
 package io.github.astrapi69.crypto.algorithm;
 
-import java.security.KeyStore;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
 
 /**
- * The enum {@link KeystoreType} for algorithm that are used to create {@link KeyStore} objects.
+ * The unit test class for the enum class {@link ChecksumAlgorithm}
  */
-public enum KeystoreType implements Algorithm
+public class KeystoreTypeTest
 {
-	/** The enum constant for DKS algorithm. */
-	DKS("dks"),
-
-	/** The enum constant for JKS algorithm. */
-	JKS("jks"),
-
-	/** The enum constant for JCEKS algorithm. */
-	JCEKS("jceks"),
-
-	/** The enum constant for PKCS11 algorithm. */
-	PKCS11("pkcs11"),
-
-	/** The enum constant for PKCS12 algorithm. */
-	PKCS12("pkcs12");
-
-	/** The algorithm. */
-	private final String algorithm;
 
 	/**
-	 * Instantiates a new {@link AesAlgorithm} object.
-	 *
-	 * @param algorithm
-	 *            the algorithm.
+	 * Test for concatenated constants.
 	 */
-	KeystoreType(final String algorithm)
+	@Test
+	public void testGetAlgorithms()
 	{
-		this.algorithm = algorithm;
-	}
-
-	@Override
-	public String getAlgorithm()
-	{
-		return algorithm;
+		assertEquals(KeystoreType.DKS.getAlgorithm(), "dks");
+		assertEquals(KeystoreType.JKS.getAlgorithm(), "jks");
+		assertEquals(KeystoreType.JCEKS.getAlgorithm(), "jceks");
+		assertEquals(KeystoreType.PKCS11.getAlgorithm(), "pkcs11");
+		assertEquals(KeystoreType.PKCS12.getAlgorithm(), "pkcs12");
 	}
 }
