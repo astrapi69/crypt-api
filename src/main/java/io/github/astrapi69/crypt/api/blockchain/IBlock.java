@@ -22,18 +22,40 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-module crypt.api {
-	exports io.github.astrapi69.crypt.api;
-	exports io.github.astrapi69.crypt.api.algorithm;
-	exports io.github.astrapi69.crypt.api.annotation;
-	exports io.github.astrapi69.crypt.api.blockchain;
-	exports io.github.astrapi69.crypt.api.compound;
-	exports io.github.astrapi69.crypt.api.key;
-	exports io.github.astrapi69.crypt.api.mechanism;
-	exports io.github.astrapi69.crypt.api.mode;
-	exports io.github.astrapi69.crypt.api.obfuscation;
-	exports io.github.astrapi69.crypt.api.obfuscation.rule;
-	exports io.github.astrapi69.crypt.api.padding;
-	exports io.github.astrapi69.crypt.api.password;
-	exports io.github.astrapi69.crypt.api.provider;
+package io.github.astrapi69.crypt.api.blockchain;
+
+import java.util.List;
+
+public interface IBlock
+{
+	String getData();
+
+	void setData(String data);
+
+	byte[] getHash();
+
+	void setHash(byte[] hash);
+
+	int getLeadingZerosCount();
+
+	byte[] getMerkleRoot();
+
+	void setMerkleRoot(byte[] merkleRoot);
+
+	byte[] getPreviousBlockHash();
+
+	void setPreviousBlockHash(byte[] previousBlockHash);
+
+	long getTimestamp();
+
+	void setTimestamp(long timestamp);
+
+	List<ITransaction> getTransactions();
+
+	void setTransactions(List<ITransaction> transactions);
+
+	long getTries();
+
+	void setTries(long tries);
+
 }

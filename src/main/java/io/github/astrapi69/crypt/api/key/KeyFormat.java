@@ -22,18 +22,31 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-module crypt.api {
-	exports io.github.astrapi69.crypt.api;
-	exports io.github.astrapi69.crypt.api.algorithm;
-	exports io.github.astrapi69.crypt.api.annotation;
-	exports io.github.astrapi69.crypt.api.blockchain;
-	exports io.github.astrapi69.crypt.api.compound;
-	exports io.github.astrapi69.crypt.api.key;
-	exports io.github.astrapi69.crypt.api.mechanism;
-	exports io.github.astrapi69.crypt.api.mode;
-	exports io.github.astrapi69.crypt.api.obfuscation;
-	exports io.github.astrapi69.crypt.api.obfuscation.rule;
-	exports io.github.astrapi69.crypt.api.padding;
-	exports io.github.astrapi69.crypt.api.password;
-	exports io.github.astrapi69.crypt.api.provider;
+package io.github.astrapi69.crypt.api.key;
+
+import java.util.Objects;
+
+/**
+ * The enum {@link KeyFormat} represents the key format of the private keys
+ */
+public enum KeyFormat
+{
+	/** The key format pkcs 1. */
+	PKCS_1("PKCS#1"),
+
+	/** The key format pkcs 8. */
+	PKCS_8("PKCS#8");
+
+	private final String format;
+
+	KeyFormat(final String format)
+	{
+		Objects.requireNonNull(format);
+		this.format = format;
+	}
+
+	public String getFormat()
+	{
+		return this.format;
+	}
 }

@@ -22,18 +22,21 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-module crypt.api {
-	exports io.github.astrapi69.crypt.api;
-	exports io.github.astrapi69.crypt.api.algorithm;
-	exports io.github.astrapi69.crypt.api.annotation;
-	exports io.github.astrapi69.crypt.api.blockchain;
-	exports io.github.astrapi69.crypt.api.compound;
-	exports io.github.astrapi69.crypt.api.key;
-	exports io.github.astrapi69.crypt.api.mechanism;
-	exports io.github.astrapi69.crypt.api.mode;
-	exports io.github.astrapi69.crypt.api.obfuscation;
-	exports io.github.astrapi69.crypt.api.obfuscation.rule;
-	exports io.github.astrapi69.crypt.api.padding;
-	exports io.github.astrapi69.crypt.api.password;
-	exports io.github.astrapi69.crypt.api.provider;
+package io.github.astrapi69.crypt.api.annotation;
+
+
+import static java.lang.annotation.ElementType.FIELD;
+import static java.lang.annotation.ElementType.PARAMETER;
+import static java.lang.annotation.RetentionPolicy.RUNTIME;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.Target;
+
+/**
+ * The marker annotation {@link Decrypted} marks a field that it was decrypted as the name let
+ * assume.
+ */
+@Retention(RUNTIME)
+@Target(value = { FIELD, PARAMETER })
+public @interface Decrypted {
 }

@@ -22,18 +22,60 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-module crypt.api {
-	exports io.github.astrapi69.crypt.api;
-	exports io.github.astrapi69.crypt.api.algorithm;
-	exports io.github.astrapi69.crypt.api.annotation;
-	exports io.github.astrapi69.crypt.api.blockchain;
-	exports io.github.astrapi69.crypt.api.compound;
-	exports io.github.astrapi69.crypt.api.key;
-	exports io.github.astrapi69.crypt.api.mechanism;
-	exports io.github.astrapi69.crypt.api.mode;
-	exports io.github.astrapi69.crypt.api.obfuscation;
-	exports io.github.astrapi69.crypt.api.obfuscation.rule;
-	exports io.github.astrapi69.crypt.api.padding;
-	exports io.github.astrapi69.crypt.api.password;
-	exports io.github.astrapi69.crypt.api.provider;
+package io.github.astrapi69.crypt.api.algorithm;
+
+public enum ChecksumAlgorithm implements Algorithm
+{
+
+	/**
+	 * The enum constant for MD2 algorithm.
+	 */
+	MD2(MdAlgorithm.MD2.getAlgorithm()),
+
+	/**
+	 * The enum constant for MD4 algorithm.
+	 */
+	MD4(MdAlgorithm.MD4.getAlgorithm()),
+
+	/**
+	 * The enum constant for MD5 algorithm.
+	 */
+	MD5(MdAlgorithm.MD5.getAlgorithm()),
+
+	/**
+	 * The enum constant for SHA-1 algorithm.
+	 */
+	SHA_1(HashAlgorithm.SHA_1.getAlgorithm()),
+
+	/**
+	 * The enum constant for SHA-256 algorithm.
+	 */
+	SHA_256(HashAlgorithm.SHA_256.getAlgorithm()),
+
+	/**
+	 * The enum constant for SHA-384 algorithm.
+	 */
+	SHA_384(HashAlgorithm.SHA_384.getAlgorithm()),
+
+	/**
+	 * The enum constant for SHA-512 algorithm.
+	 */
+	SHA_512(HashAlgorithm.SHA_512.getAlgorithm()),
+
+	/**
+	 * The enum constant for an undefined algorithm.
+	 */
+	UNDEFINED("UNDEFINED");
+
+	private final String algorithm;
+
+	ChecksumAlgorithm(String algorithm)
+	{
+		this.algorithm = algorithm;
+	}
+
+	public String getAlgorithm()
+	{
+		return this.algorithm;
+	}
 }

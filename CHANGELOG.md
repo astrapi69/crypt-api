@@ -4,6 +4,11 @@
 Version 8.3-SNAPSHOT
 -------------
 
+CHANGED:
+
+- rename of main package 'io.github.astrapi69.crypto.*' to new 'io.github.astrapi69.crypt.api.*'
+- update of module-info.java file to the new package
+
 Version 8.2
 -------------
 

@@ -22,18 +22,28 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-module crypt.api {
-	exports io.github.astrapi69.crypt.api;
-	exports io.github.astrapi69.crypt.api.algorithm;
-	exports io.github.astrapi69.crypt.api.annotation;
-	exports io.github.astrapi69.crypt.api.blockchain;
-	exports io.github.astrapi69.crypt.api.compound;
-	exports io.github.astrapi69.crypt.api.key;
-	exports io.github.astrapi69.crypt.api.mechanism;
-	exports io.github.astrapi69.crypt.api.mode;
-	exports io.github.astrapi69.crypt.api.obfuscation;
-	exports io.github.astrapi69.crypt.api.obfuscation.rule;
-	exports io.github.astrapi69.crypt.api.padding;
-	exports io.github.astrapi69.crypt.api.password;
-	exports io.github.astrapi69.crypt.api.provider;
+package io.github.astrapi69.crypt.api.algorithm;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+
+/**
+ * The unit test class for the enum class {@link KeyPairGeneratorAlgorithm}
+ */
+public class KeyPairGeneratorAlgorithmTest
+{
+
+	/**
+	 * Test for concatenated constants.
+	 */
+	@Test
+	public void testGetAlgorithms()
+	{
+		assertEquals(KeyPairGeneratorAlgorithm.DIFFIE_HELLMAN.getAlgorithm(), "DiffieHellman");
+		assertEquals(KeyPairGeneratorAlgorithm.DSA.getAlgorithm(), "DSA");
+		assertEquals(KeyPairGeneratorAlgorithm.EC.getAlgorithm(), "EC");
+		assertEquals(KeyPairGeneratorAlgorithm.RSA.getAlgorithm(), "RSA");
+		assertEquals(KeyPairGeneratorAlgorithm.RSASSA_PSS.getAlgorithm(), "RSASSA-PSS");
+	}
 }

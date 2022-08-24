@@ -22,18 +22,51 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-module crypt.api {
-	exports io.github.astrapi69.crypt.api;
-	exports io.github.astrapi69.crypt.api.algorithm;
-	exports io.github.astrapi69.crypt.api.annotation;
-	exports io.github.astrapi69.crypt.api.blockchain;
-	exports io.github.astrapi69.crypt.api.compound;
-	exports io.github.astrapi69.crypt.api.key;
-	exports io.github.astrapi69.crypt.api.mechanism;
-	exports io.github.astrapi69.crypt.api.mode;
-	exports io.github.astrapi69.crypt.api.obfuscation;
-	exports io.github.astrapi69.crypt.api.obfuscation.rule;
-	exports io.github.astrapi69.crypt.api.padding;
-	exports io.github.astrapi69.crypt.api.password;
-	exports io.github.astrapi69.crypt.api.provider;
+package io.github.astrapi69.crypt.api.key;
+
+/**
+ * The enum {@link KeySize} hold the bit size for private keys.
+ */
+public enum KeySize
+{
+
+	/** The keysize of 1024 bits. */
+	KEYSIZE_1024(1024),
+
+	/** The keysize of 2048 bits. */
+	KEYSIZE_2048(2048),
+
+	/** The keysize of 4096 bits. */
+	KEYSIZE_4096(4096),
+
+	/** The keysize of 8192 bits. */
+	KEYSIZE_8192(8192);
+
+	/** The display. */
+	private final Integer keySize;
+
+	/**
+	 * Instantiates a new {@link KeySize}.
+	 *
+	 * @param keySize
+	 *            the key size
+	 */
+	KeySize(final Integer keySize)
+	{
+		this.keySize = keySize;
+	}
+
+	public Integer getKeySize()
+	{
+		return this.keySize;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public String toString()
+	{
+		return this.keySize.toString();
+	}
 }

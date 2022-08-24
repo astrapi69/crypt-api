@@ -22,18 +22,31 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-module crypt.api {
-	exports io.github.astrapi69.crypt.api;
-	exports io.github.astrapi69.crypt.api.algorithm;
-	exports io.github.astrapi69.crypt.api.annotation;
-	exports io.github.astrapi69.crypt.api.blockchain;
-	exports io.github.astrapi69.crypt.api.compound;
-	exports io.github.astrapi69.crypt.api.key;
-	exports io.github.astrapi69.crypt.api.mechanism;
-	exports io.github.astrapi69.crypt.api.mode;
-	exports io.github.astrapi69.crypt.api.obfuscation;
-	exports io.github.astrapi69.crypt.api.obfuscation.rule;
-	exports io.github.astrapi69.crypt.api.padding;
-	exports io.github.astrapi69.crypt.api.password;
-	exports io.github.astrapi69.crypt.api.provider;
+package io.github.astrapi69.crypt.api.password;
+
+/**
+ * Interface that can be implemented from classes that want to encrypt or decrypt with a password
+ */
+public interface Passwordable
+{
+	/**
+	 * Sets the given password
+	 * 
+	 * @param password
+	 *            the password to set
+	 */
+	void setPassword(String password);
+
+	/**
+	 * Sets the given password
+	 * 
+	 * @param password
+	 *            the password to set
+	 */
+	void setPassword(char[] password);
+
+	/**
+	 * Resets the password
+	 */
+	void resetPassword();
 }

@@ -22,18 +22,28 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-module crypt.api {
-	exports io.github.astrapi69.crypt.api;
-	exports io.github.astrapi69.crypt.api.algorithm;
-	exports io.github.astrapi69.crypt.api.annotation;
-	exports io.github.astrapi69.crypt.api.blockchain;
-	exports io.github.astrapi69.crypt.api.compound;
-	exports io.github.astrapi69.crypt.api.key;
-	exports io.github.astrapi69.crypt.api.mechanism;
-	exports io.github.astrapi69.crypt.api.mode;
-	exports io.github.astrapi69.crypt.api.obfuscation;
-	exports io.github.astrapi69.crypt.api.obfuscation.rule;
-	exports io.github.astrapi69.crypt.api.padding;
-	exports io.github.astrapi69.crypt.api.password;
-	exports io.github.astrapi69.crypt.api.provider;
+package io.github.astrapi69.crypt.api.algorithm;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+
+/**
+ * The unit test class for the enum class {@link AesAlgorithm}
+ */
+public class AesAlgorithmTest
+{
+
+	/**
+	 * Test for concatenated constants.
+	 */
+	@Test
+	public void testGetAlgorithms()
+	{
+		assertEquals(AesAlgorithm.AES.getAlgorithm(), "AES");
+		assertEquals(AesAlgorithm.AES_KEY_MINIMUM_LENGTH, 128);
+		assertEquals(AesAlgorithm.AES_KEY_MEDIUM_LENGTH, 192);
+		assertEquals(AesAlgorithm.AES_KEY_MAXIMUM_LENGTH, 256);
+		assertEquals(AesAlgorithm.AES_KEY_LENGTH, 256);
+	}
 }

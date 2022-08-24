@@ -22,18 +22,46 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-module crypt.api {
-	exports io.github.astrapi69.crypt.api;
-	exports io.github.astrapi69.crypt.api.algorithm;
-	exports io.github.astrapi69.crypt.api.annotation;
-	exports io.github.astrapi69.crypt.api.blockchain;
-	exports io.github.astrapi69.crypt.api.compound;
-	exports io.github.astrapi69.crypt.api.key;
-	exports io.github.astrapi69.crypt.api.mechanism;
-	exports io.github.astrapi69.crypt.api.mode;
-	exports io.github.astrapi69.crypt.api.obfuscation;
-	exports io.github.astrapi69.crypt.api.obfuscation.rule;
-	exports io.github.astrapi69.crypt.api.padding;
-	exports io.github.astrapi69.crypt.api.password;
-	exports io.github.astrapi69.crypt.api.provider;
+package io.github.astrapi69.crypt.api.key;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+
+/**
+ * The unit test class for the class {@link KeySize}
+ */
+public class KeySizeTest
+{
+
+	/**
+	 * Test method for {@link KeySize#getKeySize()}
+	 */
+	@Test
+	public void testGetKeySize() throws Exception
+	{
+		Integer expected;
+		Integer actual;
+
+		actual = KeySize.KEYSIZE_1024.getKeySize();
+		expected = 1024;
+		assertEquals(actual, expected);
+		assertEquals(KeySize.KEYSIZE_1024.toString(), expected.toString());
+
+		actual = KeySize.KEYSIZE_2048.getKeySize();
+		expected = 2048;
+		assertEquals(actual, expected);
+		assertEquals(KeySize.KEYSIZE_2048.toString(), expected.toString());
+
+		actual = KeySize.KEYSIZE_4096.getKeySize();
+		expected = 4096;
+		assertEquals(actual, expected);
+		assertEquals(KeySize.KEYSIZE_4096.toString(), expected.toString());
+
+		actual = KeySize.KEYSIZE_8192.getKeySize();
+		expected = 8192;
+		assertEquals(actual, expected);
+		assertEquals(KeySize.KEYSIZE_8192.toString(), expected.toString());
+	}
+
 }

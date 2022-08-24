@@ -22,18 +22,30 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-module crypt.api {
-	exports io.github.astrapi69.crypt.api;
-	exports io.github.astrapi69.crypt.api.algorithm;
-	exports io.github.astrapi69.crypt.api.annotation;
-	exports io.github.astrapi69.crypt.api.blockchain;
-	exports io.github.astrapi69.crypt.api.compound;
-	exports io.github.astrapi69.crypt.api.key;
-	exports io.github.astrapi69.crypt.api.mechanism;
-	exports io.github.astrapi69.crypt.api.mode;
-	exports io.github.astrapi69.crypt.api.obfuscation;
-	exports io.github.astrapi69.crypt.api.obfuscation.rule;
-	exports io.github.astrapi69.crypt.api.padding;
-	exports io.github.astrapi69.crypt.api.password;
-	exports io.github.astrapi69.crypt.api.provider;
+package io.github.astrapi69.crypt.api;
+
+/**
+ * The generic functional interface {@link Encryptor} can encrypt an object of type &lt;T&gt; and
+ * return the encrypted result as object of type &lt;R&gt;.
+ *
+ * @author Asterios Raptis
+ * @version 1.0
+ * @param <T>
+ *            the generic type of the input to encrypt
+ * @param <R>
+ *            the generic type of the result
+ */
+public interface Encryptor<T, R>
+{
+	/**
+	 * Encrypt the given object.
+	 *
+	 * @param toEncrypt
+	 *            The object to encrypt.
+	 * @return The encrypted object.
+	 * @throws Exception
+	 *             is thrown if encryption fails.
+	 */
+	R encrypt(final T toEncrypt) throws Exception;
+
 }

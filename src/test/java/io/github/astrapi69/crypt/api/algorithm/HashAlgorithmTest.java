@@ -22,18 +22,33 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-module crypt.api {
-	exports io.github.astrapi69.crypt.api;
-	exports io.github.astrapi69.crypt.api.algorithm;
-	exports io.github.astrapi69.crypt.api.annotation;
-	exports io.github.astrapi69.crypt.api.blockchain;
-	exports io.github.astrapi69.crypt.api.compound;
-	exports io.github.astrapi69.crypt.api.key;
-	exports io.github.astrapi69.crypt.api.mechanism;
-	exports io.github.astrapi69.crypt.api.mode;
-	exports io.github.astrapi69.crypt.api.obfuscation;
-	exports io.github.astrapi69.crypt.api.obfuscation.rule;
-	exports io.github.astrapi69.crypt.api.padding;
-	exports io.github.astrapi69.crypt.api.password;
-	exports io.github.astrapi69.crypt.api.provider;
+package io.github.astrapi69.crypt.api.algorithm;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+
+/**
+ * The unit test class for the enum class {@link HashAlgorithm}
+ */
+public class HashAlgorithmTest
+{
+
+	/**
+	 * Test for concatenated constants.
+	 */
+	@Test
+	public void testGetAlgorithms()
+	{
+		assertEquals(HashAlgorithm.SHA_1.getAlgorithm(), "SHA-1");
+		assertEquals(HashAlgorithm.SHA_224.getAlgorithm(), "SHA-224");
+		assertEquals(HashAlgorithm.SHA_256.getAlgorithm(), "SHA-256");
+		assertEquals(HashAlgorithm.SHA_384.getAlgorithm(), "SHA-384");
+		assertEquals(HashAlgorithm.SHA_512.getAlgorithm(), "SHA-512");
+		assertEquals(HashAlgorithm.SHA1.getAlgorithm(), "SHA1");
+		assertEquals(HashAlgorithm.SHA224.getAlgorithm(), "SHA224");
+		assertEquals(HashAlgorithm.SHA256.getAlgorithm(), "SHA256");
+		assertEquals(HashAlgorithm.SHA384.getAlgorithm(), "SHA384");
+		assertEquals(HashAlgorithm.SHA512.getAlgorithm(), "SHA512");
+	}
 }

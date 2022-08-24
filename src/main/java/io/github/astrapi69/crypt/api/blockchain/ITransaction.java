@@ -22,18 +22,31 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-module crypt.api {
-	exports io.github.astrapi69.crypt.api;
-	exports io.github.astrapi69.crypt.api.algorithm;
-	exports io.github.astrapi69.crypt.api.annotation;
-	exports io.github.astrapi69.crypt.api.blockchain;
-	exports io.github.astrapi69.crypt.api.compound;
-	exports io.github.astrapi69.crypt.api.key;
-	exports io.github.astrapi69.crypt.api.mechanism;
-	exports io.github.astrapi69.crypt.api.mode;
-	exports io.github.astrapi69.crypt.api.obfuscation;
-	exports io.github.astrapi69.crypt.api.obfuscation.rule;
-	exports io.github.astrapi69.crypt.api.padding;
-	exports io.github.astrapi69.crypt.api.password;
-	exports io.github.astrapi69.crypt.api.provider;
+package io.github.astrapi69.crypt.api.blockchain;
+
+public interface ITransaction
+{
+
+	byte[] getHash();
+
+	void setHash(byte[] hash);
+
+	byte[] getSenderHash();
+
+	void setSenderHash(byte[] senderHash);
+
+	byte[] getSignableData();
+
+	byte[] getSignature();
+
+	void setSignature(byte[] signature);
+
+	String getText();
+
+	void setText(String text);
+
+	long getTimestamp();
+
+	void setTimestamp(long timestamp);
+
 }

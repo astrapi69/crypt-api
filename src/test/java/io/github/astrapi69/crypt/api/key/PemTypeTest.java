@@ -22,18 +22,34 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-module crypt.api {
-	exports io.github.astrapi69.crypt.api;
-	exports io.github.astrapi69.crypt.api.algorithm;
-	exports io.github.astrapi69.crypt.api.annotation;
-	exports io.github.astrapi69.crypt.api.blockchain;
-	exports io.github.astrapi69.crypt.api.compound;
-	exports io.github.astrapi69.crypt.api.key;
-	exports io.github.astrapi69.crypt.api.mechanism;
-	exports io.github.astrapi69.crypt.api.mode;
-	exports io.github.astrapi69.crypt.api.obfuscation;
-	exports io.github.astrapi69.crypt.api.obfuscation.rule;
-	exports io.github.astrapi69.crypt.api.padding;
-	exports io.github.astrapi69.crypt.api.password;
-	exports io.github.astrapi69.crypt.api.provider;
+package io.github.astrapi69.crypt.api.key;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+
+/**
+ * The unit test class for the class {@link PemType}
+ */
+public class PemTypeTest
+{
+
+	/**
+	 * Test method for {@link PemType#toPemType(String)}
+	 */
+	@Test
+	public void testToPemType()
+	{
+		PemType actual;
+		PemType expected;
+
+		actual = PemType.toPemType(PemType.PRIVATE_KEY_NAME);
+		expected = PemType.PRIVATE_KEY;
+		assertEquals(actual, expected);
+
+		actual = PemType.toPemType("foo");
+		expected = PemType.UNKNOWN_TYPE;
+		assertEquals(actual, expected);
+	}
+
 }

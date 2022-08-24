@@ -22,18 +22,51 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-module crypt.api {
-	exports io.github.astrapi69.crypt.api;
-	exports io.github.astrapi69.crypt.api.algorithm;
-	exports io.github.astrapi69.crypt.api.annotation;
-	exports io.github.astrapi69.crypt.api.blockchain;
-	exports io.github.astrapi69.crypt.api.compound;
-	exports io.github.astrapi69.crypt.api.key;
-	exports io.github.astrapi69.crypt.api.mechanism;
-	exports io.github.astrapi69.crypt.api.mode;
-	exports io.github.astrapi69.crypt.api.obfuscation;
-	exports io.github.astrapi69.crypt.api.obfuscation.rule;
-	exports io.github.astrapi69.crypt.api.padding;
-	exports io.github.astrapi69.crypt.api.password;
-	exports io.github.astrapi69.crypt.api.provider;
+package io.github.astrapi69.crypt.api.key;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import java.util.Arrays;
+
+import org.junit.jupiter.api.Test;
+
+import io.github.astrapi69.collections.array.ArrayFactory;
+
+/**
+ * The unit test class for the class {@link KeyFileFormat}
+ */
+public class KeyFileFormatTest
+{
+
+	/**
+	 * Test method for {@link KeyFileFormat#getFileExtensions()}
+	 */
+	@Test
+	public void testGetFileExtensions() throws Exception
+	{
+		String[] expected;
+		String[] actual;
+
+		actual = KeyFileFormat.DER.getFileExtensions();
+
+		expected = ArrayFactory.newArray("der");
+		assertTrue(Arrays.equals(actual, expected));
+
+		actual = KeyFileFormat.PEM.getFileExtensions();
+
+		expected = ArrayFactory.newArray("cer", "crt", "pem");
+		assertTrue(Arrays.equals(actual, expected));
+
+		actual = KeyFileFormat.P7B.getFileExtensions();
+
+		expected = ArrayFactory.newArray("p7b", "p7c");
+		assertTrue(Arrays.equals(actual, expected));
+
+		actual = KeyFileFormat.UNKNOWN.getFileExtensions();
+
+		expected = ArrayFactory.newArray();
+		assertTrue(Arrays.equals(actual, expected));
+
+	}
+
 }

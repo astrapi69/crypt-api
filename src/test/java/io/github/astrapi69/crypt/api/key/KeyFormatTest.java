@@ -22,18 +22,44 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-module crypt.api {
-	exports io.github.astrapi69.crypt.api;
-	exports io.github.astrapi69.crypt.api.algorithm;
-	exports io.github.astrapi69.crypt.api.annotation;
-	exports io.github.astrapi69.crypt.api.blockchain;
-	exports io.github.astrapi69.crypt.api.compound;
-	exports io.github.astrapi69.crypt.api.key;
-	exports io.github.astrapi69.crypt.api.mechanism;
-	exports io.github.astrapi69.crypt.api.mode;
-	exports io.github.astrapi69.crypt.api.obfuscation;
-	exports io.github.astrapi69.crypt.api.obfuscation.rule;
-	exports io.github.astrapi69.crypt.api.padding;
-	exports io.github.astrapi69.crypt.api.password;
-	exports io.github.astrapi69.crypt.api.provider;
+/**
+ *
+ */
+package io.github.astrapi69.crypt.api.key;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+
+/**
+ * The unit test class for the class {@link KeyFormatTest}
+ */
+public class KeyFormatTest
+{
+
+	/**
+	 * Test method for {@link KeyFormat#name()}
+	 */
+	@Test
+	public void testKeyFormat()
+	{
+		String expected;
+		String actual;
+		actual = KeyFormat.PKCS_1.name();
+		expected = "PKCS_1";
+		assertEquals(actual, expected);
+
+		actual = KeyFormat.PKCS_1.getFormat();
+		expected = "PKCS#1";
+		assertEquals(actual, expected);
+
+		actual = KeyFormat.PKCS_8.name();
+		expected = "PKCS_8";
+		assertEquals(actual, expected);
+
+		actual = KeyFormat.PKCS_8.getFormat();
+		expected = "PKCS#8";
+		assertEquals(actual, expected);
+	}
+
 }

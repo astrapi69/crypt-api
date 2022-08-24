@@ -22,18 +22,47 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-module crypt.api {
-	exports io.github.astrapi69.crypt.api;
-	exports io.github.astrapi69.crypt.api.algorithm;
-	exports io.github.astrapi69.crypt.api.annotation;
-	exports io.github.astrapi69.crypt.api.blockchain;
-	exports io.github.astrapi69.crypt.api.compound;
-	exports io.github.astrapi69.crypt.api.key;
-	exports io.github.astrapi69.crypt.api.mechanism;
-	exports io.github.astrapi69.crypt.api.mode;
-	exports io.github.astrapi69.crypt.api.obfuscation;
-	exports io.github.astrapi69.crypt.api.obfuscation.rule;
-	exports io.github.astrapi69.crypt.api.padding;
-	exports io.github.astrapi69.crypt.api.password;
-	exports io.github.astrapi69.crypt.api.provider;
+package io.github.astrapi69.crypt.api.algorithm;
+
+/**
+ * The enum {@link MdAlgorithm} defines the MessageDigest algorithm.
+ *
+ * @version 1.0
+ * @author Asterios Raptis
+ */
+public enum MdAlgorithm implements Algorithm
+{
+
+	/** The enum constant for MD2 algorithm. */
+	MD2(MdAlgorithm.MD + 2),
+
+	/** The enum constant for MD4 algorithm. */
+	MD4(MdAlgorithm.MD + 4),
+
+	/** The enum constant for MD5 algorithm. */
+	MD5(MdAlgorithm.MD_5);
+
+	/** The string constant MD that is use as prefix */
+	public static final String MD = "MD";
+	/** The string constant MD_5 */
+	public static final String MD_5 = MD + 5;
+	/** The algorithm. */
+	private final String algorithm;
+
+	/**
+	 * Instantiates a new {@link Algorithm} object.
+	 *
+	 * @param algorithm
+	 *            the algorithm.
+	 */
+	MdAlgorithm(final String algorithm)
+	{
+		this.algorithm = algorithm;
+	}
+
+	@Override
+	public String getAlgorithm()
+	{
+		return algorithm;
+	}
 }

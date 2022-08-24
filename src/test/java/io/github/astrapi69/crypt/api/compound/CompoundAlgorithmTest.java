@@ -22,18 +22,39 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-module crypt.api {
-	exports io.github.astrapi69.crypt.api;
-	exports io.github.astrapi69.crypt.api.algorithm;
-	exports io.github.astrapi69.crypt.api.annotation;
-	exports io.github.astrapi69.crypt.api.blockchain;
-	exports io.github.astrapi69.crypt.api.compound;
-	exports io.github.astrapi69.crypt.api.key;
-	exports io.github.astrapi69.crypt.api.mechanism;
-	exports io.github.astrapi69.crypt.api.mode;
-	exports io.github.astrapi69.crypt.api.obfuscation;
-	exports io.github.astrapi69.crypt.api.obfuscation.rule;
-	exports io.github.astrapi69.crypt.api.padding;
-	exports io.github.astrapi69.crypt.api.password;
-	exports io.github.astrapi69.crypt.api.provider;
+package io.github.astrapi69.crypt.api.compound;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+
+public class CompoundAlgorithmTest
+{
+
+	/**
+	 * Test for concatenated constants.
+	 */
+	@Test
+	public void testGetAlgorithms()
+	{
+		assertEquals(CompoundAlgorithm.PBE_WITH_MD5_AND_DES.getAlgorithm(), "PBEWithMD5AndDES");
+
+		assertEquals(CompoundAlgorithm.PBE_WITH_MD5_AND_AES.getAlgorithm(), "PBEWithMD5AndAES");
+
+		assertEquals(CompoundAlgorithm.PBE_WITH_SHA1_AND_DES_EDE.getAlgorithm(),
+			"PBEWithSHA1AndDESede");
+
+		assertEquals(CompoundAlgorithm.PBKDF2_WITH_HMAC_SHA1.getAlgorithm(), "PBKDF2WithHmacSHA1");
+
+		assertEquals(CompoundAlgorithm.PBE_WITH_SHA1_AND_128BIT_AES_CBC_BC.getAlgorithm(),
+			"PBEWITHSHA1AND128BITAES-CBC-BC");
+
+		assertEquals(CompoundAlgorithm.SHA512_WITH_RSA.getAlgorithm(), "SHA512withRSA");
+
+		assertEquals(CompoundAlgorithm.SHA384_WITH_RSA.getAlgorithm(), "SHA384withRSA");
+
+		assertEquals(CompoundAlgorithm.SHA256_WITH_RSA.getAlgorithm(), "SHA256withRSA");
+
+		assertEquals(CompoundAlgorithm.SHA1_WITH_RSA.getAlgorithm(), "SHA1withRSA");
+	}
 }

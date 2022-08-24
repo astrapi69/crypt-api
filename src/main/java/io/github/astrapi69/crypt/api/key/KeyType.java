@@ -22,18 +22,54 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-module crypt.api {
-	exports io.github.astrapi69.crypt.api;
-	exports io.github.astrapi69.crypt.api.algorithm;
-	exports io.github.astrapi69.crypt.api.annotation;
-	exports io.github.astrapi69.crypt.api.blockchain;
-	exports io.github.astrapi69.crypt.api.compound;
-	exports io.github.astrapi69.crypt.api.key;
-	exports io.github.astrapi69.crypt.api.mechanism;
-	exports io.github.astrapi69.crypt.api.mode;
-	exports io.github.astrapi69.crypt.api.obfuscation;
-	exports io.github.astrapi69.crypt.api.obfuscation.rule;
-	exports io.github.astrapi69.crypt.api.padding;
-	exports io.github.astrapi69.crypt.api.password;
-	exports io.github.astrapi69.crypt.api.provider;
+package io.github.astrapi69.crypt.api.key;
+
+/**
+ * The enum {@link KeyType} can discriminate the type, if it is a private or public key or a
+ * certificate.
+ */
+public enum KeyType
+{
+
+	/** The certificate type. */
+	CERTIFICATE("Certificate"),
+
+	/** The private key type. */
+	PRIVATE_KEY("Private key"),
+
+	/** The password protected private key type. */
+	PRIVATE_KEY_PASSWORD_PROTECTED("Password protected private key"),
+
+	/** The public key type. */
+	PUBLIC_KEY("Public key"),
+
+	/** The password protected public key type. */
+	PUBLIC_KEY_PASSWORD_PROTECTED("Password protected public key");
+
+	private final String displayValue;
+
+	/**
+	 * Instantiates a new {@link KeyType} object.
+	 *
+	 * @param displayValue
+	 *            the display value
+	 */
+	KeyType(final String displayValue)
+	{
+		this.displayValue = displayValue;
+	}
+
+	public String getDisplayValue()
+	{
+		return this.displayValue;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public String toString()
+	{
+		return this.displayValue;
+	}
 }
