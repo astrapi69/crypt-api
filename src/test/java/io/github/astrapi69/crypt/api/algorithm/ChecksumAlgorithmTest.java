@@ -41,12 +41,10 @@ public class ChecksumAlgorithmTest
 	public void testGetAlgorithms()
 	{
 		assertEquals(ChecksumAlgorithm.MD2.getAlgorithm(), "MD2");
-		assertEquals(ChecksumAlgorithm.MD4.getAlgorithm(), "MD4");
 		assertEquals(ChecksumAlgorithm.MD5.getAlgorithm(), "MD5");
 		assertEquals(ChecksumAlgorithm.SHA_1.getAlgorithm(), "SHA-1");
 		assertEquals(ChecksumAlgorithm.SHA_256.getAlgorithm(), "SHA-256");
 		assertEquals(ChecksumAlgorithm.SHA_384.getAlgorithm(), "SHA-384");
 		assertEquals(ChecksumAlgorithm.SHA_512.getAlgorithm(), "SHA-512");
-		assertEquals(ChecksumAlgorithm.UNDEFINED.getAlgorithm(), "UNDEFINED");
 	}
 }

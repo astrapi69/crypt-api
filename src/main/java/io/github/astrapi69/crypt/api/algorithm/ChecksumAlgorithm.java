@@ -33,11 +33,6 @@ public enum ChecksumAlgorithm implements Algorithm
 	MD2(MdAlgorithm.MD2.getAlgorithm()),
 
 	/**
-	 * The enum constant for MD4 algorithm.
-	 */
-	MD4(MdAlgorithm.MD4.getAlgorithm()),
-
-	/**
 	 * The enum constant for MD5 algorithm.
 	 */
 	MD5(MdAlgorithm.MD5.getAlgorithm()),
@@ -60,12 +55,7 @@ public enum ChecksumAlgorithm implements Algorithm
 	/**
 	 * The enum constant for SHA-512 algorithm.
 	 */
-	SHA_512(HashAlgorithm.SHA_512.getAlgorithm()),
-
-	/**
-	 * The enum constant for an undefined algorithm.
-	 */
-	UNDEFINED("UNDEFINED");
+	SHA_512(HashAlgorithm.SHA_512.getAlgorithm());
 
 	private final String algorithm;
 
