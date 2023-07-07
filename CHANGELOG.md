@@ -1,13 +1,23 @@
 ## Change log
 ----------------------
 
-Version 8.4-SNAPSHOT
+Version 8.5-SNAPSHOT
 -------------
 
 ADDED:
 
 - new enum class SecretKeyAlgorithm for secret key algorithms
 
+CHANGED:
+
+- update of gradle plugin dependency com.github.ben-manes.versions.gradle.plugin to new minor version 0.43.0
+- update of gradle-plugin dependency 'com.diffplug.spotless:spotless-plugin-gradle' in version 6.11.0
+- update of test dependency junit-jupiter-api to new version 5.9.1
+- update of test dependency silly-collection to new version to 20.1
+- removed unsupported algorithm MD4 from the enum ChecksumAlgorithm
+
+Version 8.4
+-------------
 
 CHANGED:
 
