@@ -58,6 +58,9 @@ public enum AesAlgorithm implements Algorithm
 		this.algorithm = algorithm;
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public String getAlgorithm()
 	{

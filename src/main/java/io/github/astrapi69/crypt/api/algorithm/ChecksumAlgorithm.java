@@ -74,6 +74,9 @@ public enum ChecksumAlgorithm implements Algorithm
 		this.algorithm = algorithm;
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
 	public String getAlgorithm()
 	{
 		return this.algorithm;

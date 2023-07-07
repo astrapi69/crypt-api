@@ -4,6 +4,18 @@
 Version 8.4-SNAPSHOT
 -------------
 
+ADDED:
+
+- new enum class SecretKeyAlgorithm for secret key algorithms
+
+
+CHANGED:
+
+- update gradle to new version 8.2
+- update of gradle-plugin dependency 'com.diffplug.spotless:spotless-plugin-gradle' in version 6.19.0
+- update of test dependency junit-jupiter-api to new version 5.10.0-M1
+- update of test dependency silly-collection to new version to 21
+
 Version 8.3
 -------------
 

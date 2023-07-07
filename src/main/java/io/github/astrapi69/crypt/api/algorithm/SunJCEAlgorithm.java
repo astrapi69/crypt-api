@@ -68,6 +68,9 @@ public enum SunJCEAlgorithm implements Algorithm
 		this.algorithm = algorithm;
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public String getAlgorithm()
 	{

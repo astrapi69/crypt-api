@@ -60,6 +60,9 @@ public enum KeystoreType implements Algorithm
 		this.algorithm = algorithm;
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public String getAlgorithm()
 	{

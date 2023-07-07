@@ -79,6 +79,9 @@ public enum HashAlgorithm implements Algorithm
 		this.algorithm = algorithm;
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
 	public String getAlgorithm()
 	{
 		return algorithm;

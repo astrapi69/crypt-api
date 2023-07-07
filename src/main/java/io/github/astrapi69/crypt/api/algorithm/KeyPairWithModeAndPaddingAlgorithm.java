@@ -99,6 +99,9 @@ public enum KeyPairWithModeAndPaddingAlgorithm implements Algorithm
 		this.algorithm = algorithm;
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public String getAlgorithm()
 	{

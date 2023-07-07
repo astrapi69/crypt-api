@@ -95,6 +95,9 @@ public enum KeyPairGeneratorAlgorithm implements Algorithm
 			.orElse(KeyPairGeneratorAlgorithm.UNKNOWN_TYPE);
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public String getAlgorithm()
 	{
