@@ -28,8 +28,8 @@ import java.util.Arrays;
 
 /**
  * The enum {@link KeyPairGeneratorAlgorithm}. For more info see: <a href=
- * "https://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#KeyPairGenerator">
- * https://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#KeyPairGenerator</a>
+ * "https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.html#keypairgenerator-algorithms">
+ * https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.html#keypairgenerator-algorithms</a>
  *
  * @version 1.0
  */
@@ -37,36 +37,76 @@ public enum KeyPairGeneratorAlgorithm implements Algorithm
 {
 	/** The enum constant for DIFFIE_HELLMAN algorithm. */
 	DIFFIE_HELLMAN(KeyPairGeneratorAlgorithm.DIFFIE_HELLMAN_ALGORITHM_NAME),
+
 	/** The shortcut value for the enum constant for DIFFIE_HELLMAN algorithm. */
 	DH(KeyPairGeneratorAlgorithm.DH_ALGORITHM_NAME),
+
+	/** The enum constant for XDH algorithm. */
+	XDH(KeyPairGeneratorAlgorithm.XDH_ALGORITHM_NAME),
+
+	/** The enum constant for X25519 algorithm. */
+	X25519(KeyPairGeneratorAlgorithm.X25519_ALGORITHM_NAME),
+
+	/** The enum constant for X448 algorithm. */
+	X448(KeyPairGeneratorAlgorithm.X448_ALGORITHM_NAME),
+
 	/** The enum constant for DSA algorithm. */
 	DSA(KeyPairGeneratorAlgorithm.DSA_ALGORITHM_NAME),
+
 	/** The enum constant for EC algorithm. */
 	EC(KeyPairGeneratorAlgorithm.EC_ALGORITHM_NAME),
+
 	/** The enum constant for RSA algorithm. */
 	RSA(KeyPairGeneratorAlgorithm.RSA_ALGORITHM_NAME),
+
 	/** The enum constant for RSA algorithm. */
 	RSASSA_PSS(KeyPairGeneratorAlgorithm.RSASSA_PSS_ALGORITHM_NAME),
+
 	/** The enum constant if the algorithm type is unknown. */
 	UNKNOWN_TYPE(KeyPairGeneratorAlgorithm.UNKNOWN_ALGORITHM_TYPE);
 
 	/** The string constant DIFFIE_HELLMAN_ALGORITHM_NAME for the 'DiffieHellman' algorithm */
 	public static final String DIFFIE_HELLMAN_ALGORITHM_NAME = "DiffieHellman";
+
 	/**
-	 * The string constant DH_ALGORITHM_NAME for the 'DH' and is a shortcut for 'DiffieHellman'
-	 * algorithm
+	 * The string constant DH_ALGORITHM_NAME is the name of the algorithm for the 'DH' and is a
+	 * shortcut for 'DiffieHellman' algorithm
 	 */
 	public static final String DH_ALGORITHM_NAME = "DH";
+
+	/**
+	 * The string constant XDH_ALGORITHM_NAME is the name of the algorithm for generate keypairs for
+	 * Diffie-Hellman key agreement with elliptic curves as defined in RFC 7748
+	 */
+	public static final String XDH_ALGORITHM_NAME = "XDH";
+
+	/**
+	 * The string constant X25519_ALGORITHM_NAME is the name of the algorithm for generate keypairs
+	 * for Diffie-Hellman key agreement with Curve25519 as defined in RFC 7748
+	 */
+	public static final String X25519_ALGORITHM_NAME = "X25519";
+
+	/**
+	 * The string constant X448_ALGORITHM_NAME is the name of the algorithm for generate keypairs
+	 * for Diffie-Hellman key agreement with Curve448 as defined in RFC 7748
+	 */
+	public static final String X448_ALGORITHM_NAME = "X448";
+
 	/** The string constant DSA_ALGORITHM_NAME */
 	public static final String DSA_ALGORITHM_NAME = "DSA";
+
 	/** The string constant EC_ALGORITHM_NAME */
 	public static final String EC_ALGORITHM_NAME = "EC";
+
 	/** The string constant RSA_ALGORITHM_NAME */
 	public static final String RSA_ALGORITHM_NAME = "RSA";
+
 	/** The string constant RSAASSA_PSS_ALGORITHM_NAME */
 	public static final String RSASSA_PSS_ALGORITHM_NAME = RSA_ALGORITHM_NAME + "SSA-PSS";
+
 	/** The Constant UNKNOWN_ALGORITHM_TYPE is if the algorithm type is unknown. */
 	public static final String UNKNOWN_ALGORITHM_TYPE = "UNKNOWN ALGORITHM TYPE";
+
 	/** The algorithm. */
 	private final String algorithm;
 

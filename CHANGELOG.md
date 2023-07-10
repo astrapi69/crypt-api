@@ -4,6 +4,11 @@
 Version 8.6-SNAPSHOT
 -------------
 
+ADDED:
+
+- new algorithms to the enum class KeyPairGeneratorAlgorithm that have come with jdk 11
+- new modes to the enum class Mode that have come with jdk 11
+
 Version 8.5
 -------------
 
