@@ -27,7 +27,9 @@ package io.github.astrapi69.crypt.api.mechanism;
 /**
  * The enum {@link ExemptionMechanism} defines the exemption mechanism names that can be specified
  * in the permission policy file that accompanies an application considered “exempt” from
- * cryptographic restrictions
+ * cryptographic restrictions. For more info see: <a href=
+ * "https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.html#exemption-mechanisms">
+ * https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.html#exemption-mechanisms</a>
  */
 public enum ExemptionMechanism
 {
