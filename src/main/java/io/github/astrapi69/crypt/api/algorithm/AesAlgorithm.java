@@ -41,6 +41,7 @@ public enum AesAlgorithm implements Algorithm
 	public static final int AES_KEY_MAXIMUM_LENGTH = 256;
 	/** The constant AES_KEY_LENGTH */
 	public static final int AES_KEY_LENGTH = AES_KEY_MAXIMUM_LENGTH;
+
 	/** The string constant AES_ALGORITHM_NAME */
 	public static final String AES_ALGORITHM_NAME = "AES";
 

@@ -28,6 +28,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
+import io.github.astrapi69.crypt.api.algorithm.key.KeyPairWithModeAndPaddingAlgorithm;
+
 /**
  * The unit test class for the enum class {@link KeyPairWithModeAndPaddingAlgorithm}
  */

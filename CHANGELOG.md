@@ -6,8 +6,17 @@ Version 8.6-SNAPSHOT
 
 ADDED:
 
+- new enum class CipherAlgorithm for Cipher algorithms
+- new enum class ExemptionMechanism for Exemption mechanisms
+- new enum class KeyAgreementAlgorithm for KeyAgreement algorithms
 - new algorithms to the enum class KeyPairGeneratorAlgorithm that have come with jdk 11
 - new modes to the enum class Mode that have come with jdk 11
+
+CHANGED:
+
+- update gradle to new version 8.2.1
+- update of test dependency junit-jupiter-api to new version 5.10.0-RC1
+- moved all algorithm enum classes related with keys to its own package 'io.github.astrapi69.crypt.api.algorithm.key'
 
 Version 8.5
 -------------

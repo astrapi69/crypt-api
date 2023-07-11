@@ -22,15 +22,16 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package io.github.astrapi69.crypt.api.algorithm;
+package io.github.astrapi69.crypt.api.algorithm.key;
 
+import io.github.astrapi69.crypt.api.algorithm.AesAlgorithm;
+import io.github.astrapi69.crypt.api.algorithm.Algorithm;
+import io.github.astrapi69.crypt.api.algorithm.SunJCEAlgorithm;
 import io.github.astrapi69.crypt.api.mode.Mode;
 import io.github.astrapi69.crypt.api.padding.PaddingScheme;
 
 /**
- * The enum {@link KeyPairWithModeAndPaddingAlgorithm}.
- *
- * @version 1.0
+ * The enum {@link KeyPairWithModeAndPaddingAlgorithm}
  */
 public enum KeyPairWithModeAndPaddingAlgorithm implements Algorithm
 {

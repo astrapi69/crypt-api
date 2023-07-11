@@ -58,7 +58,12 @@ public enum PaddingScheme
 	/**
 	 * The enum constant for the 'PKCS5Padding' algorithm
 	 **/
-	PKCS5Padding(PBEMechanism.PKCS.name() + "5Padding");
+	PKCS5Padding(PBEMechanism.PKCS.name() + "5Padding"),
+
+	/**
+	 * The enum constant for the 'SSL3Padding' algorithm
+	 **/
+	SSL3Padding("SSL3Padding");
 
 	/** The padding scheme. */
 	private final String scheme;

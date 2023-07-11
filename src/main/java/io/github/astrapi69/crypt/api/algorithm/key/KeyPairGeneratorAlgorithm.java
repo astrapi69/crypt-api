@@ -22,16 +22,16 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package io.github.astrapi69.crypt.api.algorithm;
+package io.github.astrapi69.crypt.api.algorithm.key;
 
 import java.util.Arrays;
+
+import io.github.astrapi69.crypt.api.algorithm.Algorithm;
 
 /**
  * The enum {@link KeyPairGeneratorAlgorithm}. For more info see: <a href=
  * "https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.html#keypairgenerator-algorithms">
  * https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.html#keypairgenerator-algorithms</a>
- *
- * @version 1.0
  */
 public enum KeyPairGeneratorAlgorithm implements Algorithm
 {

@@ -22,30 +22,46 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package io.github.astrapi69.crypt.api.algorithm;
+package io.github.astrapi69.crypt.api.algorithm.key;
 
-import java.security.KeyStore;
+import io.github.astrapi69.crypt.api.algorithm.AesAlgorithm;
+import io.github.astrapi69.crypt.api.algorithm.Algorithm;
+import io.github.astrapi69.crypt.api.algorithm.SunJCEAlgorithm;
 
 /**
- * The enum {@link KeystoreType} for algorithm that are used to create {@link KeyStore} objects.
+ * The enum {@link SecretKeyAlgorithm} provides algorithm names that can be specified when
+ * requesting an instance of SecretKeyFactory.<br>
+ * There are also composed algorithms possible like <br>
+ * <br>
+ * PBEWith&lt;digest&gt;And&lt;encryption&gt; <br>
+ * some examples are: <br>
+ * PBEWithMD5AndDES (PKCS #5, PBES1 encryption scheme),<br>
+ * PBEWithHmacSHA256AndAES_128 (PKCS #5, PBES2 encryption scheme) <br>
+ * <br>
+ * or <br>
+ * PBEWith&lt;prf&gt;And&lt;encryption&gt; <br>
+ * <br>
+ * or <br>
+ * PBKDF2With&lt;prf&gt; <br>
+ * an example is: <br>
+ * PBKDF2WithHmacSHA256
  */
-public enum KeystoreType implements Algorithm
+public enum SecretKeyAlgorithm implements Algorithm
 {
-	/** The enum constant for DKS algorithm. */
-	DKS("dks"),
+	/** The enum constant for AES algorithm. */
+	AES(AesAlgorithm.AES_ALGORITHM_NAME),
 
-	/** The enum constant for JKS algorithm. */
-	JKS("jks"),
+	/** The enum constant for ARCFOUR algorithm. */
+	ARCFOUR(SecretKeyAlgorithm.ARCFOUR_ALGORITHM_NAME),
 
-	/** The enum constant for JCEKS algorithm. */
-	JCEKS("jceks"),
+	/** The DES algorithm. */
+	DES(SunJCEAlgorithm.DES_ALGORITHM_NAME),
 
-	/** The enum constant for PKCS11 algorithm. */
-	PKCS11("pkcs11"),
+	/** The DESede algorithm. */
+	DESede(SunJCEAlgorithm.DES_EDE_ALGORITHM_NAME);
 
-	/** The enum constant for PKCS12 algorithm. */
-	PKCS12("pkcs12");
-
+	/** The string constant ARCFOUR_ALGORITHM_NAME */
+	public static final String ARCFOUR_ALGORITHM_NAME = "ARCFOUR";
 	/** The algorithm. */
 	private final String algorithm;
 
@@ -55,7 +71,7 @@ public enum KeystoreType implements Algorithm
 	 * @param algorithm
 	 *            the algorithm.
 	 */
-	KeystoreType(final String algorithm)
+	SecretKeyAlgorithm(final String algorithm)
 	{
 		this.algorithm = algorithm;
 	}
