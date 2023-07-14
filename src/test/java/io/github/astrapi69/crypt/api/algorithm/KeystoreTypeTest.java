@@ -42,10 +42,10 @@ public class KeystoreTypeTest
 	@Test
 	public void testGetAlgorithms()
 	{
-		assertEquals(KeystoreType.DKS.getAlgorithm(), "dks");
-		assertEquals(KeystoreType.JKS.getAlgorithm(), "jks");
-		assertEquals(KeystoreType.JCEKS.getAlgorithm(), "jceks");
-		assertEquals(KeystoreType.PKCS11.getAlgorithm(), "pkcs11");
-		assertEquals(KeystoreType.PKCS12.getAlgorithm(), "pkcs12");
+		assertEquals(KeystoreType.DKS.getType(), "dks");
+		assertEquals(KeystoreType.JKS.getType(), "jks");
+		assertEquals(KeystoreType.JCEKS.getType(), "jceks");
+		assertEquals(KeystoreType.PKCS11.getType(), "pkcs11");
+		assertEquals(KeystoreType.PKCS12.getType(), "pkcs12");
 	}
 }

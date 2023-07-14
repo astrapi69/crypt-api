@@ -35,4 +35,6 @@ module crypt.api
 	exports io.github.astrapi69.crypt.api.password;
 	exports io.github.astrapi69.crypt.api.provider;
 	exports io.github.astrapi69.crypt.api.type;
+	exports io.github.astrapi69.crypt.api.encoding;
+	exports io.github.astrapi69.crypt.api.algorithm.cert;
 }

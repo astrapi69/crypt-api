@@ -24,48 +24,16 @@
  */
 package io.github.astrapi69.crypt.api.type;
 
-import java.security.KeyStore;
-
 /**
- * The enum {@link KeystoreType} for types that are used to create {@link KeyStore} objects
+ * The interface {@link Type} is for enums that represents a type
  */
-public enum KeystoreType implements Type
+public interface Type
 {
-	/** The enum constant for DKS type */
-	DKS("dks"),
-
-	/** The enum constant for JKS type */
-	JKS("jks"),
-
-	/** The enum constant for JCEKS type */
-	JCEKS("jceks"),
-
-	/** The enum constant for PKCS11 type */
-	PKCS11("pkcs11"),
-
-	/** The enum constant for PKCS12 type */
-	PKCS12("pkcs12");
-
-	/** The type. */
-	private final String type;
 
 	/**
-	 * Instantiates a new {@link KeystoreType} object
+	 * Gets the type
 	 *
-	 * @param type
-	 *            the type
+	 * @return the type
 	 */
-	KeystoreType(final String type)
-	{
-		this.type = type;
-	}
-
-	/**
-	 * {@inheritDoc}
-	 */
-	@Override
-	public String getType()
-	{
-		return type;
-	}
+	String getType();
 }

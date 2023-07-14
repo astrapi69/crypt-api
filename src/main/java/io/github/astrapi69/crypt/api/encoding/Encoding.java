@@ -22,50 +22,18 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package io.github.astrapi69.crypt.api.type;
-
-import java.security.KeyStore;
+package io.github.astrapi69.crypt.api.encoding;
 
 /**
- * The enum {@link KeystoreType} for types that are used to create {@link KeyStore} objects
+ * The interface {@link Encoding} is for enums that represents an encodings
  */
-public enum KeystoreType implements Type
+public interface Encoding
 {
-	/** The enum constant for DKS type */
-	DKS("dks"),
-
-	/** The enum constant for JKS type */
-	JKS("jks"),
-
-	/** The enum constant for JCEKS type */
-	JCEKS("jceks"),
-
-	/** The enum constant for PKCS11 type */
-	PKCS11("pkcs11"),
-
-	/** The enum constant for PKCS12 type */
-	PKCS12("pkcs12");
-
-	/** The type. */
-	private final String type;
 
 	/**
-	 * Instantiates a new {@link KeystoreType} object
+	 * Gets the encoding
 	 *
-	 * @param type
-	 *            the type
+	 * @return the encoding
 	 */
-	KeystoreType(final String type)
-	{
-		this.type = type;
-	}
-
-	/**
-	 * {@inheritDoc}
-	 */
-	@Override
-	public String getType()
-	{
-		return type;
-	}
+	String getEncoding();
 }

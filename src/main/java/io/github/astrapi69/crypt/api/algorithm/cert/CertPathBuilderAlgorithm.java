@@ -22,50 +22,47 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package io.github.astrapi69.crypt.api.type;
+package io.github.astrapi69.crypt.api.algorithm.cert;
 
-import java.security.KeyStore;
+import java.security.cert.CertPathBuilder;
+
+import io.github.astrapi69.crypt.api.algorithm.Algorithm;
 
 /**
- * The enum {@link KeystoreType} for types that are used to create {@link KeyStore} objects
+ * The enum {@link CertPathBuilderAlgorithm} provides all the algorithm names that can be specified
+ * when generating an instance of {@link CertPathBuilder}. For more info see: <a href=
+ * "https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.html#certpathbuilder-algorithms">
+ * https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.html#certpathbuilder-algorithms</a>
  */
-public enum KeystoreType implements Type
+public enum CertPathBuilderAlgorithm implements Algorithm
 {
-	/** The enum constant for DKS type */
-	DKS("dks"),
 
-	/** The enum constant for JKS type */
-	JKS("jks"),
+	/** The enum constant for PKIX algorithm */
+	PKIX(CertPathBuilderAlgorithm.PKIX_ALGORITHM_NAME);
 
-	/** The enum constant for JCEKS type */
-	JCEKS("jceks"),
+	/** The string constant PKIX_ALGORITHM_NAME */
+	public static final String PKIX_ALGORITHM_NAME = "PKIX";
 
-	/** The enum constant for PKCS11 type */
-	PKCS11("pkcs11"),
-
-	/** The enum constant for PKCS12 type */
-	PKCS12("pkcs12");
-
-	/** The type. */
-	private final String type;
+	/** The algorithm */
+	private final String algorithm;
 
 	/**
-	 * Instantiates a new {@link KeystoreType} object
+	 * Instantiates a new {@link CertPathBuilderAlgorithm} object
 	 *
-	 * @param type
-	 *            the type
+	 * @param algorithm
+	 *            the algorithm
 	 */
-	KeystoreType(final String type)
+	CertPathBuilderAlgorithm(final String algorithm)
 	{
-		this.type = type;
+		this.algorithm = algorithm;
 	}
 
 	/**
 	 * {@inheritDoc}
 	 */
 	@Override
-	public String getType()
+	public String getAlgorithm()
 	{
-		return type;
+		return algorithm;
 	}
 }

@@ -26,13 +26,13 @@ package io.github.astrapi69.crypt.api.algorithm;
 
 /**
  * The interface {@link Algorithm} is for enums that represents an algorithm for encryption or
- * decryption.
+ * decryption
  */
 public interface Algorithm
 {
 
 	/**
-	 * Gets the algorithm for encryption or decryption.
+	 * Gets the algorithm for encryption or decryption
 	 *
 	 * @return the algorithm
 	 */

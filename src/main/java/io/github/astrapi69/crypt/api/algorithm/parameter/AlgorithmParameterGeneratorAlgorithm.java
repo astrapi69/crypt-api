@@ -22,50 +22,48 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package io.github.astrapi69.crypt.api.mechanism;
+package io.github.astrapi69.crypt.api.algorithm.parameter;
+
+import java.security.AlgorithmParameterGenerator;
+
+import io.github.astrapi69.crypt.api.algorithm.Algorithm;
+import io.github.astrapi69.crypt.api.algorithm.key.KeyPairGeneratorAlgorithm;
 
 /**
- * The enum {@link GSSAPIMechanism} can be specified when using GSSAPI. Note that Object Identifiers
- * (OIDs) are specified instead of names to be consistent with the GSSAPI standard. For more info
+ * The enum {@link AlgorithmParameterGeneratorAlgorithm} provides all the algorithm names that can
+ * be specified when generating an instance of {@link AlgorithmParameterGenerator}. For more info
  * see: <a href=
- * "https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.html#gssapi-mechanisms">
- * https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.html#gssapi-mechanisms</a>
+ * "https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.html#algorithmparametergenerator-algorithms">
+ * https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.html#algorithmparametergenerator-algorithms</a>
  */
-public enum GSSAPIMechanism
+public enum AlgorithmParameterGeneratorAlgorithm implements Algorithm
 {
-	/**
-	 * The enum constant KerberosV5 mechanism as defined in
-	 * <a href="https://tools.ietf.org/html/rfc4121">RFC 4121</a>
-	 */
-	KerberosV5("1.2.840.113554.1.2.2"),
+	/** The enum constant for DIFFIE_HELLMAN algorithm. */
+	DIFFIE_HELLMAN(KeyPairGeneratorAlgorithm.DIFFIE_HELLMAN_ALGORITHM_NAME),
 
-	/**
-	 * The enum constant SPNEGO mechanism as defined in
-	 * <a href="https://tools.ietf.org/html/rfc4178">RFC 4178</a>
-	 */
-	SPNEGO("1.3.6.1.5.5.2");
+	/** The enum constant for DSA algorithm. */
+	DSA(KeyPairGeneratorAlgorithm.DSA_ALGORITHM_NAME);
 
 	/** The algorithm. */
 	private final String algorithm;
 
 	/**
-	 * Instantiates a new {@link GSSAPIMechanism} object
+	 * Instantiates a new {@link AlgorithmParameterGeneratorAlgorithm} object.
 	 *
 	 * @param algorithm
 	 *            the algorithm.
 	 */
-	GSSAPIMechanism(final String algorithm)
+	AlgorithmParameterGeneratorAlgorithm(final String algorithm)
 	{
 		this.algorithm = algorithm;
 	}
 
 	/**
-	 * Gets the algorithm
-	 *
-	 * @return the algorithm
+	 * {@inheritDoc}
 	 */
+	@Override
 	public String getAlgorithm()
 	{
-		return this.algorithm;
+		return algorithm;
 	}
 }

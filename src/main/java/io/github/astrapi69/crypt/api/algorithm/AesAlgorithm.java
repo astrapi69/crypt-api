@@ -25,12 +25,12 @@
 package io.github.astrapi69.crypt.api.algorithm;
 
 /**
- * The enum {@link AesAlgorithm} for the Advanced Encryption Standard (AES), also known as Rijndael.
+ * The enum {@link AesAlgorithm} for the Advanced Encryption Standard (AES), also known as Rijndael
  */
 public enum AesAlgorithm implements Algorithm
 {
 
-	/** The enum constant for AES algorithm. */
+	/** The enum constant for AES algorithm */
 	AES(AesAlgorithm.AES_ALGORITHM_NAME);
 
 	/** The constant AES_KEY_MINIMUM_LENGTH represents the minimum length of the AES algorithm */
@@ -45,14 +45,14 @@ public enum AesAlgorithm implements Algorithm
 	/** The string constant AES_ALGORITHM_NAME */
 	public static final String AES_ALGORITHM_NAME = "AES";
 
-	/** The algorithm. */
+	/** The algorithm */
 	private final String algorithm;
 
 	/**
-	 * Instantiates a new {@link AesAlgorithm} object.
+	 * Instantiates a new {@link AesAlgorithm} object
 	 *
 	 * @param algorithm
-	 *            the algorithm.
+	 *            the algorithm
 	 */
 	AesAlgorithm(final String algorithm)
 	{

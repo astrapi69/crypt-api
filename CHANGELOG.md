@@ -124,6 +124,9 @@ Version 7.6
 
 ADDED:
 
+- new enum classes for algorithms
+- new enum classes for types
+- new enum classes for encoding
 - new KeyFactory algorithm 'RSASSA-PSS' added to the enum KeyPairGeneratorAlgorithm
 - new unit tests created for verify the values of the enums
 - new field UNKNOWN in enum class KeyFileFormat for unknown file formats
