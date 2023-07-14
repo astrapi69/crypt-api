@@ -35,43 +35,165 @@ public enum MacAlgorithm implements Algorithm
 {
 
 	/** The enum constant for HmacMD5 algorithm. */
-	HmacMD5,
+	HmacMD5(MacAlgorithm.H_MAC_MD5_ALGORITHM_NAME),
 
 	/** The enum constant for HmacSHA1 algorithm. */
-	HmacSHA1,
+	HmacSHA1(MacAlgorithm.H_MAC_SHA1_ALGORITHM_NAME),
 
 	/** The enum constant for HmacSHA224 algorithm. */
-	HmacSHA224,
+	HmacSHA224(MacAlgorithm.H_MAC_SHA224_ALGORITHM_NAME),
 
 	/** The enum constant for HmacSHA256 algorithm. */
-	HmacSHA256,
+	HmacSHA256(MacAlgorithm.H_MAC_SHA256_ALGORITHM_NAME),
 
 	/** The enum constant for HmacSHA384 algorithm. */
-	HmacSHA384,
+	HmacSHA384(MacAlgorithm.H_MAC_SHA384_ALGORITHM_NAME),
 
 	/** The enum constant for HmacSHA512 algorithm. */
-	HmacSHA512,
+	HmacSHA512(MacAlgorithm.H_MAC_SHA512_ALGORITHM_NAME),
+
+	/** The enum constant for HmacSHA512 algorithm. */
+	H_MAC_SHA512_224(MacAlgorithm.H_MAC_SHA512_224_ALGORITHM_NAME),
+
+	/** The enum constant for HmacSHA512 algorithm. */
+	H_MAC_SHA512_256(MacAlgorithm.H_MAC_SHA512_256_ALGORITHM_NAME),
+
+	/** The enum constant for HmacSHA224 algorithm. */
+	H_MAC_SHA3_224(MacAlgorithm.H_MAC_SHA3_224_ALGORITHM_NAME),
+
+	/** The enum constant for HmacSHA256 algorithm. */
+	H_MAC_SHA3_256(MacAlgorithm.H_MAC_SHA3_256_ALGORITHM_NAME),
+
+	/** The enum constant for HmacSHA384 algorithm. */
+	H_MAC_SHA3_384(MacAlgorithm.H_MAC_SHA3_384_ALGORITHM_NAME),
+
+	/** The enum constant for HmacSHA512 algorithm. */
+	H_MAC_SHA3_512(MacAlgorithm.H_MAC_SHA3_512_ALGORITHM_NAME),
 
 	/** The enum constant for PBEWithHmacMD5 algorithm. */
-	PBEWithHmacMD5,
+	PBEWithHmacMD5(MacAlgorithm.PBE_WITH_HMAC_MD5_ALGORITHM_NAME),
 
 	/** The enum constant for PBEWithHmacSHA1 algorithm. */
-	PBEWithHmacSHA1,
+	PBEWithHmacSHA1(MacAlgorithm.PBE_WITH_HMAC_SHA1_ALGORITHM_NAME),
 
 	/** The enum constant for PBEWithHmacSHA224 algorithm. */
-	PBEWithHmacSHA224,
+	PBEWithHmacSHA224(MacAlgorithm.PBE_WITH_HMAC_SHA224_ALGORITHM_NAME),
 
 	/** The enum constant for PBEWithHmacSHA256 algorithm. */
-	PBEWithHmacSHA256,
+	PBEWithHmacSHA256(MacAlgorithm.PBE_WITH_HMAC_SHA256_ALGORITHM_NAME),
 
 	/** The enum constant for PBEWithHmacSHA384 algorithm. */
-	PBEWithHmacSHA384,
+	PBEWithHmacSHA384(MacAlgorithm.PBE_WITH_HMAC_SHA384_ALGORITHM_NAME),
 
 	/** The enum constant for PBEWithHmacSHA512 algorithm. */
-	PBEWithHmacSHA512;
+	PBEWithHmacSHA512(MacAlgorithm.PBE_WITH_HMAC_SHA512_ALGORITHM_NAME);
 
 	/** The Constant HMAC. */
 	public static final String HMAC = "Hmac";
+
+	/**
+	 * The string constant PBE_WITH_HMAC_MD5_ALGORITHM_NAME
+	 */
+	public static final String PBE_WITH_HMAC_MD5_ALGORITHM_NAME = "PBEWithHmacMD5";
+
+	/**
+	 * The string constant PBE_WITH_HMAC_SHA1_ALGORITHM_NAME
+	 */
+	public static final String PBE_WITH_HMAC_SHA1_ALGORITHM_NAME = "PBEWithHmacSHA1";
+
+	/**
+	 * The string constant PBE_WITH_HMAC_SHA224_ALGORITHM_NAME
+	 */
+	public static final String PBE_WITH_HMAC_SHA224_ALGORITHM_NAME = "PBEWithHmacSHA224";
+
+	/**
+	 * The string constant PBE_WITH_HMAC_SHA256_ALGORITHM_NAME
+	 */
+	public static final String PBE_WITH_HMAC_SHA256_ALGORITHM_NAME = "PBEWithHmacSHA256";
+
+	/**
+	 * The string constant PBE_WITH_HMAC_SHA384_ALGORITHM_NAME
+	 */
+	public static final String PBE_WITH_HMAC_SHA384_ALGORITHM_NAME = "PBEWithHmacSHA384";
+
+	/**
+	 * The string constant PBE_WITH_HMAC_SHA512_ALGORITHM_NAME
+	 */
+	public static final String PBE_WITH_HMAC_SHA512_ALGORITHM_NAME = "PBEWithHmacSHA512";
+
+	/**
+	 * The string constant H_MAC_MD5_ALGORITHM_NAME
+	 */
+	public static final String H_MAC_MD5_ALGORITHM_NAME = "HmacMD5";
+
+	/**
+	 * The string constant H_MAC_SHA1_ALGORITHM_NAME
+	 */
+	public static final String H_MAC_SHA1_ALGORITHM_NAME = "HmacSHA1";
+
+	/**
+	 * The string constant H_MAC_SHA224_ALGORITHM_NAME
+	 */
+	public static final String H_MAC_SHA224_ALGORITHM_NAME = "HmacSHA224";
+
+	/**
+	 * The string constant H_MAC_SHA256_ALGORITHM_NAME
+	 */
+	public static final String H_MAC_SHA256_ALGORITHM_NAME = "HmacSHA256";
+
+	/**
+	 * The string constant H_MAC_SHA384_ALGORITHM_NAME
+	 */
+	public static final String H_MAC_SHA384_ALGORITHM_NAME = "HmacSHA384";
+
+	/**
+	 * The string constant H_MAC_SHA512_ALGORITHM_NAME
+	 */
+	public static final String H_MAC_SHA512_ALGORITHM_NAME = "HmacSHA512";
+
+	/**
+	 * The string constant H_MAC_SHA512_ALGORITHM_NAME
+	 */
+	public static final String H_MAC_SHA512_224_ALGORITHM_NAME = "HmacSHA512/224";
+
+	/**
+	 * The string constant H_MAC_SHA512_ALGORITHM_NAME
+	 */
+	public static final String H_MAC_SHA512_256_ALGORITHM_NAME = "HmacSHA512/256";
+
+	/**
+	 * The string constant H_MAC_SHA3_224_ALGORITHM_NAME
+	 */
+	public static final String H_MAC_SHA3_224_ALGORITHM_NAME = "HmacSHA3-224";
+
+	/**
+	 * The string constant H_MAC_SHA3_256_ALGORITHM_NAME
+	 */
+	public static final String H_MAC_SHA3_256_ALGORITHM_NAME = "HmacSHA3-256";
+
+	/**
+	 * The string constant H_MAC_SHA3_384_ALGORITHM_NAME
+	 */
+	public static final String H_MAC_SHA3_384_ALGORITHM_NAME = "HmacSHA3-384";
+
+	/**
+	 * The string constant H_MAC_SHA3_512_ALGORITHM_NAME
+	 */
+	public static final String H_MAC_SHA3_512_ALGORITHM_NAME = "HmacSHA3-512";
+
+	/** The algorithm */
+	private final String algorithm;
+
+	/**
+	 * Instantiates a new {@link AesAlgorithm} object
+	 *
+	 * @param algorithm
+	 *            the algorithm
+	 */
+	MacAlgorithm(final String algorithm)
+	{
+		this.algorithm = algorithm;
+	}
 
 	/**
 	 * {@inheritDoc}
@@ -79,6 +201,6 @@ public enum MacAlgorithm implements Algorithm
 	@Override
 	public String getAlgorithm()
 	{
-		return this.name();
+		return algorithm;
 	}
 }

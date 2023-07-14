@@ -6,11 +6,15 @@ Version 8.6-SNAPSHOT
 
 ADDED:
 
+- new enum class KeyFactoryAlgorithm for KeyFactory algorithms
+- new enum class KeyGeneratorAlgorithm for KeyGenerator algorithms
+- new enum class KeyManagerFactoryAlgorithm for KeyManagerFactory algorithms
 - new enum class CipherAlgorithm for Cipher algorithms
 - new enum class ExemptionMechanism for Exemption mechanisms
 - new enum class GSSAPIMechanism for GSSAPI mechanisms
 - new enum class KeyAgreementAlgorithm for KeyAgreement algorithms
 - new algorithms to the enum class KeyPairGeneratorAlgorithm that have come with jdk 11
+- new algorithms to the enum class MacAlgorithm that have come with jdk 11
 - new modes to the enum class Mode that have come with jdk 11
 
 CHANGED:
