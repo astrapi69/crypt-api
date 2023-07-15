@@ -42,7 +42,7 @@ public enum KeyGeneratorAlgorithm implements Algorithm
 	AES(AesAlgorithm.AES_ALGORITHM_NAME),
 
 	/** The enum constant for ARCFOUR algorithm. */
-	ARCFOUR(SecretKeyAlgorithm.ARCFOUR_ALGORITHM_NAME),
+	ARCFOUR(SecretKeyFactoryAlgorithm.ARCFOUR_ALGORITHM_NAME),
 
 	/** The Blowfish algorithm. */
 	Blowfish(SunJCEAlgorithm.BLOWFISH_ALGORITHM_NAME),

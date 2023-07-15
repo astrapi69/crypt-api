@@ -22,42 +22,15 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package io.github.astrapi69.crypt.api.mechanism;
+package io.github.astrapi69.crypt.api.type;
 
-/**
- * The enum {@link PBEMechanism} defines some of the password-based encryption (PBE).
- */
-public enum PBEMechanism implements Mechanism
+import org.junit.jupiter.api.Test;
+
+class CertificateFactoryTypeTest
 {
 
-	/** The pbe mechanism. */
-	PBE(PBEMechanism.PBE_MECHANISM_NAME),
-	/** The pkcs mechanism. */
-	PKCS(PBEMechanism.PKCS_MECHANISM_NAME);
-
-	public static final String PBE_MECHANISM_NAME = "PBE";
-	public static final String PKCS_MECHANISM_NAME = "PKCS";
-
-	/** The mechanism */
-	private final String mechanism;
-
-	/**
-	 * Instantiates a new {@link GSSAPIMechanism} object
-	 *
-	 * @param mechanism
-	 *            the mechanism
-	 */
-	PBEMechanism(final String mechanism)
+	@Test
+	void getType()
 	{
-		this.mechanism = mechanism;
-	}
-
-	/**
-	 * {@inheritDoc}
-	 */
-	@Override
-	public String getMechanism()
-	{
-		return this.mechanism;
 	}
 }

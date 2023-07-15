@@ -29,7 +29,7 @@ import io.github.astrapi69.crypt.api.algorithm.Algorithm;
 import io.github.astrapi69.crypt.api.algorithm.SunJCEAlgorithm;
 
 /**
- * The enum {@link SecretKeyAlgorithm} provides algorithm names that can be specified when
+ * The enum {@link SecretKeyFactoryAlgorithm} provides algorithm names that can be specified when
  * requesting an instance of SecretKeyFactory.<br>
  * There are also composed algorithms possible like <br>
  * <br>
@@ -45,14 +45,18 @@ import io.github.astrapi69.crypt.api.algorithm.SunJCEAlgorithm;
  * PBKDF2With&lt;prf&gt; <br>
  * an example is: <br>
  * PBKDF2WithHmacSHA256
+ *
+ * For more info see: <a href=
+ * "https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.html#secretkeyfactory-algorithms">
+ * https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.html#secretkeyfactory-algorithms</a>
  */
-public enum SecretKeyAlgorithm implements Algorithm
+public enum SecretKeyFactoryAlgorithm implements Algorithm
 {
 	/** The enum constant for AES algorithm. */
 	AES(AesAlgorithm.AES_ALGORITHM_NAME),
 
 	/** The enum constant for ARCFOUR algorithm. */
-	ARCFOUR(SecretKeyAlgorithm.ARCFOUR_ALGORITHM_NAME),
+	ARCFOUR(SecretKeyFactoryAlgorithm.ARCFOUR_ALGORITHM_NAME),
 
 	/** The DES algorithm. */
 	DES(SunJCEAlgorithm.DES_ALGORITHM_NAME),
@@ -71,7 +75,7 @@ public enum SecretKeyAlgorithm implements Algorithm
 	 * @param algorithm
 	 *            the algorithm.
 	 */
-	SecretKeyAlgorithm(final String algorithm)
+	SecretKeyFactoryAlgorithm(final String algorithm)
 	{
 		this.algorithm = algorithm;
 	}

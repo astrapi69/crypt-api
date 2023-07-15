@@ -41,6 +41,18 @@ public enum KeyPairGeneratorAlgorithm implements Algorithm
 	/** The shortcut value for the enum constant for DIFFIE_HELLMAN algorithm. */
 	DH(KeyPairGeneratorAlgorithm.DH_ALGORITHM_NAME),
 
+	/** The enum constant for DSA algorithm. */
+	DSA(KeyPairGeneratorAlgorithm.DSA_ALGORITHM_NAME),
+
+	/** The enum constant for RSA algorithm. */
+	RSA(KeyPairGeneratorAlgorithm.RSA_ALGORITHM_NAME),
+
+	/** The enum constant for RSA algorithm. */
+	RSASSA_PSS(KeyPairGeneratorAlgorithm.RSASSA_PSS_ALGORITHM_NAME),
+
+	/** The enum constant for EC algorithm. */
+	EC(KeyPairGeneratorAlgorithm.EC_ALGORITHM_NAME),
+
 	/** The enum constant for XDH algorithm. */
 	XDH(KeyPairGeneratorAlgorithm.XDH_ALGORITHM_NAME),
 
@@ -49,18 +61,6 @@ public enum KeyPairGeneratorAlgorithm implements Algorithm
 
 	/** The enum constant for X448 algorithm. */
 	X448(KeyPairGeneratorAlgorithm.X448_ALGORITHM_NAME),
-
-	/** The enum constant for DSA algorithm. */
-	DSA(KeyPairGeneratorAlgorithm.DSA_ALGORITHM_NAME),
-
-	/** The enum constant for EC algorithm. */
-	EC(KeyPairGeneratorAlgorithm.EC_ALGORITHM_NAME),
-
-	/** The enum constant for RSA algorithm. */
-	RSA(KeyPairGeneratorAlgorithm.RSA_ALGORITHM_NAME),
-
-	/** The enum constant for RSA algorithm. */
-	RSASSA_PSS(KeyPairGeneratorAlgorithm.RSASSA_PSS_ALGORITHM_NAME),
 
 	/** The enum constant if the algorithm type is unknown. */
 	UNKNOWN_TYPE(KeyPairGeneratorAlgorithm.UNKNOWN_ALGORITHM_TYPE);

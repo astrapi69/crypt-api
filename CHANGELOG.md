@@ -6,6 +6,9 @@ Version 8.6-SNAPSHOT
 
 ADDED:
 
+- new enum class SecureRandomAlgorithm for SecureRandom algorithms
+- new enum class PolicyType for Policy type
+- new enum class MessageDigestAlgorithm for MessageDigest algorithms
 - new enum class KeyFactoryAlgorithm for KeyFactory algorithms
 - new enum class KeyGeneratorAlgorithm for KeyGenerator algorithms
 - new enum class KeyManagerFactoryAlgorithm for KeyManagerFactory algorithms

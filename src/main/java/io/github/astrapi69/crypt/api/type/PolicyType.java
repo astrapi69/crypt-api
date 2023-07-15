@@ -22,30 +22,46 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package io.github.astrapi69.crypt.api.algorithm;
+package io.github.astrapi69.crypt.api.type;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
-import org.junit.jupiter.api.Test;
-
-import io.github.astrapi69.crypt.api.algorithm.key.KeyPairGeneratorAlgorithm;
+import java.security.Policy;
 
 /**
- * The unit test class for the enum class {@link KeyPairGeneratorAlgorithm}
+ * The enum {@link PolicyType} provides all the type names that can be specified when generating an
+ * instance of {@link Policy}. For more info see: <a href=
+ * "https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.html#policy-types">
+ * https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.html#policy-types</a>
  */
-public class KeyPairGeneratorAlgorithmTest
+public enum PolicyType implements Type
 {
 
+	/** The enum constant for the JavaPolicy type */
+	JavaPolicy(PolicyType.JAVA_POLICY_TYPE_NAME);
+
+
+	/** The string constant JAVA_LOGIN_CONFIG_TYPE_NAME */
+	public static final String JAVA_POLICY_TYPE_NAME = "JavaPolicy";
+
+	/** The type. */
+	private final String type;
+
 	/**
-	 * Test for concatenated constants.
+	 * Instantiates a new {@link PolicyType} object
+	 *
+	 * @param type
+	 *            the type
 	 */
-	@Test
-	public void testGetAlgorithms()
+	PolicyType(final String type)
 	{
-		assertEquals(KeyPairGeneratorAlgorithm.DIFFIE_HELLMAN.getAlgorithm(), "DiffieHellman");
-		assertEquals(KeyPairGeneratorAlgorithm.DSA.getAlgorithm(), "DSA");
-		assertEquals(KeyPairGeneratorAlgorithm.EC.getAlgorithm(), "EC");
-		assertEquals(KeyPairGeneratorAlgorithm.RSA.getAlgorithm(), "RSA");
-		assertEquals(KeyPairGeneratorAlgorithm.RSASSA_PSS.getAlgorithm(), "RSASSA-PSS");
+		this.type = type;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public String getType()
+	{
+		return type;
 	}
 }

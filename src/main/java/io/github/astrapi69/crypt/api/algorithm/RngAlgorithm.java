@@ -32,9 +32,13 @@ import java.security.SecureRandom;
  * <br>
  * Note: See what algorithm can be used with your operating system. <br>
  * For more info see: <a href=
- * "https://docs.oracle.com/javase/8/docs/technotes/guides/security/SunProviders.html#SecureRandomImp">https://docs.oracle.com/javase/8/docs/technotes/guides/security/SunProviders.html#SecureRandomImp</a>
- *
+ * "https://docs.oracle.com/javase/8/docs/technotes/guides/security/SunProviders.html#SecureRandomImp">
+ * https://docs.oracle.com/javase/8/docs/technotes/guides/security/SunProviders.html#SecureRandomImp</a>
+ * 
+ * @deprecated use instead the {@link SecureRandomAlgorithm}. Note will be removed in the next major
+ *             release
  */
+@Deprecated
 public enum RngAlgorithm implements Algorithm
 {
 

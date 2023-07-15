@@ -24,61 +24,49 @@
  */
 package io.github.astrapi69.crypt.api.algorithm;
 
+
+import java.security.SecureRandom;
+
 /**
- * The enum {@link HashAlgorithm} represents the one-way conversion hash algorithms
- *
- * @version 1.0
- * @author Asterios Raptis
+ * The enum {@link SecureRandomAlgorithm} provides algorithms for generation of random number
+ * generator (RNG) that are used with the {@link SecureRandom} object. <br>
+ * <br>
+ * Note: See what algorithm can be used with your operating system. <br>
+ * For more info see: <a href=
+ * "https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.html#securerandom-number-generation-algorithms">
+ * https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.html#securerandom-number-generation-algorithms</a>
  */
-public enum HashAlgorithm implements Algorithm
+public enum SecureRandomAlgorithm implements Algorithm
 {
 
-	/** The enum constant for SHA-1 algorithm. */
-	SHA_1(HashAlgorithm.SHA + "-" + 1),
+	/** The enum constant for NativePRNG algorithm. */
+	NativePRNG("NativePRNG"),
 
-	/** The enum constant for SHA-224 algorithm. */
-	SHA_224(HashAlgorithm.SHA + "-" + 224),
+	/** The enum constant for NativePRNGBlocking algorithm. */
+	NativePRNGBlocking("NativePRNGBlocking"),
 
-	/** The enum constant for SHA-256 algorithm. */
-	SHA_256(HashAlgorithm.SHA + "-" + 256),
+	/** The enum constant for NativePRNGNonBlocking algorithm. */
+	NativePRNGNonBlocking("NativePRNGNonBlocking"),
 
-	/** The enum constant for SHA-384 algorithm. */
-	SHA_384(HashAlgorithm.SHA + "-" + 384),
+	/** The enum constant for PKCS11 algorithm. */
+	PKCS11("PKCS11"),
 
-	/** The enum constant for SHA-512 algorithm. */
-	SHA_512(HashAlgorithm.SHA + "-" + 512),
+	/** The enum constant for SHA1PRNG algorithm. */
+	SHA1PRNG("SHA1PRNG"),
 
-	/** The enum constant for SHA1 algorithm. */
-	SHA1(HashAlgorithm.SHA + 1),
+	/** The enum constant for Windows-PRNG algorithm. */
+	Windows_PRNG("Windows-PRNG");
 
-	/** The enum constant for SHA224 algorithm. */
-	SHA224(HashAlgorithm.SHA + 224),
-
-	/** The enum constant for SHA256 algorithm. */
-	SHA256(HashAlgorithm.SHA + 256),
-
-	/** The enum constant for SHA384 algorithm. */
-	SHA384(HashAlgorithm.SHA + 384),
-
-	/** The enum constant for SHA512 algorithm. */
-	SHA512(HashAlgorithm.SHA + 512);
-
-	/** The string constant SHA that is use as prefix */
-	public static final String SHA = "SHA";
-
-	/** The string constant SHA3 that is use as prefix */
-	public static final String SHA3 = "SHA3";
-
-	/** The algorithm. */
+	/** The algorithm */
 	private final String algorithm;
 
 	/**
-	 * Instantiates a new {@link HashAlgorithm} object.
+	 * Instantiates a new {@link SecureRandomAlgorithm} object
 	 *
 	 * @param algorithm
-	 *            the algorithm.
+	 *            the algorithm
 	 */
-	HashAlgorithm(final String algorithm)
+	SecureRandomAlgorithm(final String algorithm)
 	{
 		this.algorithm = algorithm;
 	}
@@ -86,9 +74,9 @@ public enum HashAlgorithm implements Algorithm
 	/**
 	 * {@inheritDoc}
 	 */
+	@Override
 	public String getAlgorithm()
 	{
 		return algorithm;
 	}
-
 }

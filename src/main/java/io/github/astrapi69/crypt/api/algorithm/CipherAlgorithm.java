@@ -25,7 +25,7 @@
 package io.github.astrapi69.crypt.api.algorithm;
 
 import io.github.astrapi69.crypt.api.algorithm.key.KeyPairGeneratorAlgorithm;
-import io.github.astrapi69.crypt.api.algorithm.key.SecretKeyAlgorithm;
+import io.github.astrapi69.crypt.api.algorithm.key.SecretKeyFactoryAlgorithm;
 
 /**
  * The enum {@link CipherAlgorithm} that defines the names for the algorithm component in a
@@ -41,7 +41,7 @@ public enum CipherAlgorithm implements Algorithm
 	AESWrap(CipherAlgorithm.AES_WRAP_ALGORITHM_NAME),
 
 	/** The enum constant for ARCFOUR algorithm. */
-	ARCFOUR(SecretKeyAlgorithm.ARCFOUR_ALGORITHM_NAME),
+	ARCFOUR(SecretKeyFactoryAlgorithm.ARCFOUR_ALGORITHM_NAME),
 
 	/** The Blowfish algorithm. */
 	Blowfish(SunJCEAlgorithm.BLOWFISH_ALGORITHM_NAME),

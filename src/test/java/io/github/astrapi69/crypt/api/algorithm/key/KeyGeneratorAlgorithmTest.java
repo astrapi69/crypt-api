@@ -22,30 +22,36 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package io.github.astrapi69.crypt.api.algorithm;
+package io.github.astrapi69.crypt.api.algorithm.key;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-import io.github.astrapi69.crypt.api.type.KeystoreType;
-
 /**
- * The unit test class for the enum class {@link ChecksumAlgorithm}
+ * The unit test class for the enum class {@link KeyGeneratorAlgorithm}
  */
-public class KeystoreTypeTest
+class KeyGeneratorAlgorithmTest
 {
 
 	/**
-	 * Test for concatenated constants.
+	 * Test method for verify all the algorithms of enum class {@link KeyGeneratorAlgorithm}
 	 */
 	@Test
-	public void testGetAlgorithms()
+	void getAlgorithm()
 	{
-		assertEquals(KeystoreType.DKS.getType(), "dks");
-		assertEquals(KeystoreType.JKS.getType(), "jks");
-		assertEquals(KeystoreType.JCEKS.getType(), "jceks");
-		assertEquals(KeystoreType.PKCS11.getType(), "pkcs11");
-		assertEquals(KeystoreType.PKCS12.getType(), "pkcs12");
+		assertEquals(KeyGeneratorAlgorithm.AES.getAlgorithm(), "AES");
+		assertEquals(KeyGeneratorAlgorithm.ARCFOUR.getAlgorithm(), "ARCFOUR");
+		assertEquals(KeyGeneratorAlgorithm.Blowfish.getAlgorithm(), "Blowfish");
+		assertEquals(KeyGeneratorAlgorithm.ChaCha20.getAlgorithm(), "ChaCha20");
+		assertEquals(KeyGeneratorAlgorithm.DES.getAlgorithm(), "DES");
+		assertEquals(KeyGeneratorAlgorithm.DESede.getAlgorithm(), "DESede");
+		assertEquals(KeyGeneratorAlgorithm.HmacMD5.getAlgorithm(), "HmacMD5");
+		assertEquals(KeyGeneratorAlgorithm.HmacSHA1.getAlgorithm(), "HmacSHA1");
+		assertEquals(KeyGeneratorAlgorithm.HmacSHA224.getAlgorithm(), "HmacSHA224");
+		assertEquals(KeyGeneratorAlgorithm.HmacSHA256.getAlgorithm(), "HmacSHA256");
+		assertEquals(KeyGeneratorAlgorithm.HmacSHA384.getAlgorithm(), "HmacSHA384");
+		assertEquals(KeyGeneratorAlgorithm.HmacSHA512.getAlgorithm(), "HmacSHA512");
+		assertEquals(KeyGeneratorAlgorithm.RC2.getAlgorithm(), "RC2");
 	}
 }

@@ -25,46 +25,15 @@
 package io.github.astrapi69.crypt.api.mechanism;
 
 /**
- * The enum {@link GSSAPIMechanism} can be specified when using GSSAPI. Note that Object Identifiers
- * (OIDs) are specified instead of names to be consistent with the GSSAPI standard. For more info
- * see: <a href=
- * "https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.html#gssapi-mechanisms">
- * https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.html#gssapi-mechanisms</a>
+ * The interface {@link Mechanism} is for enums that represents a mechanism
  */
-public enum GSSAPIMechanism implements Mechanism
+public interface Mechanism
 {
-	/**
-	 * The enum constant KerberosV5 mechanism as defined in
-	 * <a href="https://tools.ietf.org/html/rfc4121">RFC 4121</a>
-	 */
-	KerberosV5("1.2.840.113554.1.2.2"),
 
 	/**
-	 * The enum constant SPNEGO mechanism as defined in
-	 * <a href="https://tools.ietf.org/html/rfc4178">RFC 4178</a>
-	 */
-	SPNEGO("1.3.6.1.5.5.2");
-
-	/** The mechanism */
-	private final String mechanism;
-
-	/**
-	 * Instantiates a new {@link GSSAPIMechanism} object
+	 * Gets the mechanism
 	 *
-	 * @param mechanism
-	 *            the mechanism
+	 * @return the mechanism
 	 */
-	GSSAPIMechanism(final String mechanism)
-	{
-		this.mechanism = mechanism;
-	}
-
-	/**
-	 * {@inheritDoc}
-	 */
-	@Override
-	public String getMechanism()
-	{
-		return this.mechanism;
-	}
+	String getMechanism();
 }

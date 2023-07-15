@@ -22,42 +22,31 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package io.github.astrapi69.crypt.api.mechanism;
+package io.github.astrapi69.crypt.api.algorithm.key;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
 
 /**
- * The enum {@link PBEMechanism} defines some of the password-based encryption (PBE).
+ * The unit test class for the enum class {@link KeyFactoryAlgorithm}
  */
-public enum PBEMechanism implements Mechanism
+class KeyFactoryAlgorithmTest
 {
 
-	/** The pbe mechanism. */
-	PBE(PBEMechanism.PBE_MECHANISM_NAME),
-	/** The pkcs mechanism. */
-	PKCS(PBEMechanism.PKCS_MECHANISM_NAME);
-
-	public static final String PBE_MECHANISM_NAME = "PBE";
-	public static final String PKCS_MECHANISM_NAME = "PKCS";
-
-	/** The mechanism */
-	private final String mechanism;
-
 	/**
-	 * Instantiates a new {@link GSSAPIMechanism} object
-	 *
-	 * @param mechanism
-	 *            the mechanism
+	 * Test method for verify all the algorithms of enum class {@link KeyFactoryAlgorithm}
 	 */
-	PBEMechanism(final String mechanism)
+	@Test
+	void getAlgorithm()
 	{
-		this.mechanism = mechanism;
-	}
-
-	/**
-	 * {@inheritDoc}
-	 */
-	@Override
-	public String getMechanism()
-	{
-		return this.mechanism;
+		assertEquals(KeyFactoryAlgorithm.DIFFIE_HELLMAN.getAlgorithm(), "DiffieHellman");
+		assertEquals(KeyFactoryAlgorithm.DSA.getAlgorithm(), "DSA");
+		assertEquals(KeyFactoryAlgorithm.EC.getAlgorithm(), "EC");
+		assertEquals(KeyFactoryAlgorithm.RSA.getAlgorithm(), "RSA");
+		assertEquals(KeyFactoryAlgorithm.RSASSA_PSS.getAlgorithm(), "RSASSA-PSS");
+		assertEquals(KeyFactoryAlgorithm.XDH.getAlgorithm(), "XDH");
+		assertEquals(KeyFactoryAlgorithm.X25519.getAlgorithm(), "X25519");
+		assertEquals(KeyFactoryAlgorithm.X448.getAlgorithm(), "X448");
 	}
 }

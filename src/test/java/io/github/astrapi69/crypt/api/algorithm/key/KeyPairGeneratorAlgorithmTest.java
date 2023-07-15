@@ -22,18 +22,16 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package io.github.astrapi69.crypt.api.algorithm;
+package io.github.astrapi69.crypt.api.algorithm.key;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-import io.github.astrapi69.crypt.api.algorithm.key.KeyPairWithModeAndPaddingAlgorithm;
-
 /**
- * The unit test class for the enum class {@link KeyPairWithModeAndPaddingAlgorithm}
+ * The unit test class for the enum class {@link KeyPairGeneratorAlgorithm}
  */
-public class KeyPairWithModeAndPaddingAlgorithmTest
+public class KeyPairGeneratorAlgorithmTest
 {
 
 	/**
@@ -42,23 +40,10 @@ public class KeyPairWithModeAndPaddingAlgorithmTest
 	@Test
 	public void testGetAlgorithms()
 	{
-		assertEquals(KeyPairWithModeAndPaddingAlgorithm.AES_CBC_PKCS5Padding.getAlgorithm(),
-			"AES/CBC/PKCS5Padding");
-		assertEquals(KeyPairWithModeAndPaddingAlgorithm.DESede_CBC_PKCS5Padding.getAlgorithm(),
-			"DESede/CBC/PKCS5Padding");
-		assertEquals(
-			KeyPairWithModeAndPaddingAlgorithm.RSA_ECB_OAEPWithSHA_1AndMGF1Padding.getAlgorithm(),
-			"RSA/ECB/OAEPWithSHA-1AndMGF1Padding");
-		assertEquals(
-			KeyPairWithModeAndPaddingAlgorithm.RSA_ECB_OAEPWithSHA_256AndMGF1Padding.getAlgorithm(),
-			"RSA/ECB/OAEPWithSHA-256AndMGF1Padding");
-		assertEquals(
-			KeyPairWithModeAndPaddingAlgorithm.RSA_ECB_OAEPWithSHA1AndMGF1Padding.getAlgorithm(),
-			"RSA/ECB/OAEPWithSHA1AndMGF1Padding");
-		assertEquals(
-			KeyPairWithModeAndPaddingAlgorithm.RSA_ECB_OAEPWithSHA256AndMGF1Padding.getAlgorithm(),
-			"RSA/ECB/OAEPWithSHA256AndMGF1Padding");
-		assertEquals(KeyPairWithModeAndPaddingAlgorithm.RSA_ECB_PKCS1PADDING.getAlgorithm(),
-			"RSA/ECB/PKCS1Padding");
+		assertEquals(KeyPairGeneratorAlgorithm.DIFFIE_HELLMAN.getAlgorithm(), "DiffieHellman");
+		assertEquals(KeyPairGeneratorAlgorithm.DSA.getAlgorithm(), "DSA");
+		assertEquals(KeyPairGeneratorAlgorithm.EC.getAlgorithm(), "EC");
+		assertEquals(KeyPairGeneratorAlgorithm.RSA.getAlgorithm(), "RSA");
+		assertEquals(KeyPairGeneratorAlgorithm.RSASSA_PSS.getAlgorithm(), "RSASSA-PSS");
 	}
 }

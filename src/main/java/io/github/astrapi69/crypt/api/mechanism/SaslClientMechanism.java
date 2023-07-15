@@ -25,55 +25,73 @@
 package io.github.astrapi69.crypt.api.mechanism;
 
 /**
- * The enum {@link ExemptionMechanism} defines the exemption mechanism names that can be specified
- * in the permission policy file that accompanies an application considered “exempt” from
- * cryptographic restrictions. For more info see: <a href=
+ * The enum {@link SaslClientMechanism} provides all the algorithm names that can be specified *
+ * when generating an instance of <code>javax.security.sasl.SaslClient</code>. For more info see:
+ * <a href=
  * "https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.html#exemption-mechanisms">
  * https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.html#exemption-mechanisms</a>
  */
-public enum ExemptionMechanism implements Mechanism
+public enum SaslClientMechanism implements Mechanism
 {
 
 	/**
-	 * The enum constant KEY_ESCROW. An encryption system with a backup decryption capability that
-	 * allows authorized persons (users, officers of an organization, and government officials),
-	 * under certain prescribed conditions, to decrypt ciphertext with the help of information
-	 * supplied by one or more trusted parties who hold special data recovery keys.
+	 * The enum constant CRAM_MD5
 	 */
-	KEY_ESCROW(ExemptionMechanism.KEY_ESCROW_MECHANISM_NAME),
+	CRAM_MD5(SaslClientMechanism.CRAM_MD5_MECHANISM_NAME),
 
 	/**
-	 * The enum constant KEY_RECOVERY. A method of obtaining the secret key used to lock encrypted
-	 * data. One use is as a means of providing fail-safe access to a corporation’s own encrypted
-	 * information in times of disaster.
+	 * The enum constant DIGEST_MD5
 	 */
-	KEY_RECOVERY(ExemptionMechanism.KEY_RECOVERY_MECHANISM_NAME),
+	DIGEST_MD5(SaslClientMechanism.DIGEST_MD5_MECHANISM_NAME),
 
 	/**
-	 * The enum constant KEY_WEAKENING. A method in which a part of the key can be escrowed or
-	 * recovered.
+	 * The enum constant EXTERNAL
 	 */
-	KEY_WEAKENING(ExemptionMechanism.KEY_WEAKENING_MECHANISM_NAME);
+	EXTERNAL(SaslClientMechanism.EXTERNAL_MECHANISM_NAME),
 
-	/** The string constant KEY_ESCROW_MECHANISM_NAME */
-	public static final String KEY_ESCROW_MECHANISM_NAME = "KeyEscrow";
+	/**
+	 * The enum constant GSSAPI
+	 */
+	GSSAPI(SaslClientMechanism.GSSAPI_MECHANISM_NAME),
 
-	/** The string constant KEY_RECOVERY_MECHANISM_NAME */
-	public static final String KEY_RECOVERY_MECHANISM_NAME = "KeyRecovery";
+	/**
+	 * The enum constant NTLM
+	 */
+	NTLM(SaslClientMechanism.NTLM_MECHANISM_NAME),
 
-	/** The string constant KEY_WEAKENING_MECHANISM_NAME */
-	public static final String KEY_WEAKENING_MECHANISM_NAME = "KeyWeakening";
+	/**
+	 * The enum constant PLAIN
+	 */
+	PLAIN(SaslClientMechanism.PLAIN_MECHANISM_NAME);
+
+	/** The string constant CRAM_MD5_MECHANISM_NAME */
+	public static final String CRAM_MD5_MECHANISM_NAME = "CRAM-MD5";
+
+	/** The string constant DIGEST_MD5_MECHANISM_NAME */
+	public static final String DIGEST_MD5_MECHANISM_NAME = "DIGEST-MD5";
+
+	/** The string constant EXTERNAL_MECHANISM_NAME */
+	public static final String EXTERNAL_MECHANISM_NAME = "EXTERNAL";
+
+	/** The string constant GSSAPI_MECHANISM_NAME */
+	public static final String GSSAPI_MECHANISM_NAME = "GSSAPI";
+
+	/** The string constant NTLM_MECHANISM_NAME */
+	public static final String NTLM_MECHANISM_NAME = "NTLM";
+
+	/** The string constant PLAIN_MECHANISM_NAME */
+	public static final String PLAIN_MECHANISM_NAME = "PLAIN";
 
 	/** The mechanism */
 	private final String mechanism;
 
 	/**
-	 * Instantiates a new {@link ExemptionMechanism} object
+	 * Instantiates a new {@link SaslClientMechanism} object
 	 *
 	 * @param mechanism
 	 *            the mechanism
 	 */
-	ExemptionMechanism(final String mechanism)
+	SaslClientMechanism(final String mechanism)
 	{
 		this.mechanism = mechanism;
 	}

@@ -22,42 +22,30 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package io.github.astrapi69.crypt.api.mechanism;
+package io.github.astrapi69.crypt.api.algorithm;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
 
 /**
- * The enum {@link PBEMechanism} defines some of the password-based encryption (PBE).
+ * The unit test class for the enum class {@link SecureRandomAlgorithm}
  */
-public enum PBEMechanism implements Mechanism
+class SecureRandomAlgorithmTest
 {
-
-	/** The pbe mechanism. */
-	PBE(PBEMechanism.PBE_MECHANISM_NAME),
-	/** The pkcs mechanism. */
-	PKCS(PBEMechanism.PKCS_MECHANISM_NAME);
-
-	public static final String PBE_MECHANISM_NAME = "PBE";
-	public static final String PKCS_MECHANISM_NAME = "PKCS";
-
-	/** The mechanism */
-	private final String mechanism;
-
 	/**
-	 * Instantiates a new {@link GSSAPIMechanism} object
-	 *
-	 * @param mechanism
-	 *            the mechanism
+	 * Test for all the algorithms
 	 */
-	PBEMechanism(final String mechanism)
+	@Test
+	public void testGetAlgorithms()
 	{
-		this.mechanism = mechanism;
+		assertEquals(SecureRandomAlgorithm.NativePRNG.getAlgorithm(), "NativePRNG");
+		assertEquals(SecureRandomAlgorithm.NativePRNGBlocking.getAlgorithm(), "NativePRNGBlocking");
+		assertEquals(SecureRandomAlgorithm.NativePRNGNonBlocking.getAlgorithm(),
+			"NativePRNGNonBlocking");
+		assertEquals(SecureRandomAlgorithm.PKCS11.getAlgorithm(), "PKCS11");
+		assertEquals(SecureRandomAlgorithm.SHA1PRNG.getAlgorithm(), "SHA1PRNG");
+		assertEquals(SecureRandomAlgorithm.Windows_PRNG.getAlgorithm(), "Windows-PRNG");
 	}
 
-	/**
-	 * {@inheritDoc}
-	 */
-	@Override
-	public String getMechanism()
-	{
-		return this.mechanism;
-	}
 }

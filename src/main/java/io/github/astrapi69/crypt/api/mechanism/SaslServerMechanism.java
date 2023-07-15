@@ -25,36 +25,45 @@
 package io.github.astrapi69.crypt.api.mechanism;
 
 /**
- * The enum {@link GSSAPIMechanism} can be specified when using GSSAPI. Note that Object Identifiers
- * (OIDs) are specified instead of names to be consistent with the GSSAPI standard. For more info
- * see: <a href=
- * "https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.html#gssapi-mechanisms">
- * https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.html#gssapi-mechanisms</a>
+ * The enum {@link SaslServerMechanism} provides all the algorithm names that can be specified *
+ * when generating an instance of <code>javax.security.sasl.SaslServer</code>. For more info see:
+ * <a href=
+ * "https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.html#exemption-mechanisms">
+ * https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.html#exemption-mechanisms</a>
  */
-public enum GSSAPIMechanism implements Mechanism
+public enum SaslServerMechanism implements Mechanism
 {
-	/**
-	 * The enum constant KerberosV5 mechanism as defined in
-	 * <a href="https://tools.ietf.org/html/rfc4121">RFC 4121</a>
-	 */
-	KerberosV5("1.2.840.113554.1.2.2"),
 
 	/**
-	 * The enum constant SPNEGO mechanism as defined in
-	 * <a href="https://tools.ietf.org/html/rfc4178">RFC 4178</a>
+	 * The enum constant CRAM_MD5
 	 */
-	SPNEGO("1.3.6.1.5.5.2");
+	CRAM_MD5(SaslClientMechanism.CRAM_MD5_MECHANISM_NAME),
+
+	/**
+	 * The enum constant DIGEST_MD5
+	 */
+	DIGEST_MD5(SaslClientMechanism.DIGEST_MD5_MECHANISM_NAME),
+
+	/**
+	 * The enum constant GSSAPI
+	 */
+	GSSAPI(SaslClientMechanism.GSSAPI_MECHANISM_NAME),
+
+	/**
+	 * The enum constant NTLM
+	 */
+	NTLM(SaslClientMechanism.NTLM_MECHANISM_NAME);
 
 	/** The mechanism */
 	private final String mechanism;
 
 	/**
-	 * Instantiates a new {@link GSSAPIMechanism} object
+	 * Instantiates a new {@link SaslServerMechanism} object
 	 *
 	 * @param mechanism
 	 *            the mechanism
 	 */
-	GSSAPIMechanism(final String mechanism)
+	SaslServerMechanism(final String mechanism)
 	{
 		this.mechanism = mechanism;
 	}
