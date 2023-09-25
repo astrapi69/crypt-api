@@ -24,6 +24,8 @@
  */
 package io.github.astrapi69.crypt.api.key;
 
+import java.util.Arrays;
+
 /**
  * The enum {@link KeyType} can discriminate the type, if it is a private or public key or a
  * certificate.
@@ -32,19 +34,29 @@ public enum KeyType
 {
 
 	/** The certificate type. */
-	CERTIFICATE("Certificate"),
+	CERTIFICATE(KeyType.KEY_TYPE_CERTIFICATE),
 
 	/** The private key type. */
-	PRIVATE_KEY("Private key"),
+	PRIVATE_KEY(KeyType.KEY_TYPE_PRIVATE_KEY),
 
 	/** The password protected private key type. */
-	PRIVATE_KEY_PASSWORD_PROTECTED("Password protected private key"),
+	PRIVATE_KEY_PASSWORD_PROTECTED(KeyType.KEY_TYPE_PRIVATE_KEY_PASSWORD_PROTECTED),
 
 	/** The public key type. */
-	PUBLIC_KEY("Public key"),
+	PUBLIC_KEY(KeyType.KEY_TYPE_PUBLIC_KEY),
 
 	/** The password protected public key type. */
-	PUBLIC_KEY_PASSWORD_PROTECTED("Password protected public key");
+	PUBLIC_KEY_PASSWORD_PROTECTED(KeyType.KEY_TYPE_PUBLIC_KEY_PASSWORD_PROTECTED),
+
+	/** The unknown key type. */
+	UNKNOWN(KeyType.KEY_TYPE_UNKNOWN);
+
+	public static final String KEY_TYPE_CERTIFICATE = "Certificate";
+	public static final String KEY_TYPE_PRIVATE_KEY = "Private key";
+	public static final String KEY_TYPE_PRIVATE_KEY_PASSWORD_PROTECTED = "Password protected private key";
+	public static final String KEY_TYPE_PUBLIC_KEY = "Public key";
+	public static final String KEY_TYPE_PUBLIC_KEY_PASSWORD_PROTECTED = "Password protected public key";
+	public static final String KEY_TYPE_UNKNOWN = "Unknown key type";
 
 	private final String displayValue;
 
@@ -72,4 +84,19 @@ public enum KeyType
 	{
 		return this.displayValue;
 	}
+
+	/**
+	 * Gets the corresponding {@link KeyType} from the given string
+	 * 
+	 * @param keyTypeAsString
+	 *            the key type as string
+	 * @return the {@link KeyType} object
+	 */
+	public static KeyType toKeyType(final String keyTypeAsString)
+	{
+		return Arrays.stream(KeyType.values())
+			.filter(keyType -> keyType.getDisplayValue().equalsIgnoreCase(keyTypeAsString))
+			.findFirst().orElse(KeyType.UNKNOWN);
+	}
+
 }

@@ -111,10 +111,11 @@ public enum PemType
 	 *            the name
 	 * @return the {@link PemType} object or null if not found
 	 */
-	public static PemType toPemType(String name)
+	public static PemType toPemType(final String name)
 	{
-		return Arrays.stream(PemType.values()).filter(pemType -> pemType.getName().equals(name))
-			.findFirst().orElse(PemType.UNKNOWN_TYPE);
+		return Arrays.stream(PemType.values())
+			.filter(pemType -> pemType.getName().equalsIgnoreCase(name)).findFirst()
+			.orElse(PemType.UNKNOWN_TYPE);
 	}
 
 	/**

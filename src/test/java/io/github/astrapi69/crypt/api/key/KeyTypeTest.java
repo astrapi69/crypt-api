@@ -64,9 +64,59 @@ public class KeyTypeTest
 		assertEquals(actual, expected);
 		assertEquals(KeyType.PRIVATE_KEY.toString(), expected);
 
+		actual = KeyType.PRIVATE_KEY_PASSWORD_PROTECTED.getDisplayValue();
+		expected = "Password protected private key";
+		assertEquals(actual, expected);
+		assertEquals(KeyType.PRIVATE_KEY_PASSWORD_PROTECTED.toString(), expected);
+
 		actual = KeyType.PUBLIC_KEY.getDisplayValue();
 		expected = "Public key";
 		assertEquals(actual, expected);
 		assertEquals(KeyType.PUBLIC_KEY.toString(), expected);
+
+		actual = KeyType.PUBLIC_KEY_PASSWORD_PROTECTED.getDisplayValue();
+		expected = "Password protected public key";
+		assertEquals(actual, expected);
+		assertEquals(KeyType.PUBLIC_KEY_PASSWORD_PROTECTED.toString(), expected);
+
+		actual = KeyType.PUBLIC_KEY.getDisplayValue();
+		expected = "Public key";
+		assertEquals(actual, expected);
+		assertEquals(KeyType.PUBLIC_KEY.toString(), expected);
+
+	}
+
+	/**
+	 * Test method for {@link KeyType#toKeyType(String)}
+	 */
+	@Test
+	public void testToKeyType()
+	{
+		KeyType actual;
+		KeyType expected;
+
+		actual = KeyType.toKeyType(KeyType.KEY_TYPE_CERTIFICATE);
+		expected = KeyType.CERTIFICATE;
+		assertEquals(actual, expected);
+
+		actual = KeyType.toKeyType(KeyType.KEY_TYPE_PRIVATE_KEY);
+		expected = KeyType.PRIVATE_KEY;
+		assertEquals(actual, expected);
+
+		actual = KeyType.toKeyType(KeyType.KEY_TYPE_PRIVATE_KEY_PASSWORD_PROTECTED);
+		expected = KeyType.PRIVATE_KEY_PASSWORD_PROTECTED;
+		assertEquals(actual, expected);
+
+		actual = KeyType.toKeyType(KeyType.KEY_TYPE_PUBLIC_KEY);
+		expected = KeyType.PUBLIC_KEY;
+		assertEquals(actual, expected);
+
+		actual = KeyType.toKeyType(KeyType.KEY_TYPE_PUBLIC_KEY_PASSWORD_PROTECTED);
+		expected = KeyType.PUBLIC_KEY_PASSWORD_PROTECTED;
+		assertEquals(actual, expected);
+
+		actual = KeyType.toKeyType("foo");
+		expected = KeyType.UNKNOWN;
+		assertEquals(actual, expected);
 	}
 }
