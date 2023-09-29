@@ -87,7 +87,10 @@ public enum AlgorithmParametersAlgorithm implements Algorithm
 	X25519(KeyPairGeneratorAlgorithm.X25519_ALGORITHM_NAME),
 
 	/** The enum constant for X448 algorithm. */
-	X448(KeyPairGeneratorAlgorithm.X448_ALGORITHM_NAME);
+	X448(KeyPairGeneratorAlgorithm.X448_ALGORITHM_NAME),
+
+	/** The enum constant 'UNKNOWN' if the algorithm parameter algorithm is unknown */
+	UNKNOWN(Algorithm.UNKNOWN_ALGORITHM_NAME);
 
 	/** The string constant OAEP_ALGORITHM_NAME */
 	public static final String OAEP_ALGORITHM_NAME = "OAEP";

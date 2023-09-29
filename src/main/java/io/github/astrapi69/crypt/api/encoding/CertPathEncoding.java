@@ -42,7 +42,10 @@ public enum CertPathEncoding implements Encoding
 	PKCS7(CertPathEncoding.PKCS7_ENCODING_NAME),
 
 	/** The enum constant for 'PkiPath' encoding */
-	PKI_PATH(CertPathEncoding.PKI_PATH_ENCODING_NAME);
+	PKI_PATH(CertPathEncoding.PKI_PATH_ENCODING_NAME),
+
+	/** The enum constant 'UNKNOWN' if the cert path encoding name is unknown */
+	UNKNOWN(Encoding.UNKNOWN_ENCODING_NAME);
 
 	/** The Constant PKCS7_ENCODING_NAME */
 	public static final String PKCS7_ENCODING_NAME = "PKCS7";

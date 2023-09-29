@@ -25,11 +25,14 @@
 package io.github.astrapi69.crypt.api.password;
 
 /**
- * The enum {@link PasswordHashType}.
+ * The enum {@link PasswordHashType}
  */
 public enum PasswordHashType
 {
 
 	/** The PBKDF2 hash type. */
-	PBKDF2
+	PBKDF2,
+
+	/** The enum constant 'UNKNOWN' if the password hash type is unknown or cannot be resolved */
+	UNKNOWN
 }

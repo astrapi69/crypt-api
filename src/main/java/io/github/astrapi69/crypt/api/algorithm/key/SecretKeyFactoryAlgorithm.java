@@ -62,7 +62,10 @@ public enum SecretKeyFactoryAlgorithm implements Algorithm
 	DES(SunJCEAlgorithm.DES_ALGORITHM_NAME),
 
 	/** The DESede algorithm. */
-	DESede(SunJCEAlgorithm.DES_EDE_ALGORITHM_NAME);
+	DESede(SunJCEAlgorithm.DES_EDE_ALGORITHM_NAME),
+
+	/** The enum constant 'UNKNOWN' if the secret key factory algorithm is unknown */
+	UNKNOWN(Algorithm.UNKNOWN_ALGORITHM_NAME);
 
 	/** The string constant ARCFOUR_ALGORITHM_NAME */
 	public static final String ARCFOUR_ALGORITHM_NAME = "ARCFOUR";

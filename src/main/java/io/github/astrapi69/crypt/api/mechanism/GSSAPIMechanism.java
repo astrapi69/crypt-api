@@ -43,7 +43,10 @@ public enum GSSAPIMechanism implements Mechanism
 	 * The enum constant SPNEGO mechanism as defined in
 	 * <a href="https://tools.ietf.org/html/rfc4178">RFC 4178</a>
 	 */
-	SPNEGO("1.3.6.1.5.5.2");
+	SPNEGO("1.3.6.1.5.5.2"),
+
+	/** The enum constant 'UNKNOWN' if the GSSAPI mechanism name is unknown */
+	UNKNOWN(Mechanism.UNKNOWN_MECHANISM_NAME);
 
 	/** The mechanism */
 	private final String mechanism;

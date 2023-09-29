@@ -36,7 +36,10 @@ public enum ConfigurationType implements Type
 {
 
 	/** The enum constant JavaLoginConfig type */
-	JavaLoginConfig(ConfigurationType.JAVA_LOGIN_CONFIG_TYPE_NAME);
+	JavaLoginConfig(ConfigurationType.JAVA_LOGIN_CONFIG_TYPE_NAME),
+
+	/** The enum constant 'UNKNOWN' if the configuration type is unknown */
+	UNKNOWN(Type.UNKNOWN_TYPE_NAME);
 
 
 	/** The string constant JAVA_LOGIN_CONFIG_TYPE_NAME */

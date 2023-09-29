@@ -48,7 +48,7 @@ public class PemTypeTest
 		assertEquals(actual, expected);
 
 		actual = PemType.toPemType("foo");
-		expected = PemType.UNKNOWN_TYPE;
+		expected = PemType.UNKNOWN;
 		assertEquals(actual, expected);
 	}
 

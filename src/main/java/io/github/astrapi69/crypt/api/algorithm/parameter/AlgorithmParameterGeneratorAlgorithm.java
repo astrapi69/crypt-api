@@ -42,7 +42,10 @@ public enum AlgorithmParameterGeneratorAlgorithm implements Algorithm
 	DIFFIE_HELLMAN(KeyPairGeneratorAlgorithm.DIFFIE_HELLMAN_ALGORITHM_NAME),
 
 	/** The enum constant for DSA algorithm. */
-	DSA(KeyPairGeneratorAlgorithm.DSA_ALGORITHM_NAME);
+	DSA(KeyPairGeneratorAlgorithm.DSA_ALGORITHM_NAME),
+
+	/** The enum constant 'UNKNOWN' if the algorithm parameter generator algorithm is unknown */
+	UNKNOWN(Algorithm.UNKNOWN_ALGORITHM_NAME);
 
 	/** The algorithm. */
 	private final String algorithm;

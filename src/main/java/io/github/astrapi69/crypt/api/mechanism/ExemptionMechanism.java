@@ -53,7 +53,10 @@ public enum ExemptionMechanism implements Mechanism
 	 * The enum constant KEY_WEAKENING. A method in which a part of the key can be escrowed or
 	 * recovered.
 	 */
-	KEY_WEAKENING(ExemptionMechanism.KEY_WEAKENING_MECHANISM_NAME);
+	KEY_WEAKENING(ExemptionMechanism.KEY_WEAKENING_MECHANISM_NAME),
+
+	/** The enum constant 'UNKNOWN' if the exemption mechanism name is unknown */
+	UNKNOWN(Mechanism.UNKNOWN_MECHANISM_NAME);
 
 	/** The string constant KEY_ESCROW_MECHANISM_NAME */
 	public static final String KEY_ESCROW_MECHANISM_NAME = "KeyEscrow";

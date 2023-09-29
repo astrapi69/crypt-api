@@ -40,7 +40,10 @@ public enum MdAlgorithm implements Algorithm
 	MD4(MdAlgorithm.MD + 4),
 
 	/** The enum constant for MD5 algorithm. */
-	MD5(MdAlgorithm.MD_5);
+	MD5(MdAlgorithm.MD_5),
+
+	/** The enum constant 'UNKNOWN' if the MessageDigest algorithm is unknown */
+	UNKNOWN(Algorithm.UNKNOWN_ALGORITHM_NAME);
 
 	/** The string constant MD that is use as prefix */
 	public static final String MD = "MD";

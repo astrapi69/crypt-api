@@ -31,7 +31,10 @@ public enum AesAlgorithm implements Algorithm
 {
 
 	/** The enum constant for AES algorithm */
-	AES(AesAlgorithm.AES_ALGORITHM_NAME);
+	AES(AesAlgorithm.AES_ALGORITHM_NAME),
+
+	/** The enum constant 'UNKNOWN' if the AES algorithm is unknown */
+	UNKNOWN(Algorithm.UNKNOWN_ALGORITHM_NAME);
 
 	/** The constant AES_KEY_MINIMUM_LENGTH represents the minimum length of the AES algorithm */
 	public static final int AES_KEY_MINIMUM_LENGTH = 128;
@@ -67,4 +70,5 @@ public enum AesAlgorithm implements Algorithm
 	{
 		return algorithm;
 	}
+
 }

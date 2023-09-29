@@ -35,7 +35,12 @@ public enum KeyFormat
 	PKCS_1("PKCS#1"),
 
 	/** The key format pkcs 8. */
-	PKCS_8("PKCS#8");
+	PKCS_8("PKCS#8"),
+
+	/**
+	 * The constant 'UNKNOWN' if the format is not known or cannot be resolved
+	 */
+	UNKNOWN("UNKNOWN");
 
 	private final String format;
 

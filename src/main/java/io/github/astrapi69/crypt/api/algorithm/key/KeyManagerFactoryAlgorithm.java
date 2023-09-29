@@ -40,7 +40,10 @@ public enum KeyManagerFactoryAlgorithm implements Algorithm
 {
 
 	/** The enum constant for PKIX algorithm */
-	PKIX(CertPathBuilderAlgorithm.PKIX_ALGORITHM_NAME);
+	PKIX(CertPathBuilderAlgorithm.PKIX_ALGORITHM_NAME),
+
+	/** The enum constant 'UNKNOWN' if the key manager algorithm is unknown */
+	UNKNOWN(Algorithm.UNKNOWN_ALGORITHM_NAME);
 
 	/** The algorithm */
 	private final String algorithm;

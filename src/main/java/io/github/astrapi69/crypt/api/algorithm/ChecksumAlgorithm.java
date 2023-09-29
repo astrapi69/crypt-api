@@ -55,7 +55,10 @@ public enum ChecksumAlgorithm implements Algorithm
 	/**
 	 * The enum constant for SHA-512 algorithm.
 	 */
-	SHA_512(HashAlgorithm.SHA_512.getAlgorithm());
+	SHA_512(HashAlgorithm.SHA_512.getAlgorithm()),
+
+	/** The enum constant 'UNKNOWN' if the checksum algorithm is unknown */
+	UNKNOWN(Algorithm.UNKNOWN_ALGORITHM_NAME);
 
 	private final String algorithm;
 

@@ -30,6 +30,9 @@ package io.github.astrapi69.crypt.api.mechanism;
 public interface Mechanism
 {
 
+	/** The Constant UNKNOWN_MECHANISM_NAME is if the mechanism name is unknown */
+	String UNKNOWN_MECHANISM_NAME = "UNKNOWN MECHANISM NAME";
+
 	/**
 	 * Gets the mechanism
 	 *

@@ -55,7 +55,11 @@ public enum SecureRandomAlgorithm implements Algorithm
 	SHA1PRNG("SHA1PRNG"),
 
 	/** The enum constant for Windows-PRNG algorithm. */
-	Windows_PRNG("Windows-PRNG");
+	Windows_PRNG("Windows-PRNG"),
+
+	/** The enum constant 'UNKNOWN' if the MessageDigest algorithm is unknown */
+	UNKNOWN(Algorithm.UNKNOWN_ALGORITHM_NAME);
+	;
 
 	/** The algorithm */
 	private final String algorithm;

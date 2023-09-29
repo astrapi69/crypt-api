@@ -33,7 +33,10 @@ public enum PBEMechanism implements Mechanism
 	/** The pbe mechanism. */
 	PBE(PBEMechanism.PBE_MECHANISM_NAME),
 	/** The pkcs mechanism. */
-	PKCS(PBEMechanism.PKCS_MECHANISM_NAME);
+	PKCS(PBEMechanism.PKCS_MECHANISM_NAME),
+
+	/** The enum constant 'UNKNOWN' if the PBE mechanism name is unknown */
+	UNKNOWN(Mechanism.UNKNOWN_MECHANISM_NAME);
 
 	public static final String PBE_MECHANISM_NAME = "PBE";
 	public static final String PKCS_MECHANISM_NAME = "PKCS";

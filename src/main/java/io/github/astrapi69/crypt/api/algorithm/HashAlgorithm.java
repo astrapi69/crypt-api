@@ -61,7 +61,10 @@ public enum HashAlgorithm implements Algorithm
 	SHA384(HashAlgorithm.SHA + 384),
 
 	/** The enum constant for SHA512 algorithm. */
-	SHA512(HashAlgorithm.SHA + 512);
+	SHA512(HashAlgorithm.SHA + 512),
+
+	/** The enum constant 'UNKNOWN' if the hash algorithm is unknown */
+	UNKNOWN(Algorithm.UNKNOWN_ALGORITHM_NAME);
 
 	/** The string constant SHA that is use as prefix */
 	public static final String SHA = "SHA";

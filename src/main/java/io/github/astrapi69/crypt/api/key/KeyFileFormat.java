@@ -25,7 +25,8 @@
 package io.github.astrapi69.crypt.api.key;
 
 /**
- * The enum {@link KeyFileFormat}.
+ * The enum {@link KeyFileFormat} as the name already implicates it provides the file formats of the
+ * key and the possible file extensions
  */
 public enum KeyFileFormat
 {
@@ -49,7 +50,7 @@ public enum KeyFileFormat
 	PEM("cer", "crt", "pem"),
 
 	/**
-	 * The constant if the format is not known or can not be resolved
+	 * The constant 'UNKNOWN' if the format is not known or cannot be resolved
 	 */
 	UNKNOWN();
 

@@ -95,7 +95,10 @@ public enum CompoundAlgorithm implements Algorithm
 	 * The enum constant for the 'SHA512withRSA' algorithm
 	 */
 	SHA512_WITH_RSA(HashAlgorithm.SHA512.getAlgorithm() + UnionWord.With.name().toLowerCase()
-		+ KeyPairGeneratorAlgorithm.RSA.getAlgorithm());
+		+ KeyPairGeneratorAlgorithm.RSA.getAlgorithm()),
+
+	/** The enum constant 'UNKNOWN' if the compound algorithm is unknown */
+	UNKNOWN(Algorithm.UNKNOWN_ALGORITHM_NAME);
 
 
 	/**

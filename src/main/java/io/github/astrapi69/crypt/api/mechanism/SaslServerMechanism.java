@@ -52,7 +52,10 @@ public enum SaslServerMechanism implements Mechanism
 	/**
 	 * The enum constant NTLM
 	 */
-	NTLM(SaslClientMechanism.NTLM_MECHANISM_NAME);
+	NTLM(SaslClientMechanism.NTLM_MECHANISM_NAME),
+
+	/** The enum constant 'UNKNOWN' if the SaslServer mechanism name is unknown */
+	UNKNOWN(Mechanism.UNKNOWN_MECHANISM_NAME);
 
 	/** The mechanism */
 	private final String mechanism;

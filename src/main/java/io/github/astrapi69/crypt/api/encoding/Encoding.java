@@ -30,6 +30,9 @@ package io.github.astrapi69.crypt.api.encoding;
 public interface Encoding
 {
 
+	/** The Constant UNKNOWN_ENCODING_NAME is if the encoding name is unknown */
+	String UNKNOWN_ENCODING_NAME = "UNKNOWN ENCODING NAME";
+
 	/**
 	 * Gets the encoding
 	 *

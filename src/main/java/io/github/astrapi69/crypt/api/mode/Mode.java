@@ -131,5 +131,8 @@ public enum Mode
 	 * defined in <a href="https://csrc.nist.gov/publications/fips/fips81/fips81.htm">FIPS PUB
 	 * 81</a>
 	 */
-	PCBC
+	PCBC,
+
+	/** The enum constant 'UNKNOWN' if the mode is unknown */
+	UNKNOWN
 }

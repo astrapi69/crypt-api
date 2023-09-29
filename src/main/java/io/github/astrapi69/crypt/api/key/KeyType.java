@@ -88,14 +88,14 @@ public enum KeyType
 	/**
 	 * Gets the corresponding {@link KeyType} from the given string
 	 * 
-	 * @param keyTypeAsString
-	 *            the key type as string
+	 * @param displayValueAsString
+	 *            the display value as string
 	 * @return the {@link KeyType} object
 	 */
-	public static KeyType toKeyType(final String keyTypeAsString)
+	public static KeyType toKeyType(final String displayValueAsString)
 	{
 		return Arrays.stream(KeyType.values())
-			.filter(keyType -> keyType.getDisplayValue().equalsIgnoreCase(keyTypeAsString))
+			.filter(keyType -> keyType.getDisplayValue().equalsIgnoreCase(displayValueAsString))
 			.findFirst().orElse(KeyType.UNKNOWN);
 	}
 

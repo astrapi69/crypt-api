@@ -34,7 +34,10 @@ public enum UnionWord
 	And,
 
 	/** The With enum value for chain algorithms */
-	With;
+	With,
+
+	/** The enum constant 'UNKNOWN' if the union word is unknown */
+	UNKNOWN;
 
 	public static final String AND_UNION_WORD = "And";
 	public static final String WITH_UNION_WORD = "With";

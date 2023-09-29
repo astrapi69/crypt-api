@@ -65,7 +65,10 @@ public enum KeyFactoryAlgorithm implements Algorithm
 	 * The enum constant for X448 algorithm. The Diffie-Hellman key agreement with Curve448 as
 	 * defined in <a href="https://tools.ietf.org/html/rfc7748">RFC 7748</a>
 	 */
-	X448(KeyPairGeneratorAlgorithm.X448_ALGORITHM_NAME);
+	X448(KeyPairGeneratorAlgorithm.X448_ALGORITHM_NAME),
+
+	/** The enum constant 'UNKNOWN' if the key factory algorithm is unknown */
+	UNKNOWN(Algorithm.UNKNOWN_ALGORITHM_NAME);
 
 	/** The algorithm */
 	private final String algorithm;

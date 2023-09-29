@@ -62,8 +62,15 @@ public enum KeyPairGeneratorAlgorithm implements Algorithm
 	/** The enum constant for X448 algorithm. */
 	X448(KeyPairGeneratorAlgorithm.X448_ALGORITHM_NAME),
 
-	/** The enum constant if the algorithm type is unknown. */
-	UNKNOWN_TYPE(KeyPairGeneratorAlgorithm.UNKNOWN_ALGORITHM_TYPE);
+	/**
+	 * The enum constant if the algorithm type is unknown.
+	 * 
+	 * @deprecated use the 'UNKNOWN' value. Will be removed in the next minor version
+	 */
+	UNKNOWN_TYPE(KeyPairGeneratorAlgorithm.UNKNOWN_ALGORITHM_TYPE),
+
+	/** The enum constant 'UNKNOWN' if the keypair generator algorithm is unknown */
+	UNKNOWN(Algorithm.UNKNOWN_ALGORITHM_NAME);
 
 	/** The string constant DIFFIE_HELLMAN_ALGORITHM_NAME for the 'DiffieHellman' algorithm */
 	public static final String DIFFIE_HELLMAN_ALGORITHM_NAME = "DiffieHellman";
@@ -132,7 +139,7 @@ public enum KeyPairGeneratorAlgorithm implements Algorithm
 	{
 		return Arrays.stream(KeyPairGeneratorAlgorithm.values())
 			.filter(algorithmType -> algorithmType.getAlgorithm().equals(algorithm)).findFirst()
-			.orElse(KeyPairGeneratorAlgorithm.UNKNOWN_TYPE);
+			.orElse(KeyPairGeneratorAlgorithm.UNKNOWN);
 	}
 
 	/**

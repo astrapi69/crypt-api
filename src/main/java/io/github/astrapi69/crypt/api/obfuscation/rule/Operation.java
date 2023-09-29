@@ -24,21 +24,29 @@
  */
 package io.github.astrapi69.crypt.api.obfuscation.rule;
 
+import java.util.Arrays;
+
 /**
  * The enum {@link Operation} is intended for obfuscation operations. An example is if an operation
- * is uppercase then the letter will be transformed to uppercase.
+ * is uppercase, then the letter will be transformed to uppercase.
  */
 public enum Operation
 {
 
-	/** The to lower case. */
+	/** The obfuscation operation for the lower case */
 	LOWERCASE,
-	/** The to negate case. */
+
+	/** The obfuscation operation for the negated case */
 	NEGATE,
-	/** The no operation case. */
+
+	/** The obfuscation operation for no operation case */
 	NONE,
-	/** The upper case. */
-	UPPERCASE;
+
+	/** The obfuscation operation for the upper case */
+	UPPERCASE,
+
+	/** The enum constant 'UNKNOWN' if the operation is unknown */
+	UNKNOWN;
 
 	/**
 	 * Operation on the given character.
@@ -52,6 +60,20 @@ public enum Operation
 	public static Character operate(final char character, final Operation operation)
 	{
 		return operate(character, operation, false);
+	}
+
+	/**
+	 * Gets the corresponding {@link Operation} from the given string
+	 *
+	 * @param operationAsString
+	 *            the operation as string
+	 * @return the {@link Operation} object
+	 */
+	public static Operation toOperation(final String operationAsString)
+	{
+		return Arrays.stream(Operation.values())
+			.filter(operation -> operation.name().equalsIgnoreCase(operationAsString)).findFirst()
+			.orElse(Operation.UNKNOWN);
 	}
 
 	/**
@@ -104,4 +126,5 @@ public enum Operation
 		}
 		return character;
 	}
+
 }

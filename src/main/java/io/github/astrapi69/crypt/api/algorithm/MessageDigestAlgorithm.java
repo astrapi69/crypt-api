@@ -88,7 +88,10 @@ public enum MessageDigestAlgorithm implements Algorithm
 	/**
 	 * The enum constant for SHA3-512 algorithm
 	 */
-	SHA3_512(MessageDigestAlgorithm.SHA3_512_ALGORITHM_NAME);
+	SHA3_512(MessageDigestAlgorithm.SHA3_512_ALGORITHM_NAME),
+
+	/** The enum constant 'UNKNOWN' if the MessageDigest algorithm is unknown */
+	UNKNOWN(Algorithm.UNKNOWN_ALGORITHM_NAME);
 
 	/**
 	 * The string constant SHA3_224_ALGORITHM_NAME

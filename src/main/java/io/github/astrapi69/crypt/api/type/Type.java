@@ -30,6 +30,9 @@ package io.github.astrapi69.crypt.api.type;
 public interface Type
 {
 
+	/** The Constant UNKNOWN_ENCODING_NAME is if the type name is unknown */
+	String UNKNOWN_TYPE_NAME = "UNKNOWN TYPE NAME";
+
 	/**
 	 * Gets the type
 	 *

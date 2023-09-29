@@ -36,7 +36,10 @@ public enum CertificateFactoryType implements Type
 {
 
 	/** The enum constant for X.509 certificate type */
-	X_509(CertificateFactoryType.X_509_CERTIFICATE_TYPE_NAME);
+	X_509(CertificateFactoryType.X_509_CERTIFICATE_TYPE_NAME),
+
+	/** The enum constant 'UNKNOWN' if the certificate factory type is unknown */
+	UNKNOWN(Type.UNKNOWN_TYPE_NAME);
 
 
 	/** The string constant X_509_CERTIFICATE_TYPE_NAME */

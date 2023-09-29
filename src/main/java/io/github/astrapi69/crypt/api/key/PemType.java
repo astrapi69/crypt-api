@@ -57,8 +57,14 @@ public enum PemType
 	PGP_PRIVATE_KEY(PemType.PGP_PRIVATE_KEY_NAME),
 	/** The enum constant 'PGP PUBLIC KEY' pem type. */
 	PGP_PUBLIC_KEY(PemType.PGP_PUBLIC_KEY_NAME),
-	/** The enum constant 'UNKNOWN TYPE' if the pem type is unknown */
-	UNKNOWN_TYPE(PemType.UNKNOWN_TYPE_NAME);
+	/**
+	 * The enum constant 'UNKNOWN TYPE' if the pem type is unknown
+	 *
+	 * @deprecated use the 'UNKNOWN' value. Will be removed in the next minor version
+	 **/
+	UNKNOWN_TYPE(PemType.UNKNOWN_TYPE_NAME),
+	/** The enum constant 'UNKNOWN' if the pem type is unknown */
+	UNKNOWN(PemType.UNKNOWN_TYPE_NAME);
 
 
 	/** The Constant UNKNOWN_TYPE_NAME is if the pem type is unknown. */
@@ -115,7 +121,7 @@ public enum PemType
 	{
 		return Arrays.stream(PemType.values())
 			.filter(pemType -> pemType.getName().equalsIgnoreCase(name)).findFirst()
-			.orElse(PemType.UNKNOWN_TYPE);
+			.orElse(PemType.UNKNOWN);
 	}
 
 	/**

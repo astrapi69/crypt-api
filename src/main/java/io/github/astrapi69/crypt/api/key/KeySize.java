@@ -30,17 +30,28 @@ package io.github.astrapi69.crypt.api.key;
 public enum KeySize
 {
 
-	/** The keysize of 1024 bits. */
+	/** The key size of 1024 bits */
 	KEYSIZE_1024(1024),
 
-	/** The keysize of 2048 bits. */
+	/** The key size of 2048 bits */
 	KEYSIZE_2048(2048),
 
-	/** The keysize of 4096 bits. */
+	/** The key size of 4096 bits */
 	KEYSIZE_4096(4096),
 
-	/** The keysize of 8192 bits. */
-	KEYSIZE_8192(8192);
+	/** The key size of 8192 bits */
+	KEYSIZE_8192(8192),
+
+	/** The key size of 16384 bits */
+	KEYSIZE_16384(16384),
+
+	/** The key size of 32768 bits */
+	KEYSIZE_32768(32768),
+
+	/**
+	 * The constant 'UNKNOWN' if the key size is not known or cannot be resolved
+	 */
+	UNKNOWN(-1);
 
 	/** The display. */
 	private final Integer keySize;

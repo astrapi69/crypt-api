@@ -74,7 +74,10 @@ public enum CipherAlgorithm implements Algorithm
 	RC5(CipherAlgorithm.RC5_ALGORITHM_NAME),
 
 	/** The enum constant for RSA algorithm. */
-	RSA(KeyPairGeneratorAlgorithm.RSA_ALGORITHM_NAME);
+	RSA(KeyPairGeneratorAlgorithm.RSA_ALGORITHM_NAME),
+
+	/** The enum constant 'UNKNOWN' if the cipher algorithm is unknown */
+	UNKNOWN(Algorithm.UNKNOWN_ALGORITHM_NAME);
 
 	/** The string constant AES_WRAP_ALGORITHM_NAME */
 	public static final String AES_WRAP_ALGORITHM_NAME = AesAlgorithm.AES_ALGORITHM_NAME + "Wrap";

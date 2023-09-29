@@ -75,7 +75,10 @@ public enum KeyGeneratorAlgorithm implements Algorithm
 	HmacSHA512(KeyGeneratorAlgorithm.H_MAC_SHA512_ALGORITHM_NAME),
 
 	/** The RC2 algorithm. */
-	RC2(CipherAlgorithm.RC2_ALGORITHM_NAME);
+	RC2(CipherAlgorithm.RC2_ALGORITHM_NAME),
+
+	/** The enum constant 'UNKNOWN' if the key generator algorithm is unknown */
+	UNKNOWN(Algorithm.UNKNOWN_ALGORITHM_NAME);
 
 	/**
 	 * The string constant H_MAC_MD5_ALGORITHM_NAME

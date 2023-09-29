@@ -25,13 +25,16 @@
 package io.github.astrapi69.crypt.api.provider;
 
 /**
- * The enum {@link SecurityProvider}.
+ * The enum {@link SecurityProvider}
  */
 public enum SecurityProvider
 {
 
-	/** The BouncyCastle SecurityProvider. */
+	/** The BouncyCastle SecurityProvider */
 	BC,
-	/** The sun SecurityProvider. */
-	SUN
+	/** The sun SecurityProvider */
+	SUN,
+
+	/** The enum constant 'UNKNOWN' if the security provider is unknown or cannot be resolved */
+	UNKNOWN
 }

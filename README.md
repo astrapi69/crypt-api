@@ -34,7 +34,6 @@ to your project `build.gradle` if you want to import the core functionality of c
 define version in file gradle.properties
 
 ```
-
 cryptApiVersion=8.6
 ```
 

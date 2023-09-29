@@ -82,7 +82,13 @@ public enum KeyStringEntry
 		+ KeyStringEntry.FIVE_HYPHENS),
 	/** The suffix for the end of a Elliptic Curve(EC) private key */
 	END_EC_PRIVATE_KEY_SUFFIX(KeyStringEntry.PEM_KEY_END_PREFIX + PemType.EC_PRIVATE_KEY_NAME
-		+ KeyStringEntry.FIVE_HYPHENS);
+		+ KeyStringEntry.FIVE_HYPHENS),
+
+	/**
+	 * The constant 'UNKNOWN' if the prefixes for PEM value entries are not known or cannot be
+	 * resolved
+	 */
+	UNKNOWN("UNKNOWN");
 
 	/** The Constant PEM_KEY_NAME_PREFIX. */
 	private static final String FIVE_HYPHENS = "-----";

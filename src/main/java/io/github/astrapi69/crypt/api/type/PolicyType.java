@@ -36,7 +36,10 @@ public enum PolicyType implements Type
 {
 
 	/** The enum constant for the JavaPolicy type */
-	JavaPolicy(PolicyType.JAVA_POLICY_TYPE_NAME);
+	JavaPolicy(PolicyType.JAVA_POLICY_TYPE_NAME),
+
+	/** The enum constant 'UNKNOWN' if the java policy type is unknown */
+	UNKNOWN(Type.UNKNOWN_TYPE_NAME);
 
 
 	/** The string constant JAVA_LOGIN_CONFIG_TYPE_NAME */

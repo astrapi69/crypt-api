@@ -86,7 +86,10 @@ public enum MacAlgorithm implements Algorithm
 	PBEWithHmacSHA384(MacAlgorithm.PBE_WITH_HMAC_SHA384_ALGORITHM_NAME),
 
 	/** The enum constant for PBEWithHmacSHA512 algorithm. */
-	PBEWithHmacSHA512(MacAlgorithm.PBE_WITH_HMAC_SHA512_ALGORITHM_NAME);
+	PBEWithHmacSHA512(MacAlgorithm.PBE_WITH_HMAC_SHA512_ALGORITHM_NAME),
+
+	/** The enum constant 'UNKNOWN' if the mac algorithm is unknown */
+	UNKNOWN(Algorithm.UNKNOWN_ALGORITHM_NAME);
 
 	/** The Constant HMAC. */
 	public static final String HMAC = "Hmac";

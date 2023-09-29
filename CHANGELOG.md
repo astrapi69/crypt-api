@@ -4,6 +4,17 @@
 Version 8.7-SNAPSHOT
 -------------
 
+ADDED:
+
+- new enum field value 'UNKNOWN' to all enum classes for default return value if the enum value is resolved over a string value
+
+CHANGED:
+
+- update gradle to new version 8.3
+- update of gradle plugin dependency 'com.github.ben-manes.versions.gradle.plugin' to the new minor version 0.48.0
+- update of gradle-plugin dependency 'com.diffplug.spotless:spotless-plugin-gradle' in version 6.21.0
+- update of test dependency junit-jupiter-api to the new version 5.10.0
+
 Version 8.6
 -------------
 

@@ -38,7 +38,10 @@ public enum CertPathBuilderAlgorithm implements Algorithm
 {
 
 	/** The enum constant for PKIX algorithm */
-	PKIX(CertPathBuilderAlgorithm.PKIX_ALGORITHM_NAME);
+	PKIX(CertPathBuilderAlgorithm.PKIX_ALGORITHM_NAME),
+
+	/** The enum constant 'UNKNOWN' if the cert path builder algorithm is unknown */
+	UNKNOWN(Algorithm.UNKNOWN_ALGORITHM_NAME);
 
 	/** The string constant PKIX_ALGORITHM_NAME */
 	public static final String PKIX_ALGORITHM_NAME = "PKIX";

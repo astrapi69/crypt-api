@@ -44,7 +44,10 @@ public enum KeystoreType implements Type
 	PKCS11("pkcs11"),
 
 	/** The enum constant for PKCS12 type */
-	PKCS12("pkcs12");
+	PKCS12("pkcs12"),
+
+	/** The enum constant 'UNKNOWN' if the key store type is unknown */
+	UNKNOWN(Type.UNKNOWN_TYPE_NAME);
 
 	/** The type. */
 	private final String type;

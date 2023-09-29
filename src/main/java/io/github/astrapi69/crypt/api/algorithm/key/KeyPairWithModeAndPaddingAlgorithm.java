@@ -83,7 +83,10 @@ public enum KeyPairWithModeAndPaddingAlgorithm implements Algorithm
 	 * results in 'RSA/ECB/PKCS1Padding'.
 	 */
 	RSA_ECB_PKCS1PADDING(KeyPairGeneratorAlgorithm.RSA.name() + "/" + Mode.ECB.name() + "/"
-		+ PaddingScheme.PKCS1Padding.name());
+		+ PaddingScheme.PKCS1Padding.name()),
+
+	/** The enum constant 'UNKNOWN' if the keypair algorithm with mode and padding is unknown */
+	UNKNOWN(Algorithm.UNKNOWN_ALGORITHM_NAME);
 
 
 	/** The algorithm. */

@@ -62,7 +62,10 @@ public enum SaslClientMechanism implements Mechanism
 	/**
 	 * The enum constant PLAIN
 	 */
-	PLAIN(SaslClientMechanism.PLAIN_MECHANISM_NAME);
+	PLAIN(SaslClientMechanism.PLAIN_MECHANISM_NAME),
+
+	/** The enum constant 'UNKNOWN' if the SaslClient mechanism name is unknown */
+	UNKNOWN(Mechanism.UNKNOWN_MECHANISM_NAME);
 
 	/** The string constant CRAM_MD5_MECHANISM_NAME */
 	public static final String CRAM_MD5_MECHANISM_NAME = "CRAM-MD5";

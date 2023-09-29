@@ -39,7 +39,10 @@ public enum CertStoreType implements Type
 	Collection(CertStoreType.COLLECTION_TYPE_NAME),
 
 	/** The enum constant for LDAP type */
-	LDAP(CertStoreType.LDAP_TYPE_NAME);
+	LDAP(CertStoreType.LDAP_TYPE_NAME),
+
+	/** The enum constant 'UNKNOWN' if the cert store type is unknown */
+	UNKNOWN(Type.UNKNOWN_TYPE_NAME);
 
 	/** The string constant COLLECTION_TYPE_NAME */
 	public static final String COLLECTION_TYPE_NAME = "Collection";

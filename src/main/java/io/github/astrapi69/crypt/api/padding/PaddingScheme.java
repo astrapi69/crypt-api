@@ -63,7 +63,12 @@ public enum PaddingScheme
 	/**
 	 * The enum constant for the 'SSL3Padding' algorithm
 	 **/
-	SSL3Padding("SSL3Padding");
+	SSL3Padding("SSL3Padding"),
+
+	/**
+	 * The constant 'UNKNOWN' if the padding scheme is not known or cannot be resolved
+	 */
+	UNKNOWN("UNKNOWN");
 
 	/** The padding scheme. */
 	private final String scheme;

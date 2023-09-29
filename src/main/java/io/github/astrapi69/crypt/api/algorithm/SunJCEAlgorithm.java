@@ -45,7 +45,10 @@ public enum SunJCEAlgorithm implements Algorithm
 	DESede(SunJCEAlgorithm.DES_EDE_ALGORITHM_NAME),
 
 	/** The PBEWithMD5AndDES algorithm. */
-	PBEWithMD5AndDES(SunJCEAlgorithm.PBEWithMD5AndDES_ALGORITHM_NAME);
+	PBEWithMD5AndDES(SunJCEAlgorithm.PBEWithMD5AndDES_ALGORITHM_NAME),
+
+	/** The enum constant 'UNKNOWN' if the SunJCE security provider algorithm is unknown */
+	UNKNOWN(Algorithm.UNKNOWN_ALGORITHM_NAME);
 
 	public static final String BLOWFISH_ALGORITHM_NAME = "Blowfish";
 	public static final String DES_ALGORITHM_NAME = "DES";
