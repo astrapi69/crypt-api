@@ -62,13 +62,6 @@ public enum KeyPairGeneratorAlgorithm implements Algorithm
 	/** The enum constant for X448 algorithm. */
 	X448(KeyPairGeneratorAlgorithm.X448_ALGORITHM_NAME),
 
-	/**
-	 * The enum constant if the algorithm type is unknown.
-	 * 
-	 * @deprecated use the 'UNKNOWN' value. Will be removed in the next minor version
-	 */
-	UNKNOWN_TYPE(KeyPairGeneratorAlgorithm.UNKNOWN_ALGORITHM_TYPE),
-
 	/** The enum constant 'UNKNOWN' if the keypair generator algorithm is unknown */
 	UNKNOWN(Algorithm.UNKNOWN_ALGORITHM_NAME);
 
@@ -110,9 +103,6 @@ public enum KeyPairGeneratorAlgorithm implements Algorithm
 
 	/** The string constant RSAASSA_PSS_ALGORITHM_NAME */
 	public static final String RSASSA_PSS_ALGORITHM_NAME = RSA_ALGORITHM_NAME + "SSA-PSS";
-
-	/** The Constant UNKNOWN_ALGORITHM_TYPE is if the algorithm type is unknown. */
-	public static final String UNKNOWN_ALGORITHM_TYPE = "UNKNOWN ALGORITHM TYPE";
 
 	/** The algorithm. */
 	private final String algorithm;

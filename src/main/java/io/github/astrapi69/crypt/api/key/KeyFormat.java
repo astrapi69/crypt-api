@@ -26,6 +26,8 @@ package io.github.astrapi69.crypt.api.key;
 
 import java.util.Objects;
 
+import io.github.astrapi69.crypt.api.type.Type;
+
 /**
  * The enum {@link KeyFormat} represents the key format of the private keys
  */
@@ -40,7 +42,7 @@ public enum KeyFormat
 	/**
 	 * The constant 'UNKNOWN' if the format is not known or cannot be resolved
 	 */
-	UNKNOWN("UNKNOWN");
+	UNKNOWN(Type.UNKNOWN_TYPE_NAME);
 
 	private final String format;
 

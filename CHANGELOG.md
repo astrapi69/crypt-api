@@ -4,7 +4,13 @@
 Version 8.8-SNAPSHOT
 -------------
 
+ADDED:
 
+- new test-dependency 'com.github.meanbeanlib:meanbean' for unit testing in version 3.0.0-M9
+
+CHANGED:
+
+- removed all deprecated enum values
 
 Version 8.7
 -------------

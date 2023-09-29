@@ -88,7 +88,10 @@ public enum KeyStringEntry
 	 * The constant 'UNKNOWN' if the prefixes for PEM value entries are not known or cannot be
 	 * resolved
 	 */
-	UNKNOWN("UNKNOWN");
+	UNKNOWN(KeyStringEntry.UNKNOWN_KEY_STRING_ENTRY);
+
+	/** The Constant UNKNOWN_ALGORITHM_TYPE is if the algorithm type is unknown. */
+	public static final String UNKNOWN_KEY_STRING_ENTRY = "UNKNOWN KEY STRING ENTRY";
 
 	/** The Constant PEM_KEY_NAME_PREFIX. */
 	private static final String FIVE_HYPHENS = "-----";

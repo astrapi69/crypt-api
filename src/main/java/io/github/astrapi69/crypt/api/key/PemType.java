@@ -26,6 +26,8 @@ package io.github.astrapi69.crypt.api.key;
 
 import java.util.Arrays;
 
+import io.github.astrapi69.crypt.api.type.Type;
+
 /**
  * The enum {@link PemType} holds the type names of PEM value entries
  */
@@ -57,18 +59,10 @@ public enum PemType
 	PGP_PRIVATE_KEY(PemType.PGP_PRIVATE_KEY_NAME),
 	/** The enum constant 'PGP PUBLIC KEY' pem type. */
 	PGP_PUBLIC_KEY(PemType.PGP_PUBLIC_KEY_NAME),
-	/**
-	 * The enum constant 'UNKNOWN TYPE' if the pem type is unknown
-	 *
-	 * @deprecated use the 'UNKNOWN' value. Will be removed in the next minor version
-	 **/
-	UNKNOWN_TYPE(PemType.UNKNOWN_TYPE_NAME),
+
 	/** The enum constant 'UNKNOWN' if the pem type is unknown */
-	UNKNOWN(PemType.UNKNOWN_TYPE_NAME);
+	UNKNOWN(Type.UNKNOWN_TYPE_NAME);
 
-
-	/** The Constant UNKNOWN_TYPE_NAME is if the pem type is unknown. */
-	public static final String UNKNOWN_TYPE_NAME = "UNKNOWN TYPE";
 	/** The Constant PRIVATE_KEY_NAME. */
 	public static final String PRIVATE_KEY_NAME = "PRIVATE KEY";
 	/** The Constant PUBLIC_KEY_NAME. */
