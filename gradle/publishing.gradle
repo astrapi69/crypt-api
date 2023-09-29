@@ -1,11 +1,11 @@
 def releaseVersion = !version.endsWith("SNAPSHOT")
 
-task sourcesJar(type: Jar) {
+tasks.register('sourcesJar', Jar) {
     archiveClassifier.set("sources")
     from(sourceSets.main.allJava)
 }
 
-task javadocJar(type: Jar) {
+tasks.register('javadocJar', Jar) {
     from javadoc
     archiveClassifier.set("javadoc")
     javadoc {
