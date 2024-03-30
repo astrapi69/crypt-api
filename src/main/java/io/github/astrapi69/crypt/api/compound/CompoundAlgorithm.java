@@ -108,8 +108,16 @@ public enum CompoundAlgorithm implements Algorithm
 
 	/**
 	 * Constant for the default private key
+	 * 
+	 * @deprecated use instead the new constant PASSWORD. Will be removed in the next major version
 	 */
+	@Deprecated
 	public static final String PRIVATE_KEY = "privatetopsecret";
+
+	/**
+	 * Constant for the default password
+	 */
+	public static final String PASSWORD = "privatetopsecret";
 
 	/**
 	 * Constant array for the default contents of salt

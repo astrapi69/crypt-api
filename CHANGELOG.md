@@ -6,10 +6,17 @@ Version 8.8-SNAPSHOT
 
 ADDED:
 
+- new constant PASSWORD in enum class CompoundAlgorithm for a default password
 - new test-dependency 'com.github.meanbeanlib:meanbean' for unit testing in version 3.0.0-M9
+
 
 CHANGED:
 
+- update gradle to new version 8.7
+- update of gradle plugin dependency 'com.github.ben-manes.versions.gradle.plugin' to the new minor version 0.51.0
+- update of gradle-plugin dependency 'org.ajoberstar.grgit:grgit-gradle' in version 5.2.2
+- update of gradle-plugin dependency 'com.diffplug.spotless:spotless-plugin-gradle' in version 6.25.0
+- update of test dependency junit-jupiter-api to the new version 5.10.2
 - removed all deprecated enum values
 
 Version 8.7
