@@ -28,19 +28,21 @@ The source code comes under the liberal MIT License.
 
 ## gradle dependency
 
+Replace the variable ${latestVersion} with the current latest version: [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.astrapi69/crypt-api/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.astrapi69/crypt-api)
+
 You can first define the version in the ext section and add than the following gradle dependency
 to your project `build.gradle` if you want to import the core functionality of crypt-api:
 
 define version in file gradle.properties
 
 ```
-cryptApiVersion=8.7
+cryptApiVersion=${latestVersion}
 ```
 
 or in build.gradle ext area
 
 ```
-    cryptApiVersion = "8.7"
+    cryptApiVersion = "${latestVersion}"
 ```
 
 then add the dependency to the dependencies area
@@ -61,7 +63,7 @@ Than you can add the dependency to your dependencies:
     <properties>
             ...
         <!-- CRYPT-API version -->
-        <crypt-api.version>8.7</crypt-api.version>
+        <crypt-api.version>${latestVersion}</crypt-api.version>
             ...
     </properties>
             ...
