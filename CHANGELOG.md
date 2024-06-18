@@ -8,6 +8,12 @@ ADDED:
 
 - new libs.versions.toml file for new automatic catalog versions update
 
+CHANGED:
+
+- update gradle to new version 8.8
+- update of gradle-plugin dependency 'com.diffplug.spotless:spotless-plugin-gradle' in version 7.0.0.BETA1
+- update of test dependency junit-jupiter-api to the new version 5.11.0-M2
+
 Version 9
 -------------
 
@@ -15,7 +21,6 @@ ADDED:
 
 - new constant PASSWORD in enum class CompoundAlgorithm for a default password
 - new test-dependency 'com.github.meanbeanlib:meanbean' for unit testing in version 3.0.0-M9
-
 
 CHANGED:
 
