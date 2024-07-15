@@ -1,0 +1,4 @@
+mechanismEnum,expectedMechanismName
+KerberosV5,1.2.840.113554.1.2.2
+SPNEGO,1.3.6.1.5.5.2
+UNKNOWN,UNKNOWN MECHANISM NAME

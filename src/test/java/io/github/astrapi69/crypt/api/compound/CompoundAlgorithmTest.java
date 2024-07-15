@@ -57,4 +57,31 @@ public class CompoundAlgorithmTest
 
 		assertEquals(CompoundAlgorithm.SHA1_WITH_RSA.getAlgorithm(), "SHA1withRSA");
 	}
+
+	/**
+	 * Test for concatenated constants.
+	 */
+	@Test
+	public void testToString()
+	{
+		assertEquals(CompoundAlgorithm.PBE_WITH_MD5_AND_DES.toString(), "PBEWithMD5AndDES");
+
+		assertEquals(CompoundAlgorithm.PBE_WITH_MD5_AND_AES.toString(), "PBEWithMD5AndAES");
+
+		assertEquals(CompoundAlgorithm.PBE_WITH_SHA1_AND_DES_EDE.toString(),
+			"PBEWithSHA1AndDESede");
+
+		assertEquals(CompoundAlgorithm.PBKDF2_WITH_HMAC_SHA1.toString(), "PBKDF2WithHmacSHA1");
+
+		assertEquals(CompoundAlgorithm.PBE_WITH_SHA1_AND_128BIT_AES_CBC_BC.toString(),
+			"PBEWITHSHA1AND128BITAES-CBC-BC");
+
+		assertEquals(CompoundAlgorithm.SHA512_WITH_RSA.toString(), "SHA512withRSA");
+
+		assertEquals(CompoundAlgorithm.SHA384_WITH_RSA.toString(), "SHA384withRSA");
+
+		assertEquals(CompoundAlgorithm.SHA256_WITH_RSA.toString(), "SHA256withRSA");
+
+		assertEquals(CompoundAlgorithm.SHA1_WITH_RSA.toString(), "SHA1withRSA");
+	}
 }
