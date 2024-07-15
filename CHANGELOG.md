@@ -6,11 +6,12 @@ Version 9.1-SNAPSHOT
 
 ADDED:
 
+- new enum class BrainpoolCurveAlgorithm with all Brainpool elliptic curve algorithms
 - new libs.versions.toml file for new automatic catalog versions update
 
 CHANGED:
 
-- update gradle to new version 8.8
+- update gradle to new version 8.9
 - update of gradle-plugin dependency 'com.diffplug.spotless:spotless-plugin-gradle' in version 7.0.0.BETA1
 - update of test dependency junit-jupiter-api to the new version 5.11.0-M2
 
