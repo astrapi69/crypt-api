@@ -30,7 +30,6 @@ import io.github.astrapi69.crypt.api.mechanism.PBEMechanism;
  * The enum {@link SunJCEAlgorithm} defines the algorithm specified by the SunJCE security provider.
  *
  * @version 1.0
- * @author Asterios Raptis
  */
 public enum SunJCEAlgorithm implements Algorithm
 {
@@ -47,24 +46,31 @@ public enum SunJCEAlgorithm implements Algorithm
 	/** The PBEWithMD5AndDES algorithm. */
 	PBEWithMD5AndDES(SunJCEAlgorithm.PBEWithMD5AndDES_ALGORITHM_NAME),
 
-	/** The enum constant 'UNKNOWN' if the SunJCE security provider algorithm is unknown */
+	/** The enum constant 'UNKNOWN' if the SunJCE security provider algorithm is unknown. */
 	UNKNOWN(Algorithm.UNKNOWN_ALGORITHM_NAME);
 
+	/** Constant for Blowfish algorithm name. */
 	public static final String BLOWFISH_ALGORITHM_NAME = "Blowfish";
+
+	/** Constant for DES algorithm name. */
 	public static final String DES_ALGORITHM_NAME = "DES";
+
+	/** Constant for DESede algorithm name. */
 	public static final String DES_EDE_ALGORITHM_NAME = DES_ALGORITHM_NAME + "ede";
+
+	/** Constant for PBEWithMD5AndDES algorithm name. */
 	public static final String PBEWithMD5AndDES_ALGORITHM_NAME = PBEMechanism.PBE_MECHANISM_NAME
 		+ UnionWord.WITH_UNION_WORD + MdAlgorithm.MD_5 + UnionWord.AND_UNION_WORD
 		+ DES_ALGORITHM_NAME;
 
-	/** The algorithm. */
+	/** The algorithm name. */
 	private final String algorithm;
 
 	/**
 	 * Instantiates a new {@link SunJCEAlgorithm} object.
 	 *
 	 * @param algorithm
-	 *            the algorithm.
+	 *            the algorithm name
 	 */
 	SunJCEAlgorithm(final String algorithm)
 	{

@@ -30,25 +30,28 @@ package io.github.astrapi69.crypt.api.mechanism;
 public enum PBEMechanism implements Mechanism
 {
 
-	/** The pbe mechanism. */
+	/** The PBE mechanism. */
 	PBE(PBEMechanism.PBE_MECHANISM_NAME),
-	/** The pkcs mechanism. */
+	/** The PKCS mechanism. */
 	PKCS(PBEMechanism.PKCS_MECHANISM_NAME),
 
-	/** The enum constant 'UNKNOWN' if the PBE mechanism name is unknown */
+	/** The enum constant 'UNKNOWN' if the PBE mechanism name is unknown. */
 	UNKNOWN(Mechanism.UNKNOWN_MECHANISM_NAME);
 
+	/** Constant for PBE mechanism name. */
 	public static final String PBE_MECHANISM_NAME = "PBE";
+
+	/** Constant for PKCS mechanism name. */
 	public static final String PKCS_MECHANISM_NAME = "PKCS";
 
-	/** The mechanism */
+	/** The mechanism name. */
 	private final String mechanism;
 
 	/**
-	 * Instantiates a new {@link GSSAPIMechanism} object
+	 * Instantiates a new {@link PBEMechanism} object.
 	 *
 	 * @param mechanism
-	 *            the mechanism
+	 *            the mechanism name
 	 */
 	PBEMechanism(final String mechanism)
 	{

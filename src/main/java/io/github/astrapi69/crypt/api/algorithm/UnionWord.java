@@ -25,20 +25,23 @@
 package io.github.astrapi69.crypt.api.algorithm;
 
 /**
- * The enum {@link UnionWord} hold union words for chain algorithms
+ * The enum {@link UnionWord} holds union words for chaining algorithms.
  */
 public enum UnionWord
 {
 
-	/** The And enum value for chain algorithms */
+	/** The And enum value for chaining algorithms */
 	And,
 
-	/** The With enum value for chain algorithms */
+	/** The With enum value for chaining algorithms */
 	With,
 
 	/** The enum constant 'UNKNOWN' if the union word is unknown */
 	UNKNOWN;
 
+	/** Constant for the "And" union word */
 	public static final String AND_UNION_WORD = "And";
+
+	/** Constant for the "With" union word */
 	public static final String WITH_UNION_WORD = "With";
 }
