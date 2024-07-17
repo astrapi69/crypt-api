@@ -31,7 +31,7 @@ public interface Mechanism
 {
 
 	/** The Constant UNKNOWN_MECHANISM_NAME is if the mechanism name is unknown */
-	String UNKNOWN_MECHANISM_NAME = "UNKNOWN MECHANISM NAME";
+	String UNKNOWN_MECHANISM_NAME = "UNKNOWN";
 
 	/**
 	 * Gets the mechanism

@@ -1,4 +1,5 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 import java.util.stream.Stream;
 
@@ -11,7 +12,7 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.jupiter.params.support.AnnotationConsumer;
 
-import io.github.astrapi69.crypt.api.type.CertificateFactoryType;
+import io.github.astrapi69.crypt.api.mechanism.SaslServerMechanism;
 
 /**
  * The MIT License
@@ -35,26 +36,27 @@ import io.github.astrapi69.crypt.api.type.CertificateFactoryType;
  */
 
 /**
- * JUnit 5 test class for {@link CertificateFactoryType} enum.
+ * JUnit 5 test class for {@link SaslServerMechanism} enum.
  */
-@DisplayName("CertificateFactoryType Enum Test")
-public class CertificateFactoryTypeTest
+@DisplayName("SaslServerMechanism Enum Test")
+public class SaslServerMechanismTest
 {
 
 	/**
-	 * Parameterized test to verify the CertificateFactoryType enum constants using a CSV file.
+	 * Parameterized test to verify the mechanism name for each SaslServerMechanism enum constant
+	 * using a CSV file.
 	 *
-	 * @param typeName
-	 *            the name of the certificate factory type
-	 * @param expectedType
-	 *            the expected CertificateFactoryType enum constant
+	 * @param mechanismName
+	 *            the name of the mechanism
+	 * @param expectedMechanism
+	 *            the expected SaslServerMechanism enum constant
 	 */
 	@ParameterizedTest
-	@CsvFileSource(resources = "/certificatefactorytype.csv", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/saslservermechanism.csv", numLinesToSkip = 1)
 	@DisplayName("Parameterized Test with CSV")
-	void testCertificateFactoryType(String typeName, CertificateFactoryType expectedType)
+	void testMechanismName(String mechanismName, SaslServerMechanism expectedMechanism)
 	{
-		assertEquals(typeName, expectedType.getType());
+		assertEquals(mechanismName, expectedMechanism.getMechanism());
 	}
 
 	/**
@@ -62,26 +64,30 @@ public class CertificateFactoryTypeTest
 	 *
 	 * @return a stream of arguments
 	 */
-	static Stream<Arguments> typeProvider()
+	static Stream<Arguments> mechanismProvider()
 	{
-		return Stream.of(Arguments.arguments("X.509", CertificateFactoryType.X_509),
-			Arguments.arguments("UNKNOWN", CertificateFactoryType.UNKNOWN));
+		return Stream.of(arguments("CRAM-MD5", SaslServerMechanism.CRAM_MD5),
+			arguments("DIGEST-MD5", SaslServerMechanism.DIGEST_MD5),
+			arguments("GSSAPI", SaslServerMechanism.GSSAPI),
+			arguments("NTLM", SaslServerMechanism.NTLM),
+			arguments("UNKNOWN", SaslServerMechanism.UNKNOWN));
 	}
 
 	/**
-	 * Parameterized test to verify the CertificateFactoryType enum constants using a method source.
+	 * Parameterized test to verify the mechanism name for each SaslServerMechanism enum constant
+	 * using a method source.
 	 *
-	 * @param typeName
-	 *            the name of the certificate factory type
-	 * @param expectedType
-	 *            the expected CertificateFactoryType enum constant
+	 * @param mechanismName
+	 *            the name of the mechanism
+	 * @param expectedMechanism
+	 *            the expected SaslServerMechanism enum constant
 	 */
 	@ParameterizedTest
-	@MethodSource("typeProvider")
+	@MethodSource("mechanismProvider")
 	@DisplayName("Parameterized Test with Method Source")
-	void testCertificateFactoryTypeWithMethodSource(String typeName,
-		CertificateFactoryType expectedType)
+	void testMechanismNameWithMethodSource(String mechanismName,
+		SaslServerMechanism expectedMechanism)
 	{
-		assertEquals(typeName, expectedType.getType());
+		assertEquals(mechanismName, expectedMechanism.getMechanism());
 	}
 }

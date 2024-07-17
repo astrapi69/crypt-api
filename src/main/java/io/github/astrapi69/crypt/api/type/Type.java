@@ -31,7 +31,7 @@ public interface Type
 {
 
 	/** The Constant UNKNOWN_ENCODING_NAME is if the type name is unknown */
-	String UNKNOWN_TYPE_NAME = "UNKNOWN TYPE NAME";
+	String UNKNOWN_TYPE_NAME = "UNKNOWN";
 
 	/**
 	 * Gets the type

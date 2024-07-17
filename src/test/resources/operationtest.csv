@@ -1,0 +1,9 @@
+inputChar,operationName,reverse,expectedChar
+a,UPPERCASE,false,A
+A,LOWERCASE,false,a
+a,NEGATE,false,A
+A,NEGATE,false,a
+a,NONE,false,a
+A,NONE,false,A
+a,UPPERCASE,true,a
+A,LOWERCASE,true,A

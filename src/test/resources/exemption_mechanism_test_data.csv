@@ -2,4 +2,4 @@ mechanismEnum,expectedMechanismName
 KEY_ESCROW,KeyEscrow
 KEY_RECOVERY,KeyRecovery
 KEY_WEAKENING,KeyWeakening
-UNKNOWN,UNKNOWN MECHANISM NAME
+UNKNOWN,UNKNOWN

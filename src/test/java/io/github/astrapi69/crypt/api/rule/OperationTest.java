@@ -25,8 +25,16 @@
 package io.github.astrapi69.crypt.api.rule;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.params.provider.Arguments.arguments;
 
+import java.util.stream.Stream;
+
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.CsvFileSource;
+import org.junit.jupiter.params.provider.MethodSource;
 
 import io.github.astrapi69.crypt.api.obfuscation.rule.Operation;
 
@@ -35,6 +43,63 @@ import io.github.astrapi69.crypt.api.obfuscation.rule.Operation;
  */
 public class OperationTest
 {
+
+	/**
+	 * Parameterized test to verify the operation on a given character using a CSV file.
+	 *
+	 * @param inputChar
+	 *            the character to operate on
+	 * @param operationName
+	 *            the name of the operation
+	 * @param reverse
+	 *            the flag to reverse the operation
+	 * @param expectedChar
+	 *            the expected result after the operation
+	 */
+	@ParameterizedTest
+	@CsvFileSource(resources = "/operationtest.csv", numLinesToSkip = 1)
+	@DisplayName("Parameterized Test with CSV")
+	void testOperation(char inputChar, String operationName, boolean reverse, char expectedChar)
+	{
+		Operation operation = Operation.toOperation(operationName);
+		assertEquals(expectedChar, Operation.operate(inputChar, operation, reverse));
+	}
+
+	/**
+	 * Provides a stream of arguments for the method source parameterized test.
+	 *
+	 * @return a stream of arguments
+	 */
+	static Stream<Arguments> operationProvider()
+	{
+		return Stream.of(arguments('a', "UPPERCASE", false, 'A'),
+			arguments('A', "LOWERCASE", false, 'a'), arguments('a', "NEGATE", false, 'A'),
+			arguments('A', "NEGATE", false, 'a'), arguments('a', "NONE", false, 'a'),
+			arguments('A', "NONE", false, 'A'), arguments('a', "UPPERCASE", true, 'a'),
+			arguments('A', "LOWERCASE", true, 'A'));
+	}
+
+	/**
+	 * Parameterized test to verify the operation on a given character using a method source.
+	 *
+	 * @param inputChar
+	 *            the character to operate on
+	 * @param operationName
+	 *            the name of the operation
+	 * @param reverse
+	 *            the flag to reverse the operation
+	 * @param expectedChar
+	 *            the expected result after the operation
+	 */
+	@ParameterizedTest
+	@MethodSource("operationProvider")
+	@DisplayName("Parameterized Test with Method Source")
+	void testOperationWithMethodSource(char inputChar, String operationName, boolean reverse,
+		char expectedChar)
+	{
+		Operation operation = Operation.toOperation(operationName);
+		assertEquals(expectedChar, Operation.operate(inputChar, operation, reverse));
+	}
 
 	/**
 	 * Test method for {@link Operation#operate(char, Operation)}
