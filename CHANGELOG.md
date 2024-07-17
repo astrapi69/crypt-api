@@ -6,6 +6,7 @@ Version 9.2
 
 CHANGED:
 
+- rename of module from crypt.api to io.github.astrapisixtynine.crypt.api
 - remove of deprecated enum class CompoundAlgorithm
 
 Version 9.1
