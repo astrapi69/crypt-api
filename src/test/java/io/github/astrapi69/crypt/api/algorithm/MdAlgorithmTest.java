@@ -26,9 +26,10 @@ package io.github.astrapi69.crypt.api.algorithm;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import org.junit.jupiter.api.Test;
+
 import io.github.astrapi69.crypt.api.algorithm.compound.CompoundAlgorithm;
 import io.github.astrapi69.crypt.api.algorithm.compound.CompoundAlgorithmTest;
-import org.junit.jupiter.api.Test;
 
 /**
  * The test class {@link MdAlgorithmTest} provides unit tests for the {@link MdAlgorithm} enum.

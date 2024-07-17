@@ -29,7 +29,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
 /**
- * The test class {@link CompoundAlgorithmTest} provides unit tests for the {@link CompoundAlgorithm} enum.
+ * The test class {@link CompoundAlgorithmTest} provides unit tests for the
+ * {@link CompoundAlgorithm} enum.
  */
 public class CompoundAlgorithmTest
 {
