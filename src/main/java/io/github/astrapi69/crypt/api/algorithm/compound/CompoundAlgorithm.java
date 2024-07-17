@@ -22,7 +22,7 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package io.github.astrapi69.crypt.api.compound;
+package io.github.astrapi69.crypt.api.algorithm.compound;
 
 import io.github.astrapi69.crypt.api.algorithm.AesAlgorithm;
 import io.github.astrapi69.crypt.api.algorithm.Algorithm;
@@ -38,12 +38,7 @@ import io.github.astrapi69.crypt.api.password.PasswordHashType;
 
 /**
  * The enum {@link CompoundAlgorithm} provides some compound algorithms
- * 
- * @deprecated use instead the same name enum class in the package
- *             <code>io.github.astrapi69.crypt.api.algorithm.compound</code>.<br>
- *             Note: will be removed in next minor version
  */
-@Deprecated(forRemoval = true)
 public enum CompoundAlgorithm implements Algorithm
 {
 
