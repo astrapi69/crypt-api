@@ -27,7 +27,6 @@ module crypt.api
 	exports io.github.astrapi69.crypt.api.algorithm.key;
 	exports io.github.astrapi69.crypt.api.annotation;
 	exports io.github.astrapi69.crypt.api.blockchain;
-	exports io.github.astrapi69.crypt.api.compound;
 	exports io.github.astrapi69.crypt.api.key;
 	exports io.github.astrapi69.crypt.api.mechanism;
 	exports io.github.astrapi69.crypt.api.mode;
