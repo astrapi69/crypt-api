@@ -1,4 +1,4 @@
-package io.github.astrapi69.crypt.api.type; /**
+/**
  * The MIT License
  *
  * Copyright (C) 2015 Asterios Raptis
@@ -22,6 +22,8 @@ package io.github.astrapi69.crypt.api.type; /**
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
+package io.github.astrapi69.crypt.api.type;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.stream.Stream;
@@ -31,8 +33,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.MethodSource;
-
-import io.github.astrapi69.crypt.api.type.CertStoreType;
 
 /**
  * JUnit 5 test class for {@link CertStoreType} enum.
