@@ -44,6 +44,7 @@ public enum KeyFormat
 	 */
 	UNKNOWN(Type.UNKNOWN_TYPE_NAME);
 
+	/** The key format */
 	private final String format;
 
 	KeyFormat(final String format)
@@ -52,6 +53,11 @@ public enum KeyFormat
 		this.format = format;
 	}
 
+	/**
+	 * Get the key format
+	 *
+	 * @return the key format
+	 */
 	public String getFormat()
 	{
 		return this.format;

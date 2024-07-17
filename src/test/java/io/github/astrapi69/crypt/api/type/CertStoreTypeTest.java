@@ -1,4 +1,4 @@
-/**
+package io.github.astrapi69.crypt.api.type; /**
  * The MIT License
  *
  * Copyright (C) 2015 Asterios Raptis
@@ -22,8 +22,6 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package io.github.astrapi69.crypt.api.type;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.stream.Stream;
@@ -34,26 +32,29 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import io.github.astrapi69.crypt.api.type.CertStoreType;
+
 /**
- * JUnit 5 test class for {@link CertificateFactoryType} enum.
+ * JUnit 5 test class for {@link CertStoreType} enum.
  */
-@DisplayName("CertificateFactoryType Enum Test")
-public class CertificateFactoryTypeTest
+@DisplayName("CertStoreType Enum Test")
+public class CertStoreTypeTest
 {
 
 	/**
-	 * Parameterized test to verify the CertificateFactoryType enum constants using a CSV file.
+	 * Parameterized test to verify the CertStoreType enum constants using a CSV file.
 	 *
 	 * @param typeName
-	 *            the name of the certificate factory type
+	 *            the name of the cert store type
 	 * @param expectedType
-	 *            the expected CertificateFactoryType enum constant
+	 *            the expected CertStoreType enum constant
 	 */
 	@ParameterizedTest
-	@CsvFileSource(resources = "/certificatefactorytype.csv", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/certstoretype.csv", numLinesToSkip = 1)
 	@DisplayName("Parameterized Test with CSV")
-	void testCertificateFactoryType(String typeName, CertificateFactoryType expectedType)
+	void testCertStoreType(String typeName, CertStoreType expectedType)
 	{
+		assertEquals(expectedType, CertStoreType.valueOf(typeName));
 		assertEquals(typeName, expectedType.getType());
 	}
 
@@ -64,24 +65,25 @@ public class CertificateFactoryTypeTest
 	 */
 	static Stream<Arguments> typeProvider()
 	{
-		return Stream.of(Arguments.arguments("X.509", CertificateFactoryType.X_509),
-			Arguments.arguments("UNKNOWN", CertificateFactoryType.UNKNOWN));
+		return Stream.of(Arguments.arguments("Collection", CertStoreType.Collection),
+			Arguments.arguments("LDAP", CertStoreType.LDAP),
+			Arguments.arguments("UNKNOWN", CertStoreType.UNKNOWN));
 	}
 
 	/**
-	 * Parameterized test to verify the CertificateFactoryType enum constants using a method source.
+	 * Parameterized test to verify the CertStoreType enum constants using a method source.
 	 *
 	 * @param typeName
-	 *            the name of the certificate factory type
+	 *            the name of the cert store type
 	 * @param expectedType
-	 *            the expected CertificateFactoryType enum constant
+	 *            the expected CertStoreType enum constant
 	 */
 	@ParameterizedTest
 	@MethodSource("typeProvider")
 	@DisplayName("Parameterized Test with Method Source")
-	void testCertificateFactoryTypeWithMethodSource(String typeName,
-		CertificateFactoryType expectedType)
+	void testCertStoreTypeWithMethodSource(String typeName, CertStoreType expectedType)
 	{
+		assertEquals(expectedType, CertStoreType.valueOf(typeName));
 		assertEquals(typeName, expectedType.getType());
 	}
 }

@@ -68,6 +68,11 @@ public enum KeyFileFormat
 		this.fileExtensions = fileExtensions;
 	}
 
+	/**
+	 * Get the file extensions.
+	 *
+	 * @return the array with the file extensions
+	 */
 	public String[] getFileExtensions()
 	{
 		return this.fileExtensions;

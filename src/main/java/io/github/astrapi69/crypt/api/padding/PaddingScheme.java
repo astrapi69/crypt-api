@@ -84,6 +84,11 @@ public enum PaddingScheme
 		this.scheme = scheme;
 	}
 
+	/**
+	 * Get the padding scheme.
+	 *
+	 * @return the padding scheme.
+	 */
 	public String getScheme()
 	{
 		return this.scheme;

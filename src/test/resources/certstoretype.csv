@@ -1,0 +1,4 @@
+typeName,expectedType
+Collection,Collection
+LDAP,LDAP
+UNKNOWN,UNKNOWN

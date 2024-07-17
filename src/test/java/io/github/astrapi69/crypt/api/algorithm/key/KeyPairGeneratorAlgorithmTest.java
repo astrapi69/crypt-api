@@ -25,8 +25,6 @@
 package io.github.astrapi69.crypt.api.algorithm.key;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertNull;
 
 import org.junit.jupiter.api.Test;
 
@@ -59,7 +57,7 @@ public class KeyPairGeneratorAlgorithmTest
 		assertEquals(KeyPairGeneratorAlgorithm.XDH.getAlgorithm(), "XDH");
 		assertEquals(KeyPairGeneratorAlgorithm.X25519.getAlgorithm(), "X25519");
 		assertEquals(KeyPairGeneratorAlgorithm.X448.getAlgorithm(), "X448");
-		assertEquals(KeyPairGeneratorAlgorithm.UNKNOWN.getAlgorithm(), "UNKNOWN ALGORITHM NAME");
+		assertEquals(KeyPairGeneratorAlgorithm.UNKNOWN.getAlgorithm(), "UNKNOWN");
 	}
 
 	/**

@@ -35,25 +35,26 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.MethodSource;
 
 /**
- * JUnit 5 test class for {@link CertificateFactoryType} enum.
+ * JUnit 5 test class for {@link ConfigurationType} enum.
  */
-@DisplayName("CertificateFactoryType Enum Test")
-public class CertificateFactoryTypeTest
+@DisplayName("ConfigurationType Enum Test")
+public class ConfigurationTypeTest
 {
 
 	/**
-	 * Parameterized test to verify the CertificateFactoryType enum constants using a CSV file.
+	 * Parameterized test to verify the ConfigurationType enum constants using a CSV file.
 	 *
 	 * @param typeName
-	 *            the name of the certificate factory type
+	 *            the name of the configuration type
 	 * @param expectedType
-	 *            the expected CertificateFactoryType enum constant
+	 *            the expected ConfigurationType enum constant
 	 */
 	@ParameterizedTest
-	@CsvFileSource(resources = "/certificatefactorytype.csv", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/configurationtype.csv", numLinesToSkip = 1)
 	@DisplayName("Parameterized Test with CSV")
-	void testCertificateFactoryType(String typeName, CertificateFactoryType expectedType)
+	void testConfigurationType(String typeName, ConfigurationType expectedType)
 	{
+		assertEquals(expectedType, ConfigurationType.valueOf(typeName));
 		assertEquals(typeName, expectedType.getType());
 	}
 
@@ -64,24 +65,24 @@ public class CertificateFactoryTypeTest
 	 */
 	static Stream<Arguments> typeProvider()
 	{
-		return Stream.of(Arguments.arguments("X.509", CertificateFactoryType.X_509),
-			Arguments.arguments("UNKNOWN", CertificateFactoryType.UNKNOWN));
+		return Stream.of(Arguments.arguments("JavaLoginConfig", ConfigurationType.JavaLoginConfig),
+			Arguments.arguments("UNKNOWN", ConfigurationType.UNKNOWN));
 	}
 
 	/**
-	 * Parameterized test to verify the CertificateFactoryType enum constants using a method source.
+	 * Parameterized test to verify the ConfigurationType enum constants using a method source.
 	 *
 	 * @param typeName
-	 *            the name of the certificate factory type
+	 *            the name of the configuration type
 	 * @param expectedType
-	 *            the expected CertificateFactoryType enum constant
+	 *            the expected ConfigurationType enum constant
 	 */
 	@ParameterizedTest
 	@MethodSource("typeProvider")
 	@DisplayName("Parameterized Test with Method Source")
-	void testCertificateFactoryTypeWithMethodSource(String typeName,
-		CertificateFactoryType expectedType)
+	void testConfigurationTypeWithMethodSource(String typeName, ConfigurationType expectedType)
 	{
+		assertEquals(expectedType, ConfigurationType.valueOf(typeName));
 		assertEquals(typeName, expectedType.getType());
 	}
 }

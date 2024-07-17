@@ -32,7 +32,7 @@ public interface Algorithm
 {
 
 	/** The Constant UNKNOWN_ALGORITHM_NAME is if the algorithm name is unknown */
-	String UNKNOWN_ALGORITHM_NAME = "UNKNOWN ALGORITHM NAME";
+	String UNKNOWN_ALGORITHM_NAME = "UNKNOWN";
 
 	/**
 	 * Gets the algorithm for encryption or decryption

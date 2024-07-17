@@ -110,6 +110,11 @@ public enum KeyStringEntry
 		this.value = value;
 	}
 
+	/**
+	 * Get the value the PEM entry
+	 *
+	 * @return the value the PEM entry
+	 */
 	public String getValue()
 	{
 		return value;

@@ -53,7 +53,7 @@ public enum KeySize
 	 */
 	UNKNOWN(-1);
 
-	/** The display. */
+	/** The key size. */
 	private final Integer keySize;
 
 	/**
@@ -67,6 +67,11 @@ public enum KeySize
 		this.keySize = keySize;
 	}
 
+	/**
+	 * Get the key size
+	 *
+	 * @return the key size
+	 */
 	public Integer getKeySize()
 	{
 		return this.keySize;

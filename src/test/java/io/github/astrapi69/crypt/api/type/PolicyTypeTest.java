@@ -35,25 +35,26 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.MethodSource;
 
 /**
- * JUnit 5 test class for {@link CertificateFactoryType} enum.
+ * JUnit 5 test class for {@link PolicyType} enum.
  */
-@DisplayName("CertificateFactoryType Enum Test")
-public class CertificateFactoryTypeTest
+@DisplayName("PolicyType Enum Test")
+public class PolicyTypeTest
 {
 
 	/**
-	 * Parameterized test to verify the CertificateFactoryType enum constants using a CSV file.
+	 * Parameterized test to verify the PolicyType enum constants using a CSV file.
 	 *
 	 * @param typeName
-	 *            the name of the certificate factory type
+	 *            the name of the policy type
 	 * @param expectedType
-	 *            the expected CertificateFactoryType enum constant
+	 *            the expected PolicyType enum constant
 	 */
 	@ParameterizedTest
-	@CsvFileSource(resources = "/certificatefactorytype.csv", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/policytype.csv", numLinesToSkip = 1)
 	@DisplayName("Parameterized Test with CSV")
-	void testCertificateFactoryType(String typeName, CertificateFactoryType expectedType)
+	void testPolicyType(String typeName, PolicyType expectedType)
 	{
+		assertEquals(expectedType, PolicyType.valueOf(typeName));
 		assertEquals(typeName, expectedType.getType());
 	}
 
@@ -64,24 +65,24 @@ public class CertificateFactoryTypeTest
 	 */
 	static Stream<Arguments> typeProvider()
 	{
-		return Stream.of(Arguments.arguments("X.509", CertificateFactoryType.X_509),
-			Arguments.arguments("UNKNOWN", CertificateFactoryType.UNKNOWN));
+		return Stream.of(Arguments.arguments("JavaPolicy", PolicyType.JavaPolicy),
+			Arguments.arguments("UNKNOWN", PolicyType.UNKNOWN));
 	}
 
 	/**
-	 * Parameterized test to verify the CertificateFactoryType enum constants using a method source.
+	 * Parameterized test to verify the PolicyType enum constants using a method source.
 	 *
 	 * @param typeName
-	 *            the name of the certificate factory type
+	 *            the name of the policy type
 	 * @param expectedType
-	 *            the expected CertificateFactoryType enum constant
+	 *            the expected PolicyType enum constant
 	 */
 	@ParameterizedTest
 	@MethodSource("typeProvider")
 	@DisplayName("Parameterized Test with Method Source")
-	void testCertificateFactoryTypeWithMethodSource(String typeName,
-		CertificateFactoryType expectedType)
+	void testPolicyTypeWithMethodSource(String typeName, PolicyType expectedType)
 	{
+		assertEquals(expectedType, PolicyType.valueOf(typeName));
 		assertEquals(typeName, expectedType.getType());
 	}
 }

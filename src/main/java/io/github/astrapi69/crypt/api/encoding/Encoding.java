@@ -31,7 +31,7 @@ public interface Encoding
 {
 
 	/** The Constant UNKNOWN_ENCODING_NAME is if the encoding name is unknown */
-	String UNKNOWN_ENCODING_NAME = "UNKNOWN ENCODING NAME";
+	String UNKNOWN_ENCODING_NAME = "UNKNOWN";
 
 	/**
 	 * Gets the encoding

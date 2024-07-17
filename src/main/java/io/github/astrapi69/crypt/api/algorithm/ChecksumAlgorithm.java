@@ -24,6 +24,21 @@
  */
 package io.github.astrapi69.crypt.api.algorithm;
 
+/**
+ * The enum {@link ChecksumAlgorithm} defines various checksum algorithms.
+ * <p>
+ * This enum encapsulates several commonly used message digest and hashing algorithms.
+ * </p>
+ * <ul>
+ * <li>{@link #MD2} - The MD2 message-digest algorithm</li>
+ * <li>{@link #MD5} - The MD5 message-digest algorithm</li>
+ * <li>{@link #SHA_1} - The SHA-1 hashing algorithm</li>
+ * <li>{@link #SHA_256} - The SHA-256 hashing algorithm</li>
+ * <li>{@link #SHA_384} - The SHA-384 hashing algorithm</li>
+ * <li>{@link #SHA_512} - The SHA-512 hashing algorithm</li>
+ * <li>{@link #UNKNOWN} - Represents an unknown algorithm</li>
+ * </ul>
+ */
 public enum ChecksumAlgorithm implements Algorithm
 {
 
@@ -57,11 +72,20 @@ public enum ChecksumAlgorithm implements Algorithm
 	 */
 	SHA_512(HashAlgorithm.SHA_512.getAlgorithm()),
 
-	/** The enum constant 'UNKNOWN' if the checksum algorithm is unknown */
+	/**
+	 * The enum constant 'UNKNOWN' if the checksum algorithm is unknown.
+	 */
 	UNKNOWN(Algorithm.UNKNOWN_ALGORITHM_NAME);
 
+	/** The algorithm name */
 	private final String algorithm;
 
+	/**
+	 * Instantiates a new {@link ChecksumAlgorithm} with the given algorithm name.
+	 *
+	 * @param algorithm
+	 *            the algorithm name
+	 */
 	ChecksumAlgorithm(String algorithm)
 	{
 		this.algorithm = algorithm;
@@ -70,6 +94,7 @@ public enum ChecksumAlgorithm implements Algorithm
 	/**
 	 * {@inheritDoc}
 	 */
+	@Override
 	public String getAlgorithm()
 	{
 		return this.algorithm;
