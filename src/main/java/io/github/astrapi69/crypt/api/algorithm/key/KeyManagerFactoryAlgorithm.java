@@ -26,7 +26,6 @@ package io.github.astrapi69.crypt.api.algorithm.key;
 
 import javax.net.ssl.KeyManagerFactory;
 
-import io.github.astrapi69.crypt.api.algorithm.AesAlgorithm;
 import io.github.astrapi69.crypt.api.algorithm.Algorithm;
 import io.github.astrapi69.crypt.api.algorithm.cert.CertPathBuilderAlgorithm;
 
@@ -42,14 +41,20 @@ public enum KeyManagerFactoryAlgorithm implements Algorithm
 	/** The enum constant for PKIX algorithm */
 	PKIX(CertPathBuilderAlgorithm.PKIX_ALGORITHM_NAME),
 
+	/** The enum constant for 'SunX509' algorithm */
+	SUN_X509(KeyManagerFactoryAlgorithm.SUN_X509_ALGORITHM_NAME),
+
 	/** The enum constant 'UNKNOWN' if the key manager algorithm is unknown */
 	UNKNOWN(Algorithm.UNKNOWN_ALGORITHM_NAME);
+
+	/** The string constant SUN_X509_ALGORITHM_NAME */
+	public static final String SUN_X509_ALGORITHM_NAME = "SunX509";
 
 	/** The algorithm */
 	private final String algorithm;
 
 	/**
-	 * Instantiates a new {@link AesAlgorithm} object
+	 * Instantiates a new {@link KeyManagerFactoryAlgorithm} object
 	 *
 	 * @param algorithm
 	 *            the algorithm

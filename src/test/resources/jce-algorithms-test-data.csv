@@ -1,0 +1,36 @@
+algorithm,className,description
+MD5,MessageDigest,Used for computing a message digest (hash) from input data.
+SHA-1,MessageDigest,Used for computing a message digest (hash) from input data.
+SHA-256,MessageDigest,Used for computing a message digest (hash) from input data.
+SHA-384,MessageDigest,Used for computing a message digest (hash) from input data.
+SHA-512,MessageDigest,Used for computing a message digest (hash) from input data.
+AES,Cipher,Used for encrypting and decrypting data using the AES algorithm.
+DES,Cipher,Used for encrypting and decrypting data using the DES algorithm.
+DESede,Cipher,Used for encrypting and decrypting data using the 3DES algorithm.
+Blowfish,Cipher,Used for encrypting and decrypting data using the Blowfish algorithm.
+RC2,Cipher,Used for encrypting and decrypting data using the RC2 algorithm.
+RC4,Cipher,Used for encrypting and decrypting data using the RC4 algorithm.
+RSA,Cipher,Used for encrypting and decrypting data using the RSA algorithm.
+DSA,Signature,Used for generating and verifying digital signatures using the DSA algorithm.
+EC,KeyPairGenerator,Used for generating elliptic curve key pairs.
+DH,KeyAgreement,Used for key agreement using the Diffie-Hellman algorithm.
+ECDH,KeyAgreement,Used for key agreement using the Elliptic Curve Diffie-Hellman algorithm.
+HmacMD5,Mac,Used for computing a message authentication code (MAC) using HMAC-MD5.
+HmacSHA1,Mac,Used for computing a message authentication code (MAC) using HMAC-SHA1.
+HmacSHA256,Mac,Used for computing a message authentication code (MAC) using HMAC-SHA256.
+HmacSHA384,Mac,Used for computing a message authentication code (MAC) using HMAC-SHA384.
+HmacSHA512,Mac,Used for computing a message authentication code (MAC) using HMAC-SHA512.
+RSA_KEYPAIR,KeyPairGenerator,Used for generating RSA key pairs.
+DSA_KEYPAIR,KeyPairGenerator,Used for generating DSA key pairs.
+EC_KEYPAIR,KeyPairGenerator,Used for generating elliptic curve key pairs.
+RSA_KEYFACTORY,KeyFactory,Used for converting between different representations of RSA keys.
+DSA_KEYFACTORY,KeyFactory,Used for converting between different representations of DSA keys.
+EC_KEYFACTORY,KeyFactory,Used for converting between different representations of elliptic curve keys.
+X509_CERT,CertificateFactory,Used for generating X.509 certificates from their encodings.
+JKS_KEYSTORE,KeyStore,Java KeyStore (JKS) type for storing cryptographic keys and certificates.
+PKCS12_KEYSTORE,KeyStore,PKCS#12 type for storing cryptographic keys and certificates.
+SUNX509_KEYMANAGER,KeyManagerFactory,Used for managing key material for X.509 certificates.
+PKIX_KEYMANAGER,KeyManagerFactory,Used for managing key material with PKIX trust management.
+SUNX509_TRUSTMANAGER,TrustManagerFactory,Used for managing trust material for X.509 certificates.
+PKIX_TRUSTMANAGER,TrustManagerFactory,Used for managing trust material with PKIX trust management.
+PKIX_CERTPATH,CertPathBuilder,Used for building certification paths using the PKIX algorithm.

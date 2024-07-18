@@ -188,7 +188,7 @@ public enum MacAlgorithm implements Algorithm
 	private final String algorithm;
 
 	/**
-	 * Instantiates a new {@link AesAlgorithm} object
+	 * Instantiates a new {@link MacAlgorithm} object
 	 *
 	 * @param algorithm
 	 *            the algorithm

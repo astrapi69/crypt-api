@@ -73,7 +73,7 @@ public enum SecretKeyFactoryAlgorithm implements Algorithm
 	private final String algorithm;
 
 	/**
-	 * Instantiates a new {@link AesAlgorithm} object.
+	 * Instantiates a new {@link SecretKeyFactoryAlgorithm} object.
 	 *
 	 * @param algorithm
 	 *            the algorithm.

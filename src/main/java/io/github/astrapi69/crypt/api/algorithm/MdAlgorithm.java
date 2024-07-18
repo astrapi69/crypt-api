@@ -53,7 +53,7 @@ public enum MdAlgorithm implements Algorithm
 	private final String algorithm;
 
 	/**
-	 * Instantiates a new {@link Algorithm} object.
+	 * Instantiates a new {@link MdAlgorithm} object.
 	 *
 	 * @param algorithm
 	 *            the algorithm.

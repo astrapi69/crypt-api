@@ -26,7 +26,6 @@ package io.github.astrapi69.crypt.api.algorithm.cert;
 
 import java.security.cert.CertPathValidator;
 
-import io.github.astrapi69.crypt.api.algorithm.AesAlgorithm;
 import io.github.astrapi69.crypt.api.algorithm.Algorithm;
 
 /**
@@ -48,7 +47,7 @@ public enum CertPathValidatorAlgorithm implements Algorithm
 	private final String algorithm;
 
 	/**
-	 * Instantiates a new {@link AesAlgorithm} object
+	 * Instantiates a new {@link CertPathValidatorAlgorithm} object
 	 *
 	 * @param algorithm
 	 *            the algorithm
