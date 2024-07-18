@@ -11,6 +11,10 @@ ADDED:
 - new enum class JCEAlgorithm that represents various algorithms provided by the Java Cryptography Extension (JCE)
 - new enum value SUN_X509 in enum class KeyManagerFactoryAlgorithm that represents the algorithm 'SunX509'
 
+CHANGED:
+
+- overview section in README.md file extended with explanation of all packages
+
 Version 9.2
 -------------
 
