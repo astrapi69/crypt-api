@@ -32,8 +32,10 @@ public enum SecurityProvider
 
 	/** The BouncyCastle SecurityProvider */
 	BC,
-	/** The sun SecurityProvider */
+	/** The SUN SecurityProvider */
 	SUN,
+	/** The SunJCE SecurityProvider */
+	SunJCE,
 
 	/** The enum constant 'UNKNOWN' if the security provider is unknown or cannot be resolved */
 	UNKNOWN
