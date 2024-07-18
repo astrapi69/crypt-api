@@ -7,6 +7,7 @@ Version 9.3-SNAPSHOT
 ADDED:
 
 - new enum class SECGCurveAlgorithm with all elliptic curve algorithms from the Standards for Efficient Cryptography Group (SECG)
+- new enum class SSLContextAlgorithm that represents the different SSL/TLS algorithms that can be used with SSLContext
 - new enum class JCEAlgorithm that represents various algorithms provided by the Java Cryptography Extension (JCE)
 - new enum value SUN_X509 in enum class KeyManagerFactoryAlgorithm that represents the algorithm 'SunX509'
 

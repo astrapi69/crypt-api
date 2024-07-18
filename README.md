@@ -10,11 +10,78 @@
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](http://opensource.org/licenses/MIT)
 [![Donate](https://img.shields.io/badge/donate-❤-ff2244.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GVBTWLRAZ7HB8)
 [![Hits Of Code](https://hitsofcode.com/github/astrapi69/crypt-api?branch=develop)](https://hitsofcode.com/github/astrapi69/crypt-api/view?branch=develop)
-[![Lines Of Code](https://tokei.rs/b1/github/astrapi69/crypt-api?branch=develop)](https://github.com/astrapi69/crypt-api?branch=develop)
 
 </div>
 
-Provides interfaces for encrypting and decrypting bytes, text, and files
+The Crypt API library is a comprehensive cryptographic library containing various classes and interfaces for encryption, decryption, blockchain, algorithms, keys, mechanisms, and providers. Below is an overview of its main components.
+
+### Core Classes and Interfaces
+
+- **Encryption and Decryption Interfaces**:
+    - `Encryptor`
+    - `Decryptor`
+    - `Cryptor`
+
+- **Specific Implementations for Different Data Types**:
+    - `ByteArrayEncryptor`
+    - `StringEncryptor`
+    - `FileEncryptor`
+    - `ByteArrayDecryptor`
+    - `StringDecryptor`
+    - `FileDecryptor`
+
+- **Generic Classes for Object Encryption/Decryption**:
+    - `GenericObjectEncryptor`
+    - `GenericObjectDecryptor`
+
+### Blockchain Related Interfaces
+
+- **Interfaces for Blockchain Components**:
+    - `IBlock`
+    - `IAddress`
+    - `ITransaction`
+    - `INode`
+
+### Algorithm Related Classes
+
+- **Algorithm Representations**:
+    - `Algorithm`
+    - `AlgorithmWithParams`
+    - `KeyAlgorithm`
+
+- **Specific Algorithm Implementations**:
+    - `CompoundAlgorithm`
+    - `PBEAlgorithm`
+    - `PBKDF2Algorithm`
+
+### Key Management
+
+- **Classes for Key Management**:
+    - `KeyStringEntry`
+    - `KeyFormat`
+    - `KeyType`
+    - `KeyFileFormat`
+    - `KeySize`
+
+- **Specific Algorithms for Key Generation and Management**:
+    - `PemType`
+    - `KeyPairGeneratorAlgorithm`
+    - `SecretKeyFactoryAlgorithm`
+
+### Mechanisms
+
+- **Different Cryptographic Mechanisms**:
+    - `Mechanism`
+    - `PBEMechanism`
+    - `SaslServerMechanism`
+    - `GSSAPIMechanism`
+    - `SaslClientMechanism`
+    - `ExemptionMechanism`
+
+### Providers
+
+- **Security Providers**:
+    - `SecurityProvider`
 
 > Please support this project by simply putting a Github <!-- Place this tag where you want the button to render. -->
 <a class="github-button" href="https://github.com/astrapi69/crypt-api" data-icon="octicon-star" aria-label="Star astrapi69/~~crypt-api~~ on GitHub">Star ⭐</a>
@@ -50,6 +117,23 @@ then add the dependency to the dependencies area
 
 ```
     implementation("io.github.astrapi69:crypt-api:$cryptApiVersion")
+```
+
+# with new libs.versions.toml file
+
+If you use the new libs.versions.toml file for new automatic catalog versions update
+
+```
+[versions]
+crypt-api-version=${latestVersion}
+
+[libraries]
+crypt-api = { module = "io.github.astrapi69:crypt-api", version.ref = "crypt-api-version" }
+```
+then add the dependency to the dependencies area
+
+```
+    implementation libs.crypt.api
 ```
 
 ## Maven dependency
@@ -167,12 +251,6 @@ or over flattr:
 </a>
 
 ## Credits
-
-|**Travis CI**|
-|     :---:      |
-|[![Travis CI](https://travis-ci.com/images/logos/TravisCI-Full-Color.png)](https://travis-ci.com)~~~~|
-|Special thanks to [Travis CI](https://travis-ci.com) for providing a free continuous integration service for open source projects|
-|     <img width=1000/>     |
 
 |**Nexus Sonatype repositories**|
 |     :---:      |
