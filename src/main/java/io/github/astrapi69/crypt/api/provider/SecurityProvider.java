@@ -29,14 +29,55 @@ package io.github.astrapi69.crypt.api.provider;
  */
 public enum SecurityProvider
 {
-
 	/** The BouncyCastle SecurityProvider */
 	BC,
 	/** The SUN SecurityProvider */
 	SUN,
 	/** The SunJCE SecurityProvider */
 	SunJCE,
+	/** The SunRsaSign SecurityProvider */
+	SunRsaSign,
+	/** The SunEC SecurityProvider */
+	SunEC,
+	/** The SunJSSE SecurityProvider */
+	SunJSSE,
+	/** The SunMSCAPI SecurityProvider */
+	SunMSCAPI,
+	/** The SunPKCS11 SecurityProvider */
+	SunPKCS11,
+	/** The Apache Shiro SecurityProvider */
+	ApacheShiro,
+	/** The Cryptix SecurityProvider */
+	Cryptix,
+	/** The Eclipse Kura SecurityProvider */
+	Kura,
+	/** The Conscrypt SecurityProvider */
+	Conscrypt,
+	/** The IBMJCE SecurityProvider */
+	IBMJCE,
+	/** The IBMJSSE2 SecurityProvider */
+	IBMJSSE2,
+	/** The IBMJCEFIPS SecurityProvider */
+	IBMJCEFIPS,
+	/** The Unknown SecurityProvider */
+	UNKNOWN;
 
-	/** The enum constant 'UNKNOWN' if the security provider is unknown or cannot be resolved */
-	UNKNOWN
+	/**
+	 * Resolves the security provider by name.
+	 *
+	 * @param name
+	 *            the name of the security provider
+	 * @return the corresponding {@link SecurityProvider} or {@link #UNKNOWN} if not found
+	 */
+	public static SecurityProvider fromName(String name)
+	{
+		for (SecurityProvider provider : values())
+		{
+			if (provider.name().equalsIgnoreCase(name))
+			{
+				return provider;
+			}
+		}
+		return UNKNOWN;
+	}
 }
