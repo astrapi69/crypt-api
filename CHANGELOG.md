@@ -4,7 +4,9 @@
 Version 9.3-SNAPSHOT
 -------------
 
+ADDED:
 
+- new enum class SECGCurveAlgorithm with all elliptic curve algorithms from the Standards for Efficient Cryptography Group (SECG)
 
 Version 9.2
 -------------
@@ -19,7 +21,7 @@ Version 9.1
 
 ADDED:
 
-- new enum class BrainpoolCurveAlgorithm with all Brainpool elliptic curve algorithms
+- new enum class BrainpoolCurveAlgorithm with all elliptic curve algorithms from Brainpool
 - new libs.versions.toml file for new automatic catalog versions update
 
 CHANGED:
