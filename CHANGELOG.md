@@ -14,6 +14,7 @@ ADDED:
 CHANGED:
 
 - overview section in README.md file extended with explanation of all packages
+- extracted the 'import gradle files'-section to its own gradle file apply-gradle-files.gradle
 
 Version 9.2
 -------------
