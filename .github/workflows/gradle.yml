@@ -29,7 +29,7 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
       - name: Publish to Maven Central
-      - run: ./gradlew publishMavenJavaPublicationToSonatypeRepository closeAndReleaseSonatypeStagingRepository
+        run: ./gradlew publishMavenJavaPublicationToSonatypeRepository closeAndReleaseSonatypeStagingRepository
         env:
           OSSRH_USERNAME: ${{ secrets.OSSRHUSERNAME }}
           OSSRH_PASSWORD: ${{ secrets.OSSRHPASSWORD }}
