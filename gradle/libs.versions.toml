@@ -4,6 +4,7 @@ gradle-plugin-grgit-version = "5.3.3"
 gradle-plugin-license-version = "0.16.1"
 gradle-plugin-spotless-version = "6.25.0"
 gradle-plugin-version-catalog-update-version = "0.8.4"
+gradle-plugin-publish-plugin-version="2.0.0"
 gradle-plugin-versions-version = "0.51.0"
 jsoup-version = "1.18.1"
 junit-jupiter-params-version = "5.10.3"
@@ -37,3 +38,4 @@ grgit-gradle = { id = "org.ajoberstar.grgit", version.ref = "gradle-plugin-grgit
 license-gradle-plugin = { id = "com.github.hierynomus.license", version.ref = "gradle-plugin-license-version" }
 spotless-plugin-gradle = { id = "com.diffplug.spotless", version.ref = "gradle-plugin-spotless-version" }
 version-catalog-update = { id = "nl.littlerobots.version-catalog-update", version.ref = "gradle-plugin-version-catalog-update-version" }
+publish-plugin = { id = "io.github.gradle-nexus.publish-plugin", version.ref = "gradle-plugin-publish-plugin-version" }

@@ -17,8 +17,7 @@ plugins {
     alias(libs.plugins.grgit.gradle)
     alias(libs.plugins.spotless.plugin.gradle)
     alias(libs.plugins.version.catalog.update)
-
-    id 'io.github.gradle-nexus.publish-plugin' version '2.0.0'
+    alias(libs.plugins.publish.plugin)
 }
 
 group = "$groupPackage" as Object
@@ -55,10 +54,5 @@ nexusPublishing {
             username = System.getenv("OSSRH_USERNAME") ?: ""
             password = System.getenv("OSSRH_PASSWORD") ?: ""
         }
-    }
-    // Optional: Timeout erhöhen für langsame Uploads
-    transitionCheckOptions {
-        maxRetries.set(60)
-        delayBetween.set(java.time.Duration.ofSeconds(10))
     }
 }
