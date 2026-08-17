@@ -1,9 +1,44 @@
 ## Change log
 ----------------------
 
-Version 9.4-SNAPSHOT
+Version 9.4
 -------------
 
+**New Features**
+
+- Added automatic publishing to Maven Central via GitHub Actions workflow.
+
+**Improvements**
+
+- Updated core dependencies to stable versions:
+    - JUnit Jupiter & Platform to 6.1.3
+    - Spotless Plugin to 8.10.0
+    - File Worker to 19.0
+    - Silly Collection to 28.1
+    - JSoup to 1.23.1
+    - Grgit to 5.3.3
+    - Version Catalog Update Plugin to 1.1.1
+- Improved credential handling in `publishing.gradle` to support local builds without mandatory properties (fallback to
+  empty strings).
+- Signing now uses in-memory PGP keys (`GPG_PRIVATE_KEY`/`GPG_PASSPHRASE`) so release signing works on CI runners
+  without a local GPG keyring.
+
+**Configuration Changes**
+
+- Migrated Sonatype configuration to the Central Portal (legacy `oss.sonatype.org`/`s01.oss.sonatype.org` were
+  sunset 2025-06-30). Release deploys now go through the OSSRH Staging API compatibility endpoint
+  (`ossrh-staging-api.central.sonatype.com`), snapshots through the native Central Portal snapshot repository
+  (`central.sonatype.com/repository/maven-snapshots`).
+- Removed the unused `io.github.gradle-nexus.publish-plugin` (dead code, never wired to the `publish` task, and
+  pointed at an already-defunct host).
+- Updated project version to `9.4`.
+- Removed unused flags from version catalog update configuration.
+
+**Notes**
+
+- Requires a Central Portal user token (generated at central.sonatype.com, not the old Sonatype JIRA login) stored
+  as GitHub Secrets `OSSRHUSERNAME`/`OSSRHPASSWORD`, plus `GPG_PRIVATE_KEY`/`GPG_PASSPHRASE`, for the CI/CD pipeline
+  to succeed.
 
 Version 9.3
 -------------
@@ -12,7 +47,8 @@ ADDED:
 
 - new test dependency file-worker
 - new test dependency jsoup
-- new enum class SECGCurveAlgorithm with all elliptic curve algorithms from the Standards for Efficient Cryptography Group (SECG)
+- new enum class SECGCurveAlgorithm with all elliptic curve algorithms from the Standards for Efficient Cryptography
+  Group (SECG)
 - new enum class SSLContextAlgorithm that represents the different SSL/TLS algorithms that can be used with SSLContext
 - new enum class JCEAlgorithm that represents various algorithms provided by the Java Cryptography Extension (JCE)
 - new enum value SUN_X509 in enum class KeyManagerFactoryAlgorithm that represents the algorithm 'SunX509'
@@ -67,7 +103,8 @@ Version 8.7
 
 ADDED:
 
-- new enum field value 'UNKNOWN' to all enum classes for default return value if the enum value is resolved over a string value
+- new enum field value 'UNKNOWN' to all enum classes for default return value if the enum value is resolved over a
+  string value
 
 CHANGED:
 
@@ -126,13 +163,12 @@ CHANGED:
 - update of test dependency silly-collection to new version to 20.1
 - removed unsupported algorithm MD4 from the enum ChecksumAlgorithm
 
-
 Version 8.3
 -------------
 
 CHANGED:
 
-- rename of main package 'io.github.astrapi69.crypto.*' to new 'io.github.astrapi69.crypt.api.*'
+- rename of main package 'io.github.astrapi69.crypto. *' to new 'io.github.astrapi69.crypt.api.*'
 - update of module-info.java file to the new package
 
 Version 8.2
@@ -182,7 +218,8 @@ Version 7.7
 
 ADDED:
 
-- improve gradle build performance by adding new gradle parameters for caching, parallel, configure on demand and file watch
+- improve gradle build performance by adding new gradle parameters for caching, parallel, configure on demand and file
+  watch
 - new test dependency junit-jupiter-api in new minor version 5.8.2
 - new enum PemType
 
@@ -217,7 +254,8 @@ CHANGED:
 
 - update gradle to new version 7.1
 - changed all test dependencies from groupid de.alpharogroup to new groupid io.github.astrapi69
-- update gradle-plugin dependency of gradle.plugin.com.hierynomus.gradle.plugins:license-gradle-plugin to new version 0.16.1
+- update gradle-plugin dependency of gradle.plugin.com.hierynomus.gradle.plugins:license-gradle-plugin to new version
+  0.16.1
 - update of test dependency silly-collections to new version to 8.7
 
 Version 7.5
@@ -277,7 +315,8 @@ Version 7.1
 ADDED:
 
 - new interface for encrypt an generic java object to a File object
-- new interface for decrypt an encrypted {@link File} object that was previously encrypted and return the decrypted result as generic object
+- new interface for decrypt an encrypted {@link File} object that was previously encrypted and return the decrypted
+  result as generic object
 
 Version 7
 -------------

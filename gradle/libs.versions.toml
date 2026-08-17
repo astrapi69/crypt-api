@@ -2,7 +2,6 @@
 file-worker-version = "19.0"
 gradle-plugin-grgit-version = "5.3.3"
 gradle-plugin-license-version = "0.16.1"
-gradle-plugin-publish-plugin-version = "2.0.0"
 gradle-plugin-spotless-version = "8.10.0"
 gradle-plugin-version-catalog-update-version = "1.1.1"
 gradle-plugin-versions-version = "0.61.0"
@@ -36,6 +35,5 @@ unit-testing = [
 gradle-versions-plugin = { id = "com.github.ben-manes.versions", version.ref = "gradle-plugin-versions-version" }
 grgit-gradle = { id = "org.ajoberstar.grgit", version.ref = "gradle-plugin-grgit-version" }
 license-gradle-plugin = { id = "com.github.hierynomus.license", version.ref = "gradle-plugin-license-version" }
-publish-plugin = { id = "io.github.gradle-nexus.publish-plugin", version.ref = "gradle-plugin-publish-plugin-version" }
 spotless-plugin-gradle = { id = "com.diffplug.spotless", version.ref = "gradle-plugin-spotless-version" }
 version-catalog-update = { id = "nl.littlerobots.version-catalog-update", version.ref = "gradle-plugin-version-catalog-update-version" }

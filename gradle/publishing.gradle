@@ -75,6 +75,11 @@ publishing {
 
 signing {
     if (releaseVersion) {
+        def signingKey = System.getenv("GPG_PRIVATE_KEY")
+        def signingPassphrase = System.getenv("GPG_PASSPHRASE")
+        if (signingKey && signingPassphrase) {
+            useInMemoryPgpKeys(signingKey, signingPassphrase)
+        }
         sign publishing.publications.mavenJava
     }
 }
