@@ -28,6 +28,13 @@ jobs:
           distribution: 'temurin'
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
+      - name: Publish to Maven Central
+      - run: ./gradlew publishMavenJavaPublicationToSonatypeRepository closeAndReleaseSonatypeStagingRepository
+        env:
+          OSSRH_USERNAME: ${{ secrets.OSSRHUSERNAME }}
+          OSSRH_PASSWORD: ${{ secrets.OSSRHPASSWORD }}
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
       - name: Execute Gradle build
         run: ./gradlew build
         env:
