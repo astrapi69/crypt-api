@@ -17,6 +17,8 @@ plugins {
     alias(libs.plugins.grgit.gradle)
     alias(libs.plugins.spotless.plugin.gradle)
     alias(libs.plugins.version.catalog.update)
+
+    id 'io.github.gradle-nexus.publish-plugin' version '2.0.0'
 }
 
 group = "$groupPackage" as Object
