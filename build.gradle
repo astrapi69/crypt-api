@@ -44,3 +44,19 @@ tasks.withType(JavaCompile).configureEach { javaCompiler ->
 tasks.named("test") {
     it.mustRunAfter(tasks.named("jar"))
 }
+
+nexusPublishing {
+    repositories {
+        sonatype {
+            nexusUrl.set(uri("https://s01.oss.sonatype.org/service/local/"))
+            snapshotRepositoryUrl.set(uri("https://s01.oss.sonatype.org/content/repositories/snapshots/"))
+            username = System.getenv("OSSRH_USERNAME") ?: ""
+            password = System.getenv("OSSRH_PASSWORD") ?: ""
+        }
+    }
+    // Optional: Timeout erhöhen für langsame Uploads
+    transitionCheckOptions {
+        maxRetries.set(60)
+        delayBetween.set(java.time.Duration.ofSeconds(10))
+    }
+}
