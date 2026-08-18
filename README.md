@@ -46,13 +46,12 @@ The Crypt API library is a comprehensive cryptographic library containing variou
 
 - **Algorithm Representations**:
     - `Algorithm`
-    - `AlgorithmWithParams`
-    - `KeyAlgorithm`
+    - `CompoundAlgorithm`
 
 - **Specific Algorithm Implementations**:
-    - `CompoundAlgorithm`
-    - `PBEAlgorithm`
-    - `PBKDF2Algorithm`
+    - `AesAlgorithm`
+    - `HashAlgorithm`
+    - `MdAlgorithm`
 
 ### Key Management
 
