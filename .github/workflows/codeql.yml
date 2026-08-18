@@ -41,7 +41,7 @@ jobs:
         uses: gradle/actions/setup-gradle@v6
 
       - name: Build
-        run: ./gradlew compileJava compileTestJava
+        run: ./gradlew clean compileJava compileTestJava --rerun-tasks
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
