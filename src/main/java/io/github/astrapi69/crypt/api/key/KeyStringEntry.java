@@ -33,7 +33,7 @@ public enum KeyStringEntry
 	BEGIN_PRIVATE_KEY_PREFIX(KeyStringEntry.PEM_KEY_BEGIN_PREFIX + PemType.PRIVATE_KEY_NAME
 		+ KeyStringEntry.FIVE_HYPHENS),
 	/** The prefix for the begin of a public key */
-	BEGIN_PUBLIC_KEY_PREFIX(KeyStringEntry.PEM_KEY_BEGIN_PREFIX + PemType.PRIVATE_KEY_NAME
+	BEGIN_PUBLIC_KEY_PREFIX(KeyStringEntry.PEM_KEY_BEGIN_PREFIX + PemType.PUBLIC_KEY_NAME
 		+ KeyStringEntry.FIVE_HYPHENS),
 	/** The prefix for the begin of a RSA private key */
 	BEGIN_RSA_PRIVATE_KEY_PREFIX(KeyStringEntry.PEM_KEY_BEGIN_PREFIX + PemType.RSA_PRIVATE_KEY_NAME
@@ -64,7 +64,7 @@ public enum KeyStringEntry
 		KeyStringEntry.PEM_KEY_END_PREFIX + PemType.PRIVATE_KEY_NAME + KeyStringEntry.FIVE_HYPHENS),
 	/** The suffix for the end of a public key */
 	END_PUBLIC_KEY_SUFFIX(
-		KeyStringEntry.PEM_KEY_END_PREFIX + PemType.PRIVATE_KEY_NAME + KeyStringEntry.FIVE_HYPHENS),
+		KeyStringEntry.PEM_KEY_END_PREFIX + PemType.PUBLIC_KEY_NAME + KeyStringEntry.FIVE_HYPHENS),
 	/** The suffix for the end of a RSA private key */
 	END_RSA_PRIVATE_KEY_SUFFIX(KeyStringEntry.PEM_KEY_END_PREFIX + PemType.RSA_PRIVATE_KEY_NAME
 		+ KeyStringEntry.FIVE_HYPHENS),
