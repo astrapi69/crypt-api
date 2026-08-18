@@ -5,7 +5,7 @@
 [![Java CI with Gradle](https://github.com/astrapi69/crypt-api/actions/workflows/gradle.yml/badge.svg)](https://github.com/astrapi69/crypt-api/actions/workflows/gradle.yml)
 [![Coverage Status](https://codecov.io/gh/astrapi69/crypt-api/branch/develop/graph/badge.svg)](https://codecov.io/gh/astrapi69/crypt-api)
 [![Open Issues](https://img.shields.io/github/issues/astrapi69/crypt-api.svg?style=flat)](https://github.com/astrapi69/crypt-api/issues)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.astrapi69/crypt-api/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.astrapi69/crypt-api)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.astrapi69/crypt-api.svg?label=Maven%20Central)](https://central.sonatype.com/artifact/io.github.astrapi69/crypt-api)
 [![Javadocs](http://www.javadoc.io/badge/io.github.astrapi69/crypt-api.svg)](http://www.javadoc.io/doc/io.github.astrapi69/crypt-api)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](http://opensource.org/licenses/MIT)
 [![Donate](https://img.shields.io/badge/donate-❤-ff2244.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GVBTWLRAZ7HB8)
@@ -95,7 +95,7 @@ The source code comes under the liberal MIT License.
 
 ## gradle dependency
 
-Replace the variable ${latestVersion} with the current latest version: [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.astrapi69/crypt-api/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.astrapi69/crypt-api)
+Replace the variable ${latestVersion} with the current latest version: [![Maven Central](https://img.shields.io/maven-central/v/io.github.astrapi69/crypt-api.svg?label=Maven%20Central)](https://central.sonatype.com/artifact/io.github.astrapi69/crypt-api)
 
 You can first define the version in the ext section and add than the following gradle dependency
 to your project `build.gradle` if you want to import the core functionality of crypt-api:
@@ -251,9 +251,9 @@ or over flattr:
 
 ## Credits
 
-|**Nexus Sonatype repositories**|
+|**Sonatype Central repository**|
 |     :---:      |
-|[![sonatype repository](https://img.shields.io/nexus/r/https/oss.sonatype.org/io.github.astrapi69/crypt-api.svg?style=for-the-badge)](https://oss.sonatype.org/index.html#nexus-search;gav~io.github.astrapi69~crypt-api~~~)|
+|[![Maven Central](https://img.shields.io/maven-central/v/io.github.astrapi69/crypt-api.svg?style=for-the-badge)](https://central.sonatype.com/artifact/io.github.astrapi69/crypt-api)|
 |Special thanks to [sonatype repository](https://www.sonatype.com) for providing a free maven repository service for open source projects|
 |     <img width=1000/>     |
 
