@@ -103,12 +103,19 @@ public enum CompoundAlgorithm implements Algorithm
 
 	/**
 	 * Constant for the default iteration count.
+	 *
+	 * <p>
+	 * <b>Legacy value, do not use as a default for new encryption.</b> 19 rounds provides
+	 * effectively no key-stretching against brute-force attacks. This value is retained only so
+	 * that data encrypted before this warning was added can still be decrypted by explicitly
+	 * passing it; new code should use a caller-generated, modern iteration count (tens of thousands
+	 * of rounds or more, depending on the chosen algorithm).
 	 */
 	public static final int ITERATIONCOUNT = 19;
 
 	/**
 	 * Constant for the default private key
-	 * 
+	 *
 	 * @deprecated use instead the new constant PASSWORD. Will be removed in the next major version
 	 */
 	@Deprecated
@@ -116,11 +123,27 @@ public enum CompoundAlgorithm implements Algorithm
 
 	/**
 	 * Constant for the default password
+	 *
+	 * <p>
+	 * <b>Legacy value, do not use as a default key/password for new encryption.</b> This is a
+	 * fixed, publicly known string hardcoded in this open-source library's source code — anyone who
+	 * has read this file can use it. This value is retained only so that data encrypted before this
+	 * warning was added can still be decrypted by explicitly passing it; new code should always
+	 * require the caller to supply their own secret key/password.
 	 */
 	public static final String PASSWORD = "privatetopsecret";
 
 	/**
 	 * Constant array for the default contents of salt
+	 *
+	 * <p>
+	 * <b>Legacy value, do not use as a default salt for new encryption.</b> This is a single fixed
+	 * byte array, identical for every installation of this library — using it defeats the entire
+	 * purpose of salting (it enables rainbow-table/precomputation attacks and makes ciphertext for
+	 * a given plaintext+password fully deterministic across every consumer of this library). This
+	 * value is retained only so that data encrypted before this warning was added can still be
+	 * decrypted by explicitly passing it; new code should generate a fresh, random salt per
+	 * encryption (e.g. via {@code SecureRandom}).
 	 */
 	public static final byte[] SALT = { (byte)0xA9, (byte)0x9B, (byte)0xC8, (byte)0x32, (byte)0x56,
 			(byte)0x35, (byte)0xE3, (byte)0x03 };
