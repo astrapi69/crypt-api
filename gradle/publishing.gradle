@@ -60,17 +60,6 @@ publishing {
             }
         }
     }
-    repositories {
-        maven {
-            credentials {
-                username = System.getenv("$projectRepositoriesUserNameKey") ?: (project.hasProperty("$projectRepositoriesUserNameKey") ? project.property("$projectRepositoriesUserNameKey") : "")
-                password = System.getenv("$projectRepositoriesPasswordKey") ?: (project.hasProperty("$projectRepositoriesPasswordKey") ? project.property("$projectRepositoriesPasswordKey") : "")
-            }
-            def releasesRepoUrl = "$projectRepositoriesReleasesRepoUrl" as Object
-            def snapshotsRepoUrl = "$projectRepositoriesSnapshotsRepoUrl" as Object
-            url = releaseVersion ? releasesRepoUrl : snapshotsRepoUrl
-        }
-    }
 }
 
 signing {
