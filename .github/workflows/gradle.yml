@@ -28,13 +28,6 @@ jobs:
           distribution: 'temurin'
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
-      - name: Publish to Maven Central
-        run: ./gradlew publish
-        env:
-          ossrhUsername: ${{ secrets.OSSRHUSERNAME }}
-          ossrhPassword: ${{ secrets.OSSRHPASSWORD }}
-          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
-          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
       - name: Execute Gradle build
         run: ./gradlew build
         env:
@@ -43,3 +36,11 @@ jobs:
       - uses: codecov/codecov-action@v4
         with:
           token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+      - name: Publish to Maven Central
+        if: github.event_name == 'push'
+        run: ./gradlew publish
+        env:
+          ossrhUsername: ${{ secrets.OSSRHUSERNAME }}
+          ossrhPassword: ${{ secrets.OSSRHPASSWORD }}
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
