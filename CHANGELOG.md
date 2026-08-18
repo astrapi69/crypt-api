@@ -1,8 +1,31 @@
 ## Change log
 ----------------------
 
-Version 9.5-SNAPSHOT
+Version 9.5
 -------------
+
+**Bug Fixes**
+
+- Fixed `KeyStringEntry.BEGIN_PUBLIC_KEY_PREFIX` and `END_PUBLIC_KEY_SUFFIX` resolving to
+  private-key PEM markers instead of public-key markers, due to a copy-paste error. The test
+  fixture had the wrong value baked in as "expected", masking the bug.
+
+**CI/Build**
+
+- Gated the Maven Central publish step behind a successful build and excluded it from pull
+  request runs, so untested code can no longer be published.
+- Upgraded Gradle wrapper 8.9 -> 9.7.0.
+- Bumped GitHub Actions to current major versions (`checkout@v7`, `setup-java@v5`,
+  `setup-gradle@v6`, `codecov-action@v7`) to drop the Node.js 20 deprecation warning.
+- Added a CodeQL security-scanning workflow.
+
+**Improvements**
+
+- Enabled the `-Xlint:deprecation` and `-Xlint:unchecked` compiler flags.
+- Fixed the JPMS module name in `module-info.java` to match the actual exported package
+  (`io.github.astrapi69.crypt.api`, was `io.github.astrapisixtynine.crypt.api`).
+- Removed unused test dependencies (`meanbean`, `jsoup`, `file-worker`).
+- Fixed stale class references and a dead Maven Central badge in `README.md`.
 
 Version 9.4
 -------------
