@@ -1,8 +1,19 @@
 ## Change log
 ----------------------
 
-Version 9.7-SNAPSHOT
+Version 9.7
 -------------
+
+ADDED:
+
+- new post-quantum algorithm constants to KeyPairGeneratorAlgorithm: ML_KEM_512/768/1024
+  (FIPS 203 key encapsulation), ML_DSA_44/65/87 (FIPS 204 signatures), and the 12 pure
+  SLH_DSA_* parameter sets (FIPS 205 hash-based signatures, SHA2/SHAKE x 128/192/256 x S/F),
+  verified against Bouncy Castle's actual registered JCA names
+
+CHANGED:
+
+- added PIT mutation testing (opt-in, run via `./gradlew pitest`), not wired into check/build
 
 Version 9.6
 -------------
