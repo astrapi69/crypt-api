@@ -4,6 +4,17 @@
 Version 9.6-SNAPSHOT
 -------------
 
+ADDED:
+
+- new constants Ed25519/Ed448 to KeyPairGeneratorAlgorithm, completing the pair with the
+  existing X25519/X448 key-agreement constants for the signature side; both are natively
+  supported by the JDK since JDK 15, no Bouncy Castle needed
+
+CHANGED:
+
+- expanded Javadoc on CompoundAlgorithm's ITERATIONCOUNT, PASSWORD and SALT constants to
+  document them explicitly as legacy-only values unsuitable as defaults for new encryption
+
 Version 9.5
 -------------
 
