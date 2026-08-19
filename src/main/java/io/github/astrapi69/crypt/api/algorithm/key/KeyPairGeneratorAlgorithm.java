@@ -68,6 +68,60 @@ public enum KeyPairGeneratorAlgorithm implements Algorithm
 	/** The enum constant for Ed448 algorithm. */
 	Ed448(KeyPairGeneratorAlgorithm.ED448_ALGORITHM_NAME),
 
+	/** The enum constant for the ML-KEM-512 post-quantum key encapsulation algorithm. */
+	ML_KEM_512(KeyPairGeneratorAlgorithm.ML_KEM_512_ALGORITHM_NAME),
+
+	/** The enum constant for the ML-KEM-768 post-quantum key encapsulation algorithm. */
+	ML_KEM_768(KeyPairGeneratorAlgorithm.ML_KEM_768_ALGORITHM_NAME),
+
+	/** The enum constant for the ML-KEM-1024 post-quantum key encapsulation algorithm. */
+	ML_KEM_1024(KeyPairGeneratorAlgorithm.ML_KEM_1024_ALGORITHM_NAME),
+
+	/** The enum constant for the ML-DSA-44 post-quantum signature algorithm. */
+	ML_DSA_44(KeyPairGeneratorAlgorithm.ML_DSA_44_ALGORITHM_NAME),
+
+	/** The enum constant for the ML-DSA-65 post-quantum signature algorithm. */
+	ML_DSA_65(KeyPairGeneratorAlgorithm.ML_DSA_65_ALGORITHM_NAME),
+
+	/** The enum constant for the ML-DSA-87 post-quantum signature algorithm. */
+	ML_DSA_87(KeyPairGeneratorAlgorithm.ML_DSA_87_ALGORITHM_NAME),
+
+	/** The enum constant for the SLH-DSA-SHA2-128S post-quantum signature algorithm. */
+	SLH_DSA_SHA2_128S(KeyPairGeneratorAlgorithm.SLH_DSA_SHA2_128S_ALGORITHM_NAME),
+
+	/** The enum constant for the SLH-DSA-SHA2-128F post-quantum signature algorithm. */
+	SLH_DSA_SHA2_128F(KeyPairGeneratorAlgorithm.SLH_DSA_SHA2_128F_ALGORITHM_NAME),
+
+	/** The enum constant for the SLH-DSA-SHA2-192S post-quantum signature algorithm. */
+	SLH_DSA_SHA2_192S(KeyPairGeneratorAlgorithm.SLH_DSA_SHA2_192S_ALGORITHM_NAME),
+
+	/** The enum constant for the SLH-DSA-SHA2-192F post-quantum signature algorithm. */
+	SLH_DSA_SHA2_192F(KeyPairGeneratorAlgorithm.SLH_DSA_SHA2_192F_ALGORITHM_NAME),
+
+	/** The enum constant for the SLH-DSA-SHA2-256S post-quantum signature algorithm. */
+	SLH_DSA_SHA2_256S(KeyPairGeneratorAlgorithm.SLH_DSA_SHA2_256S_ALGORITHM_NAME),
+
+	/** The enum constant for the SLH-DSA-SHA2-256F post-quantum signature algorithm. */
+	SLH_DSA_SHA2_256F(KeyPairGeneratorAlgorithm.SLH_DSA_SHA2_256F_ALGORITHM_NAME),
+
+	/** The enum constant for the SLH-DSA-SHAKE-128S post-quantum signature algorithm. */
+	SLH_DSA_SHAKE_128S(KeyPairGeneratorAlgorithm.SLH_DSA_SHAKE_128S_ALGORITHM_NAME),
+
+	/** The enum constant for the SLH-DSA-SHAKE-128F post-quantum signature algorithm. */
+	SLH_DSA_SHAKE_128F(KeyPairGeneratorAlgorithm.SLH_DSA_SHAKE_128F_ALGORITHM_NAME),
+
+	/** The enum constant for the SLH-DSA-SHAKE-192S post-quantum signature algorithm. */
+	SLH_DSA_SHAKE_192S(KeyPairGeneratorAlgorithm.SLH_DSA_SHAKE_192S_ALGORITHM_NAME),
+
+	/** The enum constant for the SLH-DSA-SHAKE-192F post-quantum signature algorithm. */
+	SLH_DSA_SHAKE_192F(KeyPairGeneratorAlgorithm.SLH_DSA_SHAKE_192F_ALGORITHM_NAME),
+
+	/** The enum constant for the SLH-DSA-SHAKE-256S post-quantum signature algorithm. */
+	SLH_DSA_SHAKE_256S(KeyPairGeneratorAlgorithm.SLH_DSA_SHAKE_256S_ALGORITHM_NAME),
+
+	/** The enum constant for the SLH-DSA-SHAKE-256F post-quantum signature algorithm. */
+	SLH_DSA_SHAKE_256F(KeyPairGeneratorAlgorithm.SLH_DSA_SHAKE_256F_ALGORITHM_NAME),
+
 	/** The enum constant 'UNKNOWN' if the keypair generator algorithm is unknown */
 	UNKNOWN(Algorithm.UNKNOWN_ALGORITHM_NAME);
 
@@ -111,6 +165,127 @@ public enum KeyPairGeneratorAlgorithm implements Algorithm
 	 * 8032
 	 */
 	public static final String ED448_ALGORITHM_NAME = "Ed448";
+
+	/**
+	 * The string constant ML_KEM_512_ALGORITHM_NAME is the name of the NIST-standardized (FIPS 203)
+	 * post-quantum key encapsulation algorithm ML-KEM at security level 1 (comparable to AES-128)
+	 */
+	public static final String ML_KEM_512_ALGORITHM_NAME = "ML-KEM-512";
+
+	/**
+	 * The string constant ML_KEM_768_ALGORITHM_NAME is the name of the NIST-standardized (FIPS 203)
+	 * post-quantum key encapsulation algorithm ML-KEM at security level 3 (comparable to AES-192)
+	 */
+	public static final String ML_KEM_768_ALGORITHM_NAME = "ML-KEM-768";
+
+	/**
+	 * The string constant ML_KEM_1024_ALGORITHM_NAME is the name of the NIST-standardized (FIPS
+	 * 203) post-quantum key encapsulation algorithm ML-KEM at security level 5 (comparable to
+	 * AES-256)
+	 */
+	public static final String ML_KEM_1024_ALGORITHM_NAME = "ML-KEM-1024";
+
+	/**
+	 * The string constant ML_DSA_44_ALGORITHM_NAME is the name of the NIST-standardized (FIPS 204)
+	 * post-quantum signature algorithm ML-DSA at security level 2
+	 */
+	public static final String ML_DSA_44_ALGORITHM_NAME = "ML-DSA-44";
+
+	/**
+	 * The string constant ML_DSA_65_ALGORITHM_NAME is the name of the NIST-standardized (FIPS 204)
+	 * post-quantum signature algorithm ML-DSA at security level 3
+	 */
+	public static final String ML_DSA_65_ALGORITHM_NAME = "ML-DSA-65";
+
+	/**
+	 * The string constant ML_DSA_87_ALGORITHM_NAME is the name of the NIST-standardized (FIPS 204)
+	 * post-quantum signature algorithm ML-DSA at security level 5
+	 */
+	public static final String ML_DSA_87_ALGORITHM_NAME = "ML-DSA-87";
+
+	/**
+	 * The string constant SLH_DSA_SHA2_128S_ALGORITHM_NAME is the name of the NIST-standardized
+	 * (FIPS 205) hash-based post-quantum signature algorithm SLH-DSA, SHA2 variant, security level
+	 * 1, small-signature/slower parameter set
+	 */
+	public static final String SLH_DSA_SHA2_128S_ALGORITHM_NAME = "SLH-DSA-SHA2-128S";
+
+	/**
+	 * The string constant SLH_DSA_SHA2_128F_ALGORITHM_NAME is the name of the NIST-standardized
+	 * (FIPS 205) hash-based post-quantum signature algorithm SLH-DSA, SHA2 variant, security level
+	 * 1, fast/larger-signature parameter set
+	 */
+	public static final String SLH_DSA_SHA2_128F_ALGORITHM_NAME = "SLH-DSA-SHA2-128F";
+
+	/**
+	 * The string constant SLH_DSA_SHA2_192S_ALGORITHM_NAME is the name of the NIST-standardized
+	 * (FIPS 205) hash-based post-quantum signature algorithm SLH-DSA, SHA2 variant, security level
+	 * 3, small-signature/slower parameter set
+	 */
+	public static final String SLH_DSA_SHA2_192S_ALGORITHM_NAME = "SLH-DSA-SHA2-192S";
+
+	/**
+	 * The string constant SLH_DSA_SHA2_192F_ALGORITHM_NAME is the name of the NIST-standardized
+	 * (FIPS 205) hash-based post-quantum signature algorithm SLH-DSA, SHA2 variant, security level
+	 * 3, fast/larger-signature parameter set
+	 */
+	public static final String SLH_DSA_SHA2_192F_ALGORITHM_NAME = "SLH-DSA-SHA2-192F";
+
+	/**
+	 * The string constant SLH_DSA_SHA2_256S_ALGORITHM_NAME is the name of the NIST-standardized
+	 * (FIPS 205) hash-based post-quantum signature algorithm SLH-DSA, SHA2 variant, security level
+	 * 5, small-signature/slower parameter set
+	 */
+	public static final String SLH_DSA_SHA2_256S_ALGORITHM_NAME = "SLH-DSA-SHA2-256S";
+
+	/**
+	 * The string constant SLH_DSA_SHA2_256F_ALGORITHM_NAME is the name of the NIST-standardized
+	 * (FIPS 205) hash-based post-quantum signature algorithm SLH-DSA, SHA2 variant, security level
+	 * 5, fast/larger-signature parameter set
+	 */
+	public static final String SLH_DSA_SHA2_256F_ALGORITHM_NAME = "SLH-DSA-SHA2-256F";
+
+	/**
+	 * The string constant SLH_DSA_SHAKE_128S_ALGORITHM_NAME is the name of the NIST-standardized
+	 * (FIPS 205) hash-based post-quantum signature algorithm SLH-DSA, SHAKE variant, security level
+	 * 1, small-signature/slower parameter set
+	 */
+	public static final String SLH_DSA_SHAKE_128S_ALGORITHM_NAME = "SLH-DSA-SHAKE-128S";
+
+	/**
+	 * The string constant SLH_DSA_SHAKE_128F_ALGORITHM_NAME is the name of the NIST-standardized
+	 * (FIPS 205) hash-based post-quantum signature algorithm SLH-DSA, SHAKE variant, security level
+	 * 1, fast/larger-signature parameter set
+	 */
+	public static final String SLH_DSA_SHAKE_128F_ALGORITHM_NAME = "SLH-DSA-SHAKE-128F";
+
+	/**
+	 * The string constant SLH_DSA_SHAKE_192S_ALGORITHM_NAME is the name of the NIST-standardized
+	 * (FIPS 205) hash-based post-quantum signature algorithm SLH-DSA, SHAKE variant, security level
+	 * 3, small-signature/slower parameter set
+	 */
+	public static final String SLH_DSA_SHAKE_192S_ALGORITHM_NAME = "SLH-DSA-SHAKE-192S";
+
+	/**
+	 * The string constant SLH_DSA_SHAKE_192F_ALGORITHM_NAME is the name of the NIST-standardized
+	 * (FIPS 205) hash-based post-quantum signature algorithm SLH-DSA, SHAKE variant, security level
+	 * 3, fast/larger-signature parameter set
+	 */
+	public static final String SLH_DSA_SHAKE_192F_ALGORITHM_NAME = "SLH-DSA-SHAKE-192F";
+
+	/**
+	 * The string constant SLH_DSA_SHAKE_256S_ALGORITHM_NAME is the name of the NIST-standardized
+	 * (FIPS 205) hash-based post-quantum signature algorithm SLH-DSA, SHAKE variant, security level
+	 * 5, small-signature/slower parameter set
+	 */
+	public static final String SLH_DSA_SHAKE_256S_ALGORITHM_NAME = "SLH-DSA-SHAKE-256S";
+
+	/**
+	 * The string constant SLH_DSA_SHAKE_256F_ALGORITHM_NAME is the name of the NIST-standardized
+	 * (FIPS 205) hash-based post-quantum signature algorithm SLH-DSA, SHAKE variant, security level
+	 * 5, fast/larger-signature parameter set
+	 */
+	public static final String SLH_DSA_SHAKE_256F_ALGORITHM_NAME = "SLH-DSA-SHAKE-256F";
 
 	/** The string constant DSA_ALGORITHM_NAME */
 	public static final String DSA_ALGORITHM_NAME = "DSA";

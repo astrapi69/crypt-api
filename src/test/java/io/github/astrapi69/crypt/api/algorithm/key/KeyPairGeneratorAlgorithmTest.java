@@ -61,6 +61,44 @@ public class KeyPairGeneratorAlgorithmTest
 	}
 
 	/**
+	 * Test for the post-quantum algorithm constants (ML-KEM, ML-DSA, SLH-DSA).
+	 */
+	@Test
+	public void testPostQuantumAlgorithms()
+	{
+		assertEquals(KeyPairGeneratorAlgorithm.ML_KEM_512.getAlgorithm(), "ML-KEM-512");
+		assertEquals(KeyPairGeneratorAlgorithm.ML_KEM_768.getAlgorithm(), "ML-KEM-768");
+		assertEquals(KeyPairGeneratorAlgorithm.ML_KEM_1024.getAlgorithm(), "ML-KEM-1024");
+		assertEquals(KeyPairGeneratorAlgorithm.ML_DSA_44.getAlgorithm(), "ML-DSA-44");
+		assertEquals(KeyPairGeneratorAlgorithm.ML_DSA_65.getAlgorithm(), "ML-DSA-65");
+		assertEquals(KeyPairGeneratorAlgorithm.ML_DSA_87.getAlgorithm(), "ML-DSA-87");
+		assertEquals(KeyPairGeneratorAlgorithm.SLH_DSA_SHA2_128S.getAlgorithm(),
+			"SLH-DSA-SHA2-128S");
+		assertEquals(KeyPairGeneratorAlgorithm.SLH_DSA_SHA2_128F.getAlgorithm(),
+			"SLH-DSA-SHA2-128F");
+		assertEquals(KeyPairGeneratorAlgorithm.SLH_DSA_SHA2_192S.getAlgorithm(),
+			"SLH-DSA-SHA2-192S");
+		assertEquals(KeyPairGeneratorAlgorithm.SLH_DSA_SHA2_192F.getAlgorithm(),
+			"SLH-DSA-SHA2-192F");
+		assertEquals(KeyPairGeneratorAlgorithm.SLH_DSA_SHA2_256S.getAlgorithm(),
+			"SLH-DSA-SHA2-256S");
+		assertEquals(KeyPairGeneratorAlgorithm.SLH_DSA_SHA2_256F.getAlgorithm(),
+			"SLH-DSA-SHA2-256F");
+		assertEquals(KeyPairGeneratorAlgorithm.SLH_DSA_SHAKE_128S.getAlgorithm(),
+			"SLH-DSA-SHAKE-128S");
+		assertEquals(KeyPairGeneratorAlgorithm.SLH_DSA_SHAKE_128F.getAlgorithm(),
+			"SLH-DSA-SHAKE-128F");
+		assertEquals(KeyPairGeneratorAlgorithm.SLH_DSA_SHAKE_192S.getAlgorithm(),
+			"SLH-DSA-SHAKE-192S");
+		assertEquals(KeyPairGeneratorAlgorithm.SLH_DSA_SHAKE_192F.getAlgorithm(),
+			"SLH-DSA-SHAKE-192F");
+		assertEquals(KeyPairGeneratorAlgorithm.SLH_DSA_SHAKE_256S.getAlgorithm(),
+			"SLH-DSA-SHAKE-256S");
+		assertEquals(KeyPairGeneratorAlgorithm.SLH_DSA_SHAKE_256F.getAlgorithm(),
+			"SLH-DSA-SHAKE-256F");
+	}
+
+	/**
 	 * Test the toKeyPairGeneratorAlgorithm method with valid algorithms.
 	 */
 	@Test
