@@ -62,6 +62,12 @@ public enum KeyPairGeneratorAlgorithm implements Algorithm
 	/** The enum constant for X448 algorithm. */
 	X448(KeyPairGeneratorAlgorithm.X448_ALGORITHM_NAME),
 
+	/** The enum constant for Ed25519 algorithm. */
+	Ed25519(KeyPairGeneratorAlgorithm.ED25519_ALGORITHM_NAME),
+
+	/** The enum constant for Ed448 algorithm. */
+	Ed448(KeyPairGeneratorAlgorithm.ED448_ALGORITHM_NAME),
+
 	/** The enum constant 'UNKNOWN' if the keypair generator algorithm is unknown */
 	UNKNOWN(Algorithm.UNKNOWN_ALGORITHM_NAME);
 
@@ -91,6 +97,20 @@ public enum KeyPairGeneratorAlgorithm implements Algorithm
 	 * for Diffie-Hellman key agreement with Curve448 as defined in RFC 7748
 	 */
 	public static final String X448_ALGORITHM_NAME = "X448";
+
+	/**
+	 * The string constant ED25519_ALGORITHM_NAME is the name of the algorithm for generate keypairs
+	 * for the Edwards-Curve Digital Signature Algorithm (EdDSA) with Curve25519 as defined in RFC
+	 * 8032
+	 */
+	public static final String ED25519_ALGORITHM_NAME = "Ed25519";
+
+	/**
+	 * The string constant ED448_ALGORITHM_NAME is the name of the algorithm for generate keypairs
+	 * for the Edwards-Curve Digital Signature Algorithm (EdDSA) with Curve448 as defined in RFC
+	 * 8032
+	 */
+	public static final String ED448_ALGORITHM_NAME = "Ed448";
 
 	/** The string constant DSA_ALGORITHM_NAME */
 	public static final String DSA_ALGORITHM_NAME = "DSA";
