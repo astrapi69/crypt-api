@@ -1,8 +1,21 @@
 ## Change log
 ----------------------
 
-Version 9.8-SNAPSHOT
+Version 10.0.0
 -------------
+
+CHANGED:
+
+- BREAKING: minimum required JDK raised from 17 to 25 (LTS), matching crypt-data and
+  mystic-crypt. Published bytecode now targets JDK 25, so consumers on JDK 17-24 can no longer
+  load this artifact - hence the major version bump. CI's setup-java (gradle.yml, codeql.yml)
+  updated to match.
+- Maven Central publishing switched from AUTOMATIC to USER_MANAGED: CI uploads and validates
+  the deployment, release to Central is approved manually in the Central Portal.
+- test quality: 100% line and branch coverage, PIT mutation score 100% (78/78 mutants killed,
+  test strength 100%). The one previously untested method, SecurityProvider.fromName, now has
+  record-driven parameterized tests covering case-insensitive matching, the UNKNOWN fallback and
+  null input. The shared testing strategy is documented in mystic-crypt/docs/TESTING.md.
 
 Version 9.7
 -------------

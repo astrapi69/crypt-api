@@ -87,8 +87,7 @@ public class SecurityProviderTest
 		assertEquals(expectedProvider, SecurityProvider.valueOf(providerName));
 	}
 
-	record FromNameCase(String name, SecurityProvider expected)
-	{
+	record FromNameCase(String name, SecurityProvider expected) {
 	}
 
 	static Stream<FromNameCase> fromNameProvider()
