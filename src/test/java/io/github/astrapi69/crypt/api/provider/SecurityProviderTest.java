@@ -29,6 +29,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.util.stream.Stream;
 
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvFileSource;
@@ -84,5 +85,35 @@ public class SecurityProviderTest
 		SecurityProvider expectedProvider)
 	{
 		assertEquals(expectedProvider, SecurityProvider.valueOf(providerName));
+	}
+
+	record FromNameCase(String name, SecurityProvider expected)
+	{
+	}
+
+	static Stream<FromNameCase> fromNameProvider()
+	{
+		return Stream.of(new FromNameCase("BC", SecurityProvider.BC),
+			new FromNameCase("bc", SecurityProvider.BC),
+			new FromNameCase("Bc", SecurityProvider.BC),
+			new FromNameCase("SunJCE", SecurityProvider.SunJCE),
+			new FromNameCase("sunjce", SecurityProvider.SunJCE),
+			new FromNameCase("does-not-exist", SecurityProvider.UNKNOWN),
+			new FromNameCase("", SecurityProvider.UNKNOWN));
+	}
+
+	@ParameterizedTest
+	@MethodSource("fromNameProvider")
+	@DisplayName("fromName resolves case-insensitively, falls back to UNKNOWN")
+	void testFromName(FromNameCase testCase)
+	{
+		assertEquals(testCase.expected(), SecurityProvider.fromName(testCase.name()));
+	}
+
+	@Test
+	@DisplayName("fromName with null name falls back to UNKNOWN")
+	void testFromNameWithNull()
+	{
+		assertEquals(SecurityProvider.UNKNOWN, SecurityProvider.fromName(null));
 	}
 }
