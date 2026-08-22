@@ -4,7 +4,7 @@
 
 [![Java CI with Gradle](https://github.com/astrapi69/crypt-api/actions/workflows/gradle.yml/badge.svg)](https://github.com/astrapi69/crypt-api/actions/workflows/gradle.yml)
 [![Coverage Status](https://codecov.io/gh/astrapi69/crypt-api/branch/develop/graph/badge.svg)](https://codecov.io/gh/astrapi69/crypt-api)
-[![Mutation Coverage](https://img.shields.io/badge/mutation%20coverage-96%25-brightgreen)](https://pitest.org/)
+[![Mutation Coverage](https://img.shields.io/badge/mutation%20coverage-100%25-brightgreen)](https://pitest.org/)
 [![Open Issues](https://img.shields.io/github/issues/astrapi69/crypt-api.svg?style=flat)](https://github.com/astrapi69/crypt-api/issues)
 [![Maven Central](https://img.shields.io/maven-central/v/io.github.astrapi69/crypt-api.svg?label=Maven%20Central)](https://central.sonatype.com/artifact/io.github.astrapi69/crypt-api)
 [![Javadocs](http://www.javadoc.io/badge/io.github.astrapi69/crypt-api.svg)](http://www.javadoc.io/doc/io.github.astrapi69/crypt-api)
@@ -181,7 +181,13 @@ Create your own fork of [astrapi69/crypt-api/fork](https://github.com/astrapi69/
 
 To share your changes, [submit a pull request](https://github.com/astrapi69/crypt-api/pull/new/develop).
 
-Don't forget to add new units tests on your changes.
+Don't forget to add new unit tests on your changes. This library is at 100% line and branch
+coverage with a 100% PIT mutation score (every one of the 78 generated mutants is killed by a
+test) - please keep it there. The testing strategy shared across `crypt-api`, `crypt-data` and
+`mystic-crypt` is documented in
+[mystic-crypt/docs/TESTING.md](https://github.com/astrapi69/mystic-crypt/blob/develop/docs/TESTING.md):
+parameterized tests with records per case, property plus negative assertions, and an independent
+verification loop behind the numbers.
 
 ## Contacting the Developers
 
