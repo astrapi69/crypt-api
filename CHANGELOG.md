@@ -1,8 +1,35 @@
 ## Change log
 ----------------------
 
-Version 10.1-SNAPSHOT
+Version 10.2-SNAPSHOT
 -------------
+
+CHANGED:
+
+- build only: the Gradle 10 deprecation sources are gone, so the build no longer warns about
+  behaviour that is scheduled to be removed
+- build only: the gradle/ directory is no longer ignored, so the split build configuration is
+  version controlled with everything else
+- build only: signing falls back to the local gpg command when no key is in the environment, which
+  is what a release prepared by hand needs
+
+
+Version 10.1
+-------------
+
+CHANGED:
+
+- build only: the license and grgit plugins are gone and a Maven Central publish workflow takes
+  their place, so a pushed RELEASE tag uploads the artifacts
+
+DOCUMENTATION:
+
+- the dead OSSRH link is replaced by the one for the Maven Central Portal
+
+This section was written after the fact. 10.1 was released while the changelog still carried an
+empty 10.1-SNAPSHOT heading, so what shipped is reconstructed from the commits between
+RELEASE-10.0.0 and RELEASE-10.1.
+
 
 Version 10.0.0
 -------------
