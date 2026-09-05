@@ -6,6 +6,15 @@ Version 10.2-SNAPSHOT
 
 CHANGED:
 
+- build only: the RELEASE-10.1 line is merged back into develop. Everything that release
+  introduced had stayed on the tag: the Maven Central publish workflow, the README's link to the
+  Portal instead of the dead OSSRH one, and the removal of the license and grgit plugins. develop
+  had none of it, which is why this changelog claimed under 10.1 that grgit was gone while
+  build.gradle still applied it
+- build only: tagRelease no longer comes from grgit. It is a plain 'git tag' Exec task in
+  gradle/tagging.gradle, matching mystic-crypt. That file was named in RELEASE-10.1's
+  gradle-files.list but never committed, so the tag as published does not build from a clean
+  checkout - it worked only in the working copy the release was cut from
 - build only: the Gradle 10 deprecation sources are gone, so the build no longer warns about
   behaviour that is scheduled to be removed
 - build only: the gradle/ directory is no longer ignored, so the split build configuration is
