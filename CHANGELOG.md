@@ -4,6 +4,13 @@
 Version 10.3-SNAPSHOT
 -------------
 
+CHANGED:
+
+- build only: an API compatibility gate (apiCompatibility, part of check), as in crypt-data#71.
+  japicmp compares the jar with the last release on Maven Central (apiBaselineVersion=10.2);
+  within the same major a binary or source incompatibility fails the build. crypt-api is the top
+  of the family, so a removed or renamed constant here breaks both libraries below it (#13)
+
 
 Version 10.2
 -------------
