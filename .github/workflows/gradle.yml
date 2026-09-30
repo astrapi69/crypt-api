@@ -36,6 +36,12 @@ jobs:
       - uses: codecov/codecov-action@v7
         with:
           token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+          # the uploader searches the tree and found .idea/runConfigurations/code_coverage_main.xml,
+          # an IntelliJ run configuration, as a second "coverage file" (mystic-crypt#151). Name the report
+          # and switch the search off: a gate reporting numbers nobody produced is worse than one
+          # reporting none
+          files: build/reports/jacoco/test/jacocoTestReport.xml
+          disable_search: true
       # Snapshots only. A non-SNAPSHOT version on develop is deliberately NOT
       # published here: the release commit reaches develop when the release pull
       # request is merged, so publishing from this push would upload a release
