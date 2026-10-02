@@ -4,6 +4,14 @@
 Version 10.3-SNAPSHOT
 -------------
 
+ADDED:
+
+- SecretKeyFactoryAlgorithm.PBKDF2_WITH_HMAC_SHA256 and PBKDF2_WITH_HMAC_SHA512, with their
+  string constants. The javadoc named the PBKDF2 family while the enum had no member of it, so
+  every consumer wrote "PBKDF2WithHmacSHA256" or "PBKDF2WithHmacSHA512" as a literal: lethenon for
+  the BIP-39 seed, mystic-crypt in Pbkdf2Support and PassphraseCryptor. A test asks the JDK for a
+  SecretKeyFactory under each name (#15)
+
 CHANGED:
 
 - build only: an API compatibility gate (apiCompatibility, part of check), as in crypt-data#71.
