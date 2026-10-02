@@ -1,7 +1,7 @@
 ## Change log
 ----------------------
 
-Version 10.3-SNAPSHOT
+Version 10.3
 -------------
 
 ADDED:
@@ -18,6 +18,11 @@ CHANGED:
   japicmp compares the jar with the last release on Maven Central (apiBaselineVersion=10.2);
   within the same major a binary or source incompatibility fails the build. crypt-api is the top
   of the family, so a removed or renamed constant here breaks both libraries below it (#13)
+- build only: the publish workflow calls nmcp's real task instead of its deprecated alias, and
+  offers a snapshot rehearsal so that path is EXECUTED before a tag depends on it. Rehearsed on
+  2026-10-02 (run 37020821954, green): 10.3-20261002.143536-6 reached the Central snapshot
+  repository and `gpg --verify` accepted its signature. A release that finds no signing key now
+  refuses instead of uploading unsigned (#16, #18)
 
 
 Version 10.2
