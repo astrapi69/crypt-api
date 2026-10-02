@@ -64,11 +64,21 @@ public enum SecretKeyFactoryAlgorithm implements Algorithm
 	/** The DESede algorithm. */
 	DESede(SunJCEAlgorithm.DES_EDE_ALGORITHM_NAME),
 
+	/** PBKDF2 with HMAC-SHA256 as the pseudorandom function (PKCS #5, RFC 8018) */
+	PBKDF2_WITH_HMAC_SHA256(SecretKeyFactoryAlgorithm.PBKDF2_WITH_HMAC_SHA256_ALGORITHM_NAME),
+
+	/** PBKDF2 with HMAC-SHA512 as the pseudorandom function, e.g. for the BIP-39 seed */
+	PBKDF2_WITH_HMAC_SHA512(SecretKeyFactoryAlgorithm.PBKDF2_WITH_HMAC_SHA512_ALGORITHM_NAME),
+
 	/** The enum constant 'UNKNOWN' if the secret key factory algorithm is unknown */
 	UNKNOWN(Algorithm.UNKNOWN_ALGORITHM_NAME);
 
 	/** The string constant ARCFOUR_ALGORITHM_NAME */
 	public static final String ARCFOUR_ALGORITHM_NAME = "ARCFOUR";
+	/** The string constant PBKDF2_WITH_HMAC_SHA256_ALGORITHM_NAME */
+	public static final String PBKDF2_WITH_HMAC_SHA256_ALGORITHM_NAME = "PBKDF2WithHmacSHA256";
+	/** The string constant PBKDF2_WITH_HMAC_SHA512_ALGORITHM_NAME */
+	public static final String PBKDF2_WITH_HMAC_SHA512_ALGORITHM_NAME = "PBKDF2WithHmacSHA512";
 	/** The algorithm. */
 	private final String algorithm;
 
