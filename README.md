@@ -173,6 +173,35 @@ Release version numbers will be incremented in the following format:
 
 For detailed information on versioning for this project you can visit this [wiki page](https://github.com/astrapi69/mvn-parent-projects/wiki/Simplified-Semantic-Versioning).
 
+## Verifying the release signatures
+
+The releases on Maven Central are signed with the OpenPGP key
+
+```text
+5B2F A6B1 1E29 8BC0 9287  F423 D8C4 0351 8C49 CA75
+```
+
+Releases after 10.3 are signed by its signing subkey
+
+```text
+6D67 F844 2A6F CC96 BD7C  1B5E 9FCF 7C97 10E2 BD8D
+```
+
+valid until 2028-10-09; 10.3 and earlier were signed by the primary key itself. The key, with the subkey, is on keyserver.ubuntu.com and keys.openpgp.org.
+
+To check a download, fetch the key once, then verify the signature that lies next to each file on
+Maven Central:
+
+```sh
+gpg --keyserver hkps://keys.openpgp.org --recv-keys 5B2FA6B11E298BC09287F423D8C403518C49CA75
+gpg --verify crypt-api-10.3.jar.asc crypt-api-10.3.jar
+```
+
+gpg answers `Good signature` and prints the `Primary key fingerprint`, for a release signed by the
+subkey also the `Subkey fingerprint`. Both have to be the ones above. The warning that the key "is
+not certified with a trusted signature" only says that you have not marked the key as trusted in your
+own keyring; the fingerprints are what to compare.
+
 ## Want to Help and improve it? ###
 
 The source code for crypt-api are on GitHub. Please feel free to fork and send pull requests!
