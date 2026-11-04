@@ -1,7 +1,7 @@
 [versions]
-gradle-plugin-nmcp-version = "1.6.1"
+gradle-plugin-nmcp-version = "1.6.2"
 gradle-plugin-pitest-version = "1.19.0"
-gradle-plugin-spotless-version = "8.10.0"
+gradle-plugin-spotless-version = "8.10.4"
 gradle-plugin-version-catalog-update-version = "1.1.1"
 gradle-plugin-versions-version = "0.61.0"
 japicmp-version = "0.26.2"
