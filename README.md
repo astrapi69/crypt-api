@@ -218,6 +218,11 @@ test) - please keep it there. The testing strategy shared across `crypt-api`, `c
 parameterized tests with records per case, property plus negative assertions, and an independent
 verification loop behind the numbers.
 
+`./gradlew build` runs `apiCompatibility`, which compares the public API with the last release on
+Maven Central and, within the same major version, fails on a binary or source incompatible change
+unless a documented entry (element, reason, issue) in `gradle/api-compatibility-exclusions.gradle`
+accepts it; a higher major only reports it.
+
 ## Contacting the Developers
 
 Do not hesitate to contact the crypt-api developers with your questions, concerns, comments, bug reports, or feature requests.
