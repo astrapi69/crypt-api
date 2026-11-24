@@ -9,7 +9,7 @@
 [![Maven Central](https://img.shields.io/maven-central/v/io.github.astrapi69/crypt-api.svg?label=Maven%20Central)](https://central.sonatype.com/artifact/io.github.astrapi69/crypt-api)
 [![Javadocs](http://www.javadoc.io/badge/io.github.astrapi69/crypt-api.svg)](http://www.javadoc.io/doc/io.github.astrapi69/crypt-api)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](http://opensource.org/licenses/MIT)
-[![Donate](https://img.shields.io/badge/donate-❤-ff2244.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GVBTWLRAZ7HB8)
+[![Donate](https://img.shields.io/badge/donate-❤-ff2244.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=MJ7V43GU2H386)
 [![Hits Of Code](https://hitsofcode.com/github/astrapi69/crypt-api?branch=develop)](https://hitsofcode.com/github/astrapi69/crypt-api/view?branch=develop)
 
 </div>
@@ -88,7 +88,7 @@ The Crypt API library is a comprehensive cryptographic library containing variou
 >
 > Share this library with friends on Twitter and everywhere else you can
 >
-> If you love this project [![donation](https://img.shields.io/badge/donate-❤-ff2244.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GVBTWLRAZ7HB8)
+> If you love this project [![donation](https://img.shields.io/badge/donate-❤-ff2244.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=MJ7V43GU2H386)
 
 ## License
 
